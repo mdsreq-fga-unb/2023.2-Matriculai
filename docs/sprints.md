@@ -16,8 +16,7 @@ De acordo com a organização Scrum, as sprints serão realizadas quinzenalmente
 | ----------- | ----------- |
 | 12/09/2023 | 02/10/2023 |
 
-A sprint 0 consiste em uma preparação para as próximas sprints, o que levou a mais tempo de duração, pois a equipe ainda estava sendo formada e ainda estava se conhecendo.
-Neste caso, as entregas da Unidade 1 foram elaboradas durante esta sprint, sendo esse o backlog da Sprint 0.
+<p style="text-indent: 50px;text-align: justify;"> A sprint 0 consiste em uma preparação para as próximas sprints, o que levou a mais tempo de duração, pois a equipe ainda estava sendo formada e ainda estava se conhecendo. Neste caso, as entregas da Unidade 1 foram elaboradas durante esta sprint, sendo esse o backlog da Sprint 0.</p>
 
 ## Sprint 1
 

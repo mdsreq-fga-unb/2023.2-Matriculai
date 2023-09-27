@@ -3,8 +3,9 @@ nav:
   - Home: 'index.md'
   - Visão de Produto: 'visao_produto.md'
   - Visão de Projeto: 'visao_projeto.md'
-  - Spints: 'sprints.md'
+  - Sprints: 'sprints.md'
   - Entregas: 'entregas.md'
+  - Lições Aprendidas: 'licoes.md'
 
 theme:
   name: material
