@@ -1,0 +1,35 @@
+site_name: Matriculaí
+nav:
+  - Visão de Produto e Projeto: 'visao_produto_projeto.md'
+  - Entregas: 'entregas.md'
+
+theme:
+  name: material
+  language: pt
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.integrate
+    - content.action.edit
+    - content.action.view
+    - navigation.top
+    - content.tabs.link
+    - content.code.annotation
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/weather-night
+        name: Modo noturno
+    - scheme: slate
+      primary: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Modo claro
+extra_css:
+  - stylesheets/extra.css
+extra:
+  generator: false
