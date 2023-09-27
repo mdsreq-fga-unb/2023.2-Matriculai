@@ -22,12 +22,12 @@
 
 | Estratégia | Descrição |
 | --- | --- | 
-| Propriedade Coletiva | <p style="text-align:justify"> A prática de propriedade coletiva declara que qualquer membro da equipe pode alterar qualquer parte do código do sistema a qualquer momento. </p>|
-| Ritmo Sustentável | <p style="text-align:justify"> Evita a sobrecarga de trabalho e o esgotamento físico e mental dos membros da equipe. O que sucede em uma boa qualidade do produto, diminuição na incidência de erros e prazos não cumpridos. </p> |
-| Metáfora | <p style="text-align:justify"> Para tornar mais claro o entendimento de toda a equipe sobre o projeto e suas funcionalidades. </p> |
-| Refatoração | <p style="text-align:justify"> Prática que envolve a melhoria contínua do código existente sem alterar sua funcionalidade. </p> |
-| Programação em Pares | <p style="text-align:justify"> Prática que permite que dois ou mais participantes trabalhem simultâneamente no mesmo código através de uma vídeo-chamada ou até chamada de voz. </p> |
-| Jogo de Planejamento | <p style="text-align:justify"> Será utilizado no início de cada Sprint da metodologia SCRUM para priorizar as funcionalidades e definir as tarefas que serão realizadas para cumprir os objetivos. </p> |
-| Toda a Equipe | <p style="text-align:justify"> Faz com que a equipe possa trabalhar junta para resolver problemas e alcançar os objetivos do projeto, aumentando a produtividade e diminuindo conflitos entre os membros da equipe. </p> |
-| Pequenas Versões | <p style="text-align:justify"> Torna o acompanhamento do progresso do projeto de forma mais clara e objetiva. Permite, também, que a equipe e o cliente identifiquem problemas com mais rapidez. </p> |
+| Propriedade Coletiva | <p style="text-align:justify"> Qualquer membro da equipe pode alterar qualquer parte do código da aplicação a qualquer momento. </p>|
+| Ritmo Sustentável | <p style="text-align:justify"> Evita a sobrecarga de trabalho e o esgotamento dos membros da equipe.  </p> |
+| Metáfora | <p style="text-align:justify"> Explicar o projeto de forma simples auxilia o time e o cliente a entender os elementos do sistema. </p> |
+| Refatoração | <p style="text-align:justify"> Melhorar o código existente sem alterar sua funcionalidade. </p> |
+| Programação em Pares | <p style="text-align:justify">  É uma abordagem colaborativa em que dois desenvolvedores trabalham juntos em um único código, compartilhando conhecimentos e habilidades para melhorar a qualidade e eficiência do desenvolvimento de software. </p> |
+| Jogo de Planejamento | <p style="text-align:justify"> Será utilizado no início de cada Sprint da metodologia SCRUM para priorizar as funcionalidades e definir as tarefas que serão realizadas. </p> |
+| Toda a Equipe | <p style="text-align:justify"> Fomenta a colaboração entre todos os membros da equipe para resolver problemas e atingir os objetivos do projeto, o que resulta em maior produtividade e na redução de conflitos entre os membros.</p> |
+| Pequenas Versões | <p style="text-align:justify"> Tornam o acompanhamento do progresso do projeto mais claro e objetivo, facilitando a identificação mais rápida de problemas tanto para a equipe quanto para o cliente. </p> |
 | Padrões de codificação | <p style="text-align:justify"> Uma codificação padronizada facilita a comunicação, encoraja a posse coletiva e evita problemas na programação. </p> |

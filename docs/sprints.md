@@ -20,9 +20,9 @@ De acordo com a organização Scrum, as sprints serão realizadas quinzenalmente
 
 ## Sprint 1
 
-| Data início | Data fim |
+| Sprint | 0 |
 | ----------- | ----------- |
-| 03/10/2023 | 18/10/2023 |
+| Decisões do grupo | - Primeira reunião do grupo- Foi decidido por alto as tecnologias que seriam utilizadas- Foram decididos os papéis de cada integrante |
 
 A Sprint 1 define....
 

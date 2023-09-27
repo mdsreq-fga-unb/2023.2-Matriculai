@@ -14,7 +14,7 @@
 <p style="text-indent: 50px;text-align: justify;"> Por ser um projeto aplicado recentemente em uma realidade de escola pública, existe uma dificuldade de compreensão das disciplinas eletivas ofertadas e não há um consenso de como a contemplação dos alunos é realizada, o que dificulta o entendimento e adaptação de toda a comunidade escolar. </p>
 
 
-Espinha de peixe
+![Image](./images/diagrama.png)
 
 ## Declaração de posição de produto
 
