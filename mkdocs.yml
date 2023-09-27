@@ -1,8 +1,10 @@
 site_name: Matriculaí
 nav:
   - Home: 'index.md'
-  - Visão de Produto: 'visao_produto.md'
-  - Visão de Projeto: 'visao_projeto.md'
+  - Visão de produto e projeto: 
+    - Visão de produto: 'visao_produto.md'
+    - Visão de projeto: 'visao_projeto.md'
+    - Processos de desenvolvimento de software: 'desenvolvimento.md'
   - Sprints: 'sprints.md'
   - Entregas: 'entregas.md'
   - Lições Aprendidas: 'licoes.md'

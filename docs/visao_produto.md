@@ -20,18 +20,19 @@ Espinha de peixe
 
 <p style="text-indent: 50px;text-align: justify;"> O produto proposto é uma aplicação web que busca resolver o problema da gestão de disciplinas e de grade horária no novo modelo de ensino médio. O produto se diferencia dos demais concorrentes como o  Sigaa pelo público alvo de cada aplicação. O público alvo do Matriculaí será para os alunos da escola CEMTN. Nossa aplicação simplifica e economiza o tempo do estudante, além de dar uma maior visão para os alunos de quais matérias ele pode agregar a sua grade e a melhor forma de gerir suas aulas durante todo o ensino médio. </p>
 
-## Objetivos
-
-- Facilitar o desempenho organizacional da gestão da escola;
-- Auxiliar na adaptação dos alunos e da escola ao novo Ensino Médio.
-
-| Para| Centro de Ensino Médio Taguatinga Norte (CEMTN) |
+| Para | Centro de Ensino Médio Taguatinga Norte (CEMTN) |
 | ----- | ----- |
 | Quem | Deseja uma plataforma com funcionalidades que permitam a escolha e gestão de disciplinas ofertadas numa escola pública de Ensino Médio |
 | O Matriculaí |  É uma aplicação web |
 | Que | Facilita a matrícula e visualização de disciplinas de Ensino Médio, auxiliando na organização e desempenho |
 | Ao contrário | Do Sigaa |
 | Nosso produto | Fornece ao público do Ensino Médio um primeiro contato com uma ferramenta de gestão de disciplinas e grade horária |
+
+## Objetivos
+
+- Facilitar o desempenho organizacional da gestão da escola;
+- Auxiliar na adaptação dos alunos e da escola ao novo Ensino Médio.
+
 
 ## Tecnologias Utilizadas
 
