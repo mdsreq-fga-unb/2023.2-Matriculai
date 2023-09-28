@@ -14,7 +14,7 @@ Este projeto faz parte da Disciplina de Requisitos de Software, implementado pel
 
 ## 📂 Documentação
 
-[Clique aqui](https://sonda-engenharia-nr.vercel.app/) para acessar a documentação do projeto.
+[Clique aqui](https://mdsreq-fga-unb.github.io/2023.2-Matriculai/) para acessar a documentação do projeto.
 
 ## 👥 Equipe
 
