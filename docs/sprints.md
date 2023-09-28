@@ -20,10 +20,6 @@ De acordo com a organização Scrum, as sprints serão realizadas quinzenalmente
 
 ## Sprint 1
 
-| Sprint | 0 |
-| ----------- | ----------- |
-| Decisões do grupo | - Primeira reunião do grupo- Foi decidido por alto as tecnologias que seriam utilizadas- Foram decididos os papéis de cada integrante |
-
 A Sprint 1 define....
 
 | Eventos da Sprint | Atividades da Sprint |
