@@ -3,10 +3,31 @@
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
 | 25/09/2023 | 0.1 | Adicionando os processos de desenvolvimento | Júlia Yoshida |
+| 25/09/2023 | 0.2 | Atualizando atividades de engenharia de requisitos | Júlia Yoshida, Luana Ribeiro e Yasmim Oliveira |
 
 ## Metodologias
 
-<p style="text-indent: 50px;text-align: justify;"> No processo de desenvolvimento de uma aplicação, é importante ter em mente  que o êxito do projeto não se restringe apenas à codificação. O sucesso depende igualmente da identificação das características da aplicação, para que a partir disso, possamos escolher as metodologias que melhor atendem às nossas necessidades. Nesse contexto, entendendo que temos tempo e recursos limitados, escolhemos desenvolver nosso projeto a partir de uma abordagem ágil e de um ciclo de vida iterativo/incremental, visto que precisamos realizar pequenas entregas e que a constante comunicação entre a equipe de desenvolvimento e o cliente desempenha um papel fundamental para garantir que as demandas sejam atendidas de maneira eficaz. Assim, por fim, optamos por combinar duas metodologias para o nosso processo de desenvolvimento: Scrum e XP. A integração dessas abordagens oferece vantagens significativas que precisamos, como um processo ágil de desenvolvimento bem estruturado, entregas frequentes e aprimoramento da qualidade do código.  </p>
+|Abordagem|Ciclo de vida|Processo|
+|-|-|-|
+|Ágil|Iterativo/Incremental|Scrum/XP|
+
+<p style="text-indent: 50px;text-align: justify;"> No processo de desenvolvimento de uma aplicação, é importante ter em mente  que o êxito do projeto não se restringe apenas à codificação. O sucesso depende igualmente da identificação das características da aplicação, para que a partir disso, possamos escolher as metodologias que melhor atendem às nossas necessidades. </p>
+<p style="text-indent: 50px;text-align: justify;"> A grande diferença entre uma abordagem dirigida à plano para uma ágil é a limitação que cada projeto possui, para o Matriculaí suas limitações estão no tempo e nos recursos financeiros o que direciona o projeto para uma abordagem ágil. Ao afunilar o universo de processo de desenvolvimento após a escolha da abordagem, o ciclo de vida se atém ao contato constante (ou não) com o cliente que, particularmente, se dispôs a ter um contato frequente com a equipe. O processo se deu devido a familiaridade da equipe, ao foco em feedback constante e entregas de valor.  Na tabela a seguir estão as atividades de engenharia de requisitos que serão realizadas durante o desenvolvimento do software:  </p>
+
+|Nome da atividade|Método|Momento na Sprint|Ferramenta|Entrega|
+|-|-|-|-|-|
+|Elicitação e Descoberta|Reuniões com o cliente|- Sprint Review</br>- Sprint Planning|- Cliente</br>- Documentação sobre o Novo Ensino Médio|- Diagrama de Ishikawa</br>- Documentação da reunião com o cliente|
+|Análise e Consenso |- Estudo individual e reunião entre a equipe</br> - Reunião de confirmação com o stakeholder|- Sprint Planning</br>- Entre a Planning e a Review</br>- Sprint Review|- Documentação da reunião com o cliente</br> - Conteúdo acerca do tema|- Backlog de requisitos</br>- Backlog da sprint</br>-Documentação da validação do cliente|
+|Declaração|- História de usuário|- Sprint Planning</br>- Durante a sprint caso necessário|- Stakeholders </br>- Backlog da sprint|- Backlog de requisitos com histórias de usuário|
+|Representação|- Semiformal|- Sprint Planning</br>- Sprint Review|- Figma|- Protótipo|
+|Verificação e Validação|- Testes na aplicação e de validação do cliente</br>- Reunião com o cliente|- Testes durante a sprint</br>- Sprint Review|- Google forms</br>- Ferramentas de teste|- Documentação dos testes </br>- Documentação do feedback do cliente|
+|Organização e Atualização|Listagem dos requisitos</br>- Reuniões entre a equipe</br>- Reuniões com o stakeholder|- Sprint Planning</br>- Sprint Review</br>- Atividades durante a sprint|- Documentação da aplicação|- Documentação atualizada </br>- Aplicação atualizada|
+
+### Configurações do processo de engenharia de requisitos: Participativo
+
+|Alvo|Propósito|Tempo|
+|-|-|-|
+|Cliente específico|Exploratório|Iterativo|
 
 ## SCRUM
 
@@ -31,3 +52,7 @@
 | Toda a Equipe | <p style="text-align:justify"> Fomenta a colaboração entre todos os membros da equipe para resolver problemas e atingir os objetivos do projeto, o que resulta em maior produtividade e na redução de conflitos entre os membros.</p> |
 | Pequenas Versões | <p style="text-align:justify"> Tornam o acompanhamento do progresso do projeto mais claro e objetivo, facilitando a identificação mais rápida de problemas tanto para a equipe quanto para o cliente. </p> |
 | Padrões de codificação | <p style="text-align:justify"> Uma codificação padronizada facilita a comunicação, encoraja a posse coletiva e evita problemas na programação. </p> |
+
+## Representação Scrum/XP
+
+![Image](./images/sprint.jpg)

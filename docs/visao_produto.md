@@ -4,7 +4,7 @@
 
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
-| 25/09/2023 | 0.1 | Criando o Visão de Produto | Luana Ribeiro |
+| 25/09/2023 | 0.1 | Criando a visão de produto | Luana Ribeiro |
 | 25/09/2023 | 0.2 | Adicionando objetivos e declaração de posição de produto | Júlia Yoshida |
 
 ## Problema
