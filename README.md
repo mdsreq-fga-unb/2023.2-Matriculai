@@ -14,7 +14,7 @@ Este projeto faz parte da Disciplina de Requisitos de Software, implementado pel
 
 ## 📂 Documentação
 
-Acesse aqui a documentação do projeto.
+[Clique aqui](https://sonda-engenharia-nr.vercel.app/) para acessar a documentação do projeto.
 
 ## 👥 Equipe
 
