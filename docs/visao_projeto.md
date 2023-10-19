@@ -21,20 +21,20 @@
 
 |Sprint|Produto(Entrega)|Data Início|Data Fim|
 |--|--|--|--|
-|0|Visão do produto e projeto, vídeo de apresentação e GitPages|12/09/23|02/09/23|
-|1||03/10/23|18/10/23|
-|2||19/10/23|03/11/23|
-|3||04/11/23|19/11/23|
-|4||20/11/23|05/12/23|
-|5||06/12/23|21/12/23|
+|0|Material do seminário de processos e ciclos de vida, visão do produto e projeto, GitPages e vídeo de apresentação das entregas|12/09/23|02/10/23|
+|1|Backlog do produto|03/10/23|16/10/23|
+|2|Backlog do produto atualizado, backlog dos MVP's, visão do produto e projeto atualizado, GitPages atualizado e vídeo de apresentação das entregas|17/10/23|30/10/23|
+|3|Visão do produto e projeto atualizado e GitPages atualizado|31/10/23|13/11/23|
+|4|Entrega da Unidade 3|14/11/23|27/11/23|
+|5|Entrega da Unidade 4|28/11/23|11/12/23|
 
 ## Matriz de comunicação
 
 |Descrição|Área/Envolvidos|Periodicidade|Produtos Gerados|
 |--|--|--|--|
-|- Acompanhamento das Atividades em Andamento</br>- Acompanhamento dos Riscos, Compromissos, Ações Pendentes, Indicadores|- Equipe |- A cada três dias</br>- Quinzenal|- Ata de reunião (Sprints)</br>- Relatório de situação do projeto</br>- Sprint Planning e Retrospective (documentação) </br>- Issues (GitHub)|
-|- Comunicar situação do projeto|- Equipe</br>- Professor|- Semanal|- Documentação da Sprint</br>- Relatório de Situação do Projeto|
-|-Validação do produto|- Equipe </br>- Cliente |- Quinzenal|- Sprint Review (documentação)|
+|Acompanhamento das atividades em andamento, riscos, compromissos, ações pendentes e indicadores|Equipe|Diariamente|Ata de reunião das Sprints</br>Relatório de situação do projeto</br>Documentação da Sprint Planning e da Sprint Retrospective</br>Issues (GitHub)|
+|Comunicar situação do projeto|Equipe</br>Professor|Semanal|Documentação da Sprint</br>Relatório de Situação do Projeto|
+|Validação do produto|Equipe </br>Cliente |A cada duas semanas|Documentação da Sprint Review|
 
 ## Gerenciamento de riscos
 
@@ -44,6 +44,21 @@
 |Indisponibilidade do cliente| <p style="text-align: justify;">Manter uma comunicação clara com o cliente sobre os prazos e as necessidades do projeto.</p>|Baixo|
 |Problemas de interação da equipe| <p style="text-align: justify;">Utilização de uma metodologia ágil que enfatiza a comunicação frequente onde cada membro pode e deve se expressar.</p>|Médio|
 |Falta de habilidades técnicas dos membros da equipe| <p style="text-align: justify;">Identificar as lacunas técnicas com antecedência para definição de tecnologias de fácil entendimento para toda equipe.</p>|Médio|
+
+### Definição dos graus de risco: 
+
+1. Baixo: 
+    - Indica que a probabilidade de ocorrência de eventos indesejados é considerada pequena;
+    - As consequências de um evento de risco baixo costumam ser limitadas e gerenciáveis. 
+
+2. Médio:
+    - Indica uma probabilidade moderada de eventos indesejados;
+    - As consequências de um evento de risco médio podem variar de moderadas a significativas.
+
+
+3. Alto:
+    - Indica uma probabilidade significativa de ocorrência de eventos indesejados;
+    - As consequências de um evento de risco alto podem ter impactos significativos.
 
 ## Critérios de replanejamento
 
