@@ -6,16 +6,20 @@
 | ---------- | ----------- | -------------- | -------------- |
 | 25/09/2023 | 0.1 | Criando a visão de projeto | Luana Ribeiro |
 | 25/09/2023 | 0.2 | Adicionando organização do projeto | Júlia Yoshida e Luana Ribeiro |
+| 22/10/2023 | 0.3 | Edições organização do projeto | Luana Ribeiro |
 
 ## Organização do projeto
 
-| Papel | Atribuições | Responsável | Participantes |
-| --- | --- | --- | --- |
-| Scrum Master | <p style="text-align: justify;"> Lidera a equipe de desenvolvimento, fornece orientação técnica, garante a qualidade do código, arquiteta soluções e sistemas complexos e participa da tomada de decisões estratégicas para o desenvolvimento do software. </p> | Luana Ribeiro | Luana Ribeiro |
-| Dev Back-end | <p style="text-align: justify;"> Trabalha com as lógicas de negócio, armazenamento e recuperação de dados, autenticação, segurança, integração com outros sistemas, desenvolve APIs, bancos de dados e realiza testes de desempenho e escalabilidade. </p> | Júlia | TODOS |
-| Dev Front-end | <p style="text-align: justify;"> Desenvolve as interfaces de usuário e layouts intuitivos, otimiza a performance e usabilidade, testa a compatibilidade em diferentes navegadores dispositivos e tamanhos de telas. </p> | Yan | TODOS |
-| Dev CI/Test | <p style="text-align: justify;"> Automatiza o processo de integração, contribui para compilar e construir o software, integra o código-fonte, realiza análises estáticas e testes, gera relatórios e fornece feedback imediato aos desenvolvedores. </p> | Yasmim | TODOS |
-| Product Owner | <p style="text-align: justify;"> Determinar o Backlog do produto, priorizar os requisitos do projeto, participar de reuniões (Scrum Planning e Sprint Review) com a equipe de desenvolvimento, solucionar dúvidas em relação ao projeto, validar as entregas. </p> | Vinicius e Sidney | Vinicius e Sidney |
+O projeto é orientado através das Disciplinas da Engenharia de Requisitos, onde haverá um representante desse papel, porém todos participarão do processo.
+
+| Disciplina | Atribuições | Responsável |
+| --- | --- | --- |
+| Elicitação e Descoberta | <p style="text-align: justify;"> Identificar as questões relacionadas ao projeto, problemática, interessados, desejos e expectativas, além de possibilidades ou restrições do produto. </p> | Yan |
+| Análise e Consenso | <p style="text-align: justify;"> Analisar os requisitos em sua forma "bruta", refinar, retirar e aperfeiçoar os requisitos,além de confirmar o entendimento comum com todos os envolvidos no projeto. </p> | Julia |
+| Declaração | <p style="text-align: justify;"> Declarar e documentar os requisitos e comunicá-los entre os envolvidos. </p> | Yasmin |
+| Representação | <p style="text-align: justify;"> Representação dos Requisitos em modelos e/ou visualizações do produto. </p> | Algusto |
+| Verificação e Validação | <p style="text-align: justify;"> Validação: É a confirmação (ou não) de que os requisitos definem a solução correta conforme combinado. </p> Verificação: É a confirmação (ou não) de que os requisitos foram realizados da maneira correta. </p> | Luana |
+| Organização e Atualização | <p style="text-align: justify;"> Manter o conjunto dos requisitos do produto, adequadamente organizados e atualizados ao longo do tempo. </p> | Gabriel |
 
 ## Planejamento das fases e/ou iterações do projeto
 

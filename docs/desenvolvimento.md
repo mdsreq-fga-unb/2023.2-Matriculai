@@ -42,7 +42,7 @@
 ## Estratégias eXtremme Programming
 
 | Estratégia | Descrição |
-| --- | --- | 
+| --- | --- |
 | Propriedade Coletiva | <p style="text-align:justify"> Qualquer membro da equipe pode alterar qualquer parte do código da aplicação a qualquer momento. </p>|
 | Ritmo Sustentável | <p style="text-align:justify"> Evita a sobrecarga de trabalho e o esgotamento dos membros da equipe.  </p> |
 | Metáfora | <p style="text-align:justify"> Explicar o projeto de forma simples auxilia o time e o cliente a entender os elementos do sistema. </p> |
