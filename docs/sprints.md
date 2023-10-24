@@ -22,11 +22,11 @@ Data:  03/10/2023 a 17/10/2023
 
 | Cerimônia | Atividades da Sprint |
 | ------------------------------------- | ----------------------------------------------------- |
-| Sprint Planning |  Goal: Definir a organização do projeto   </br> Escopo: Organizacional       |
-| Backlog da Sprint | Analisar quais técnicas da elicitação e descoberta serão utilizadas; - Luana e Algusto</br>Aplicar as técnicas no contexto do projeto; - Todos </br> Realizar uma reunião com o cliente para aplicar a técnica de elicitação e descoberta escolhida. - Todos |
+| Sprint Planning | - Goal: Definir a organização do projeto   </br> - Escopo: Organizacional       |
+| Backlog da Sprint | - Analisar quais técnicas da elicitação e descoberta serão utilizadas. Responsáveis: Luana e Algusto</br>- Aplicar as técnicas no contexto do projeto. Responsáveis: toda a equipe. </br> - Realizar uma reunião com o cliente para aplicar a técnica de elicitação e descoberta escolhida. Responsáveis: toda a equipe. |
 | Sprint Review | - O cliente anaisou a lista de requisitos e passou suas considerações e correções com relação ao funcionamento do Novo Ensino Médio. </br> - Foi criado um grupo de comunicação para maior sincronia e comunicação |
 | Débitos Técnicos |  - As técnicas de ER ão foram passadas fielmente. |
-| Sprint Retrospective |  - Pontos Fortes: maior entrosamento da equipe, mais facilidade na comunicação com os membros da equipe. </br> Pontos Fracos: As atribuições da sprints não ficaram muito bem elucidadas entre os membros, havendo dificuldade no entendimento do que deveria ser feito, houve dificuldade para todos estarem ao mesmo tempo nas reuniões, atrasando o que era acordado. </br> - Pontos de melhoria: Melhor atribuição de papéis entre os membros |
+| Sprint Retrospective |  - Pontos Fortes: maior entrosamento da equipe, mais facilidade na comunicação com os membros da equipe. </br> - Pontos Fracos: As atribuições da sprints não ficaram muito bem elucidadas entre os membros, havendo dificuldade no entendimento do que deveria ser feito, houve dificuldade para todos estarem ao mesmo tempo nas reuniões, atrasando o que era acordado. </br> - Pontos de melhoria: Melhor atribuição de papéis entre os membros |
 
 ### XP
 
