@@ -6,7 +6,8 @@
 | ---------- | ----------- | -------------- | -------------- |
 | 27/09/2023 | 0.1 | Criando as sprints | Luana Ribeiro |
 | 19/10/2023 | 0.2 | Atualizando as sprints | Júlia Yoshida |
-| 22/10/2023 | 0.3 | DOcumentação da Sprint 1 | Luana Ribeiro |
+| 22/10/2023 | 0.3 | Documentação da Sprint 1 | Luana Ribeiro |
+| 24/10/2023 | 0.4 | Documentação da Sprint 2 | Júlia Yoshida e Luana Ribeiro |
 
 ## Sprint 0
 
@@ -43,7 +44,7 @@ Data:  17/10/2023 a 30/10/2023
 | Cerimônia | Atividades da Sprint |
 | ------------------------------------- | ----------------------------------------------------- |
 | Sprint Planning | - Goal: Backlog do produto atualizado, backlog dos MVP's, visão do produto e projeto atualizado, GitPages atualizado e vídeo de apresentação das entregas </br> - ER: Análise e Consenso, Representação e Verificação e Validação |
-| Backlog da Sprint | - Correção das issues. Responsáveis: Júlia, Luana, Yan e Yasmim. </br>- Correção a partir do feedback dos monitores. Responsáveis: Júlia, Luana, Yan e Yasmim.</br>- Tabela valor de negócio. Responsáveis: toda a equipe. </br> - Correção VeriVal do outro grupo. Responsável: Luana. </br>- Atualizar Pages. Responsáveis: Luana e Júlia. </br>- Finalizar as entregas da unidade 2. Responsáveis: toda a equipe. </br> - Refinar requisitos de acordo com o Safe corretamente. Responsáveis: Luana, Algusto e Gabriel.</br>- Validar o bakclog com o cliente</br>|
+| Backlog da Sprint | - Correção das issues. Responsáveis: Júlia, Luana, Yan e Yasmim. </br>- Correção a partir do feedback dos monitores. Responsáveis: Júlia, Luana, Yan e Yasmim.</br>- Tabela valor de negócio. Responsáveis: toda a equipe. </br> - Correção VeriVal do outro grupo. Responsável: Luana. </br>- Atualizar Pages. Responsáveis: Luana e Júlia. </br>- Finalizar as entregas da unidade 2. Responsáveis: toda a equipe. </br> - Refinar requisitos de acordo com o Safe corretamente. Responsáveis: Luana, Algusto e Gabriel.</br>- Validar o backlog com o cliente</br>|
 | Sprint Review |Não realizado|
 | Débitos Técnicos |Não realizado|
 | Sprint Retrospective |Não realizado|
