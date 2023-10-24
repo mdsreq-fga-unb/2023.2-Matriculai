@@ -16,7 +16,7 @@ Data: 12/09/2023 a 02/10/2023
 
 ## Sprint 1
 
-Data:  03/10/2023 a 17/10/2023
+Data:  03/10/2023 a 16/10/2023
 
 ### Scrum
 
@@ -35,3 +35,15 @@ Data:  03/10/2023 a 17/10/2023
 |Metáfora|Utilizamos o método da metáfora, para conseguirmos nos comunicar com o cliente de maneira mais simples.|
 |Propriedade coletiva|Utilizamos a propriedade coletiva, para que todos pudessem desenvolver o GitPages.|
 |Jogo de Planejamento|Utilizamos no início da Sprint, para priorizar as funcionalidades e definir as tarefas que serão realizadas.|
+
+## Sprint 2
+
+Data:  17/10/2023 a 30/10/2023
+
+| Cerimônia | Atividades da Sprint |
+| ------------------------------------- | ----------------------------------------------------- |
+| Sprint Planning | - Goal: Backlog do produto atualizado, backlog dos MVP's, visão do produto e projeto atualizado, GitPages atualizado e vídeo de apresentação das entregas </br> - ER: Análise e Consenso, Representação e Verificação e Validação |
+| Backlog da Sprint | - Correção das issues. Responsáveis: Júlia, Luana, Yan e Yasmim. </br>- Correção a partir do feedback dos monitores. Responsáveis: Júlia, Luana, Yan e Yasmim.</br>- Tabela valor de negócio. Responsáveis: toda a equipe. </br> - Correção VeriVal do outro grupo. Responsável: Luana. </br>- Atualizar Pages. Responsáveis: Luana e Júlia. </br>- Finalizar as entregas da unidade 2. Responsáveis: toda a equipe. </br> - Refinar requisitos de acordo com o Safe corretamente. Responsáveis: Luana, Algusto e Gabriel.</br>- Validar o bakclog com o cliente</br>|
+| Sprint Review |Não realizado|
+| Débitos Técnicos |Não realizado|
+| Sprint Retrospective |Não realizado|
