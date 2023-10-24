@@ -6,7 +6,8 @@ nav:
     - Visão de projeto: 'visao_projeto.md'
     - Processos de desenvolvimento de software: 'desenvolvimento.md'
   - Sprints: 'sprints.md'
-  - Entregas: 'entregas.md'
+  - Entregas: 
+    - Unidade 1: 'unidade1.md'
   - Lições Aprendidas: 'licoes.md'
 
 theme:
