@@ -10,7 +10,7 @@
 
 ## Organização do projeto
 
-O projeto é orientado através das Disciplinas da Engenharia de Requisitos, onde haverá um representante desse papel, porém todos participarão do processo.
+<p style="text-indent: 50px;text-align: justify;"> O projeto é orientado através das Disciplinas da Engenharia de Requisitos, onde haverá um representante desse papel, porém todos participarão do processo. </p>
 
 | Disciplina | Atribuições | Responsável |
 | --- | --- | --- |

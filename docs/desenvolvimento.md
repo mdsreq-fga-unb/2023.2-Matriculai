@@ -16,8 +16,8 @@
 
 |Nome da atividade|Método|Momento na Sprint|Ferramenta|Entrega|
 |-|-|-|-|-|
-|Elicitação e Descoberta|Reuniões com o cliente|- Sprint Review</br>- Sprint Planning|- Google Meet</br>- Notion|- Diagrama de Ishikawa</br>- Documentação da reunião com o cliente|
-|Análise e Consenso |- Estudo individual e reunião entre a equipe</br> - Reunião de confirmação com o stakeholder|- Sprint Planning</br>- Entre a Planning e a Review</br>- Sprint Review|- Google Meet</br> - Notion |- Backlog de requisitos</br>- Backlog da sprint</br>-Documentação da validação do cliente|
+|Elicitação e Descoberta|- Reuniões com o cliente|- Sprint Review</br>- Sprint Planning|- Google Meet</br>- Notion|- Diagrama de Ishikawa</br>- Documentação da reunião com o cliente|
+|Análise e Consenso |- Estudo individual e reunião entre a equipe</br> - Reunião de confirmação com o stakeholder|- Sprint Planning</br>- Entre a Planning e a Review</br>- Sprint Review|- Google Meet</br> - Notion |- Backlog de requisitos</br>- Backlog da sprint</br>- Documentação da validação do cliente|
 |Declaração|- História de usuário|- Sprint Planning</br>- Durante a sprint caso necessário|- Notion|- Backlog de requisitos com histórias de usuário|
 |Representação|- Prototipação|- Sprint Planning</br>- Sprint Review|- Figma|- Protótipo|
 |Verificação e Validação|- Testes na aplicação e de validação do cliente</br>- Reunião com o cliente|- Testes durante a sprint</br>- Sprint Review|- Google forms</br>- Ferramentas de teste|- Documentação dos testes </br>- Documentação do feedback do cliente|

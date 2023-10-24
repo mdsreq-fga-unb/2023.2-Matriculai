@@ -7,6 +7,7 @@
 | 25/09/2023 | 0.1 | Criando o Visão de Produto | Luana Ribeiro |
 | 25/09/2023 | 0.2 | Adicionando objetivos e declaração de posição de produto | Júlia Yoshida |
 | 22/10/2023 | 0.3 | Editando Declaração de Posição de Produto | Luana Ribeiro |
+| 24/10/2023 | 0.4 | Editando objetivos do produto | Júlia Yoshida |
 
 ## Problema
 
@@ -31,7 +32,18 @@
 
 ## Objetivos
 
-O objetivo principal do Matriculaí é a transformação digital do processo de matrículas em disciplinas do CEMTN, solucionando o problema de dificuldade na gestão da matrícula dos alunos, tanto para os coordenadores organizarem as matrículas e relacioná-las aos estudantes, quanto para os próprios alunos em si, ao realizarem sua escolha de disciplinas e visualizarem sua grade horária.
+### Objetivo geral
+
+<p style="text-indent: 50px;text-align: justify;"> O objetivo principal do Matriculaí é fornecer uma solução tecnológica para a gestão de matrículas no âmbito do Novo Ensino Médio, a fim de simplificar e aprimorar o processo de escolha de disciplinas tanto para os alunos como para os coordenadores da escola CEMTN.</p>
+
+### Objetivos específicos
+
+|Objetivo|Descrição|
+|-|-|
+| Facilitar a escolha de disciplinas | Permitir que os alunos possam explorar as disciplinas eletivas disponíveis, de forma mais clara e acessível, bem como fornecer informações detalhadas sobre cada disciplina, auxiliando na tomada de decisão. |
+| Agilizar o processo de matrícula | Reduzir o tempo e os esforços necessários para que os alunos efetuem suas matrículas, substituindo métodos manuais por um sistema eficiente e fácil de usar. |
+| Apoiar a coordenação escolar | Capacitar os coordenadores da escola CEMTN a gerenciar matrículas de forma eficaz, fornecendo ferramentas de acompanhamento para facilitar a administração do processo. |
+| Promover a eficiência da escola | Contribuir para a eficiência operacional da escola CEMTN, reduzindo a sobrecarga administrativa e simplificando a gestão das matrículas. |
 
 ## Tecnologias Utilizadas
 
