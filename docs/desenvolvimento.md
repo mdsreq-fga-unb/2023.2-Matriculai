@@ -38,7 +38,7 @@
 3. Os representantes do cliente estarão disponíveis e dispostos a participar do time de desenvolvimento? Sim.
 4. Existem questões culturais que possam afetar o desenvolvimento do sistema? Não.
 
-## Atividades de engenharia de requisitos
+## Atividades da engenharia de requisitos
 
 <p style="text-indent: 50px;text-align: justify;"> Na tabela a seguir estão as atividades de engenharia de requisitos que serão realizadas durante o desenvolvimento do software: </p>
 
@@ -52,6 +52,8 @@
 |Organização e Atualização|Listagem dos requisitos</br>- Reuniões entre a equipe</br>- Reuniões com o stakeholder|- Sprint Planning</br>- Sprint Review</br>- Atividades durante a sprint|- Notion</br>- Discord </br>- Google Meet|- Documentação atualizada </br>- Aplicação atualizada|
 
 ### Configurações do processo de engenharia de requisitos: Participativo
+
+<p style="text-indent: 50px;text-align: justify;"> Escolhemos o processo de engenharia de requisitos participativo, por estarmos trabalhando com uma metodologia ágil em um contexto em que temos um cliente específico e em que o foco é explorar os requisitos em uma série de iterações, tendo contato constante com o cliente.</p>
 
 |Alvo|Propósito|Tempo|
 |-|-|-|
