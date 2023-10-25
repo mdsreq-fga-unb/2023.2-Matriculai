@@ -3,7 +3,8 @@
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
 | 25/09/2023 | 0.1 | Adicionando os processos de desenvolvimento | Júlia Yoshida |
-| 25/09/2023 | 0.2 | Atualizando atividades de engenharia de requisitos | Júlia Yoshida, Luana Ribeiro e Yasmim Oliveira |
+| 25/09/2023 | 0.2 | Atualizando atividades de engenharia de requisitos | Júlia Yoshida, Luana Ribeiro, Yasmim Oliveira e Yan Luca |
+| 25/09/2023 | 0.3 | Detalhando o uso do Sommervile  | Júlia Yoshida |
 
 ## Metodologias
 
