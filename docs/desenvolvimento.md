@@ -3,7 +3,8 @@
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
 | 25/09/2023 | 0.1 | Adicionando os processos de desenvolvimento | Júlia Yoshida |
-| 25/09/2023 | 0.2 | Atualizando atividades de engenharia de requisitos | Júlia Yoshida, Luana Ribeiro e Yasmim Oliveira |
+| 25/09/2023 | 0.2 | Atualizando atividades de engenharia de requisitos | Júlia Yoshida, Luana Ribeiro, Yasmim Oliveira e Yan Luca |
+| 25/09/2023 | 0.3 | Detalhando o uso do Sommervile  | Júlia Yoshida |
 
 ## Metodologias
 
@@ -12,7 +13,35 @@
 |Ágil|Iterativo/Incremental|Scrum/XP|
 
 <p style="text-indent: 50px;text-align: justify;"> No processo de desenvolvimento de uma aplicação, é importante ter em mente  que o êxito do projeto não se restringe apenas à codificação. O sucesso depende igualmente da identificação das características da aplicação, para que a partir disso, possamos escolher as metodologias que melhor atendem às nossas necessidades. </p>
-<p style="text-indent: 50px;text-align: justify;"> A grande diferença entre uma abordagem dirigida à plano para uma ágil é a limitação que cada projeto possui, para o Matriculaí suas limitações estão no tempo e nos recursos financeiros o que direciona o projeto para uma abordagem ágil. Ao afunilar o universo de processo de desenvolvimento após a escolha da abordagem, o ciclo de vida se atém ao contato constante (ou não) com o cliente que, particularmente, se dispôs a ter um contato frequente com a equipe. O processo se deu ao utilizar o framework Sommerville que é um conjunto de perguntas de cárater técnico, organizacional e humano que nos proporcionou a segurança para eleger o Scrum/XP além de fatores como a familiaridade da equipe, o foco em feedback constante e entregas de valor.  Na tabela a seguir estão as atividades de engenharia de requisitos que serão realizadas durante o desenvolvimento do software:  </p>
+<p style="text-indent: 50px;text-align: justify;"> A grande diferença entre uma abordagem dirigida à plano para uma ágil é a limitação que cada projeto possui, para o Matriculaí suas limitações estão no tempo e nos recursos financeiros o que direciona o projeto para uma abordagem ágil. Ao afunilar o universo de processo de desenvolvimento após a escolha da abordagem, o ciclo de vida se atém ao contato constante (ou não) com o cliente que, particularmente, se dispôs a ter um contato frequente com a equipe. O processo se deu ao utilizar o framework Sommerville que é um conjunto de perguntas de cárater técnico, organizacional e humano que nos proporcionou a segurança para eleger o Scrum/XP além de fatores como a familiaridade da equipe, o foco em feedback constante e entregas de valor. </p>
+
+## Sommervile
+
+<p style="text-indent: 50px;text-align: justify;">A escolha da abordagem foi feita a partir dos critérios propostos pelo framework Sommervile. Para isso, respondemos às seguintes perguntas: </p>
+
+#### Perguntas técnicas
+
+1. Qual é o tamanho do sistema que está sendo desenvolvido? Pequeno.
+2. Que tipo de sistema está sendo desenvolvido? Solução Web. 
+3. Qual é a vida útil prevista para o sistema? Indefinido. 
+4. O sistema está sujeito a controle externo? Não. 
+
+#### Perguntas humanas
+1. Qual é o nível de competência dos projetistas e programadores do time de desenvolvimento? Júnior. 
+2. Como está organizado o time de desenvolvimento? Scrum Master, Dev Back e Front, CI Tester (responsabilidade compartilhada).
+3. Quais são as tecnologias disponíveis para apoiar o desenvolvimento do sistema? ReactJs, GitHub, Notion, Google Meet, MySQL, NodeJs.
+
+
+#### Perguntas organizacionas
+
+1. É importante ter uma especificação e um projeto (design) bem detalhados antes de passar para a implementação — talvez por motivos contratuais? Não.
+2. É realista uma estratégia de entrega incremental, na qual o software é entregue aos clientes ou outros stakeholders e um rápido feedback é obtido? Sim.
+3. Os representantes do cliente estarão disponíveis e dispostos a participar do time de desenvolvimento? Sim.
+4. Existem questões culturais que possam afetar o desenvolvimento do sistema? Não.
+
+## Atividades da engenharia de requisitos
+
+<p style="text-indent: 50px;text-align: justify;"> Na tabela a seguir estão as atividades de engenharia de requisitos que serão realizadas durante o desenvolvimento do software: </p>
 
 |Nome da atividade|Método|Momento na Sprint|Ferramenta|Entrega|
 |-|-|-|-|-|
@@ -24,6 +53,8 @@
 |Organização e Atualização|Listagem dos requisitos</br>- Reuniões entre a equipe</br>- Reuniões com o stakeholder|- Sprint Planning</br>- Sprint Review</br>- Atividades durante a sprint|- Notion</br>- Discord </br>- Google Meet|- Documentação atualizada </br>- Aplicação atualizada|
 
 ### Configurações do processo de engenharia de requisitos: Participativo
+
+<p style="text-indent: 50px;text-align: justify;"> Escolhemos o processo de engenharia de requisitos participativo, por estarmos trabalhando com uma metodologia ágil em um contexto em que temos um cliente específico e em que o foco é explorar os requisitos em uma série de iterações, tendo contato constante com o cliente.</p>
 
 |Alvo|Propósito|Tempo|
 |-|-|-|
