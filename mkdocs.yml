@@ -9,6 +9,7 @@ nav:
   - Entregas: 
     - Unidade 1: 'unidade1.md'
   - Lições Aprendidas: 'licoes.md'
+  - Backlog: 'backlog.md'
 
 theme:
   name: material
