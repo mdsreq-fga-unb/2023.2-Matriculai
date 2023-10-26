@@ -36,6 +36,17 @@
 | **[EP03]** Gestão de matrículas  | **[CA04]** Gestão do administrador com as matrículas | **[FE07]** Relatórios de matrículas  | **[US13]** Eu, como administrador, devo ser capaz de gerar uma lista de estudantes matriculados em uma trilha ou disciplina eletiva, para visualizar todos os estudantes matriculados|
 | **[EP04]** Gestão de dados  | **[CA05]** Tratamento de dados importados  | **[FE08]** Importação de dados | **[US14]** Eu, como administrador, desejo poder importar dados básicos dos estudantes (nome, ano escolar e matrícula) de uma fonte externa para o sistema, para realizar as matrículas no sistema. |
 
-### Backlog Priorizado
+## Valoração dos Épicos
+| Épico              | Complexidade Técnica | Valor de Negócio | Média |
+|--------------------|------------------|--------------|----------|
+| **[EP01]** Gestão de usuários da plataforma |3|4|3,5|
+| **[EP02]** Gestão de disciplinas|4|5|4,5|
+| **[EP03]** Gestão de matrículas |4|5|4,5|
+| **[EP04]** Gestão de dados |4|4|4|
+
+
+## Valoração das User Stories
+Organização das US por Épicos por ordem de média do VN (valor de negócio) e complexidade técnica.
+
 
 
