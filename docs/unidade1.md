@@ -5,11 +5,11 @@
 | 27/09/2023 | 0.1 | Adicionando os vídeos | Júlia Yoshida |
 | 23/10/2023 | 0.2 | Adicionando material de escolha do processo | Júlia Yoshida |
 
-### Vídeo Reunião com o Cliente
+### Vídeo - Reunião com o Cliente
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7Ph6t5wxlI?si=2gsnYh4nvo4c3ndK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-### Vídeo Entrega Unidade 1
+### Vídeo - Entrega da Unidade 1
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KLzakT7g40U?si=D7niWWWG0TqtxPAz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
