@@ -82,6 +82,7 @@ Organização das US por Épicos por ordem de média do VN (valor de negócio) e
 | **[EP01]** Gestão de usuários da plataforma   | **[US02]** Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.  |3|4|3,5|
 | **[EP04]** Gestão de dados  | **[US14]** Eu, como administrador, desejo poder importar dados básicos dos estudantes (nome, ano escolar e matrícula) de uma fonte externa para o sistema, para realizar as matrículas no sistema. | 5 | 5 | 5 |
 
+# MVPs
 ## MVP 1
 | Épico    | Capability     | Feature     | User Story  |
 |----------|----------------|-------------|-----|
@@ -92,7 +93,7 @@ Organização das US por Épicos por ordem de média do VN (valor de negócio) e
 | **[EP02]** Gestão de disciplinas  | **[CA02]** CRUD de disciplinas   | **[FE03]** Crud de trilhas  | **[US05]** Eu, como administrador, desejo poder criar uma nova trilha, para manter o catálogo atualizado.  |Facilitar a escolha de disciplinas|
 | **[EP02]** Gestão de disciplinas  | **[CA02]** CRUD de disciplinas   | **[FE03]** Crud de trilhas  | **[US06]** Eu, como administrador, desejo poder excluir uma trilha, para manter o catálogo atualizado.  |Facilitar a escolha de disciplinas|
 
-# MVP 2
+## MVP 2
 | Épico    | Capability     | Feature     | User Story  |
 |----------|----------------|-------------|-----|
 | **[EP03]** Gestão de matrículas  | **[CA03]** Gestão do estudante com suas matrículas   | **[FE04]** Solicitação de matrícula  | **[US07]** Eu, como estudante, desejo poder solicitar a matricula em uma trilha, para compor minha grade horária.|
