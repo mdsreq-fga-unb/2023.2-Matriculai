@@ -35,6 +35,7 @@
 | **[EP03]** Gestão de matrículas  | **[CA04]** Gestão do administrador com as matrículas | **[FE07]** Relatórios de matrículas  | **[US12]** Eu, como administrador, desejo ser capaz de fechar o período de matrícula, para realizar o processamento de matrículas.|Apoiar a coordenação escolar|
 | **[EP03]** Gestão de matrículas  | **[CA04]** Gestão do administrador com as matrículas | **[FE07]** Relatórios de matrículas  | **[US13]** Eu, como administrador, devo ser capaz de gerar uma lista de estudantes matriculados em uma trilha ou disciplina eletiva, para visualizar todos os estudantes matriculados|Apoiar a coordenação escolar|
 | **[EP04]** Gestão de dados  | **[CA05]** Tratamento de dados importados  | **[FE08]** Importação de dados | **[US14]** Eu, como administrador, desejo poder importar dados básicos dos estudantes (nome, ano escolar e matrícula) de uma fonte externa para o sistema, para realizar as matrículas no sistema. |Promover a eficiência da escola|
+
 ## Valoração
 Na etapa de valoração utilizamos dois indicadores: complexidade técnica e valor de negócio. Seus graus e significados podem ser vistos nas tabelas a seguir:
 
@@ -53,7 +54,8 @@ Na etapa de valoração utilizamos dois indicadores: complexidade técnica e val
 |3|A história traz um valor perceptível para o usuário ou produto, mas não é crítica. É útil, mas existem funcionalidades mais importantes.|
 |4|A história fornece um valor significativo ao usuário ou ao produto e é essencial para a funcionalidade ou experiência geral.|
 |5|A história é crítica, fundamental e proporciona um valor excepcional ao usuário ou produto. É uma alta prioridade e pode ter um impacto transformador.|
-### Valoração dos Épicos
+
+## Valoração dos Épicos
 | Épico              | Complexidade Técnica | Valor de Negócio | Média |
 |--------------------|------------------|--------------|----------|
 | **[EP01]** Gestão de usuários da plataforma |3|4|3,5|
@@ -62,7 +64,7 @@ Na etapa de valoração utilizamos dois indicadores: complexidade técnica e val
 | **[EP04]** Gestão de dados |4|4|4|
 
 
-### Valoração das User Stories
+## Valoração das User Stories
 Organização das US por Épicos por ordem de média do VN (valor de negócio) e complexidade técnica.
 
 | Épico |   US  | Complexidade Técnica | Valor de Negócio | Média |
