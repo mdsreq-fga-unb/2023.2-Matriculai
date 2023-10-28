@@ -21,6 +21,17 @@
 | Verificação e Validação | <p style="text-align: justify;"> Validação: É a confirmação (ou não) de que os requisitos definem a solução correta conforme combinado. </p> Verificação: É a confirmação (ou não) de que os requisitos foram realizados da maneira correta. </p> | Luana |
 | Organização e Atualização | <p style="text-align: justify;"> Manter o conjunto dos requisitos do produto, adequadamente organizados e atualizados ao longo do tempo. </p> | Gabriel |
 
+## Organização SCRUM
+
+|Papel|Atribuições|Responsável|Participantes|
+|---|---|---|---|
+|Desenvolvedor Back-End|Implementar o banco de dados, criar a arquitetura, garantir a segurança do aplicativo, aprimorar a performance do aplicativo.|Júlia Yoshida|Júlia Yoshida e Yasmim Rosa|
+|Desenvolvedor Front-End|Realizar os testes automatizados necessários, para garantir a qualidade e funcionamento de todas as partes do código e consequentemente do produto, por meio da integração contínua.|Algusto Caldas|Algusto Caldas e Yan Luca|
+|Desenvolvedor CI-Tester|Realizar os testes automatizados necessários, para garantir a qualidade e funcionamento de todas as partes do código e consequentemente do produto, por meio da integração contínua.|Gabriel Esteves|Gabriel Esteves e Luana Ribeiro|
+|Desenvolvedor Scrum Master|Facilitar a comunicação da equipe com o cliente, coordenar o processo de desenvolvimento, solucionar conflitos da equipe, garantir a qualidade do projeto.|Luana Ribeiro|Luana Ribeiro|
+|Product Owner|Determinar o Backlog do produto, priorizar os requisitos do projeto, participar de reuniões (Scrum Planning e Sprint Review) com a equipe de desenvolvimento, solucionar dúvidas em relação ao projeto, validar as entregas.|Sydney|Sydney|
+|Cliente|Validar as entregas.|Sydney|George Marsicano e Sydney|
+
 ## Planejamento das fases e/ou iterações do projeto
 
 |Sprint|Produto(Entrega)|Data Início|Data Fim|

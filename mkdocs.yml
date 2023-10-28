@@ -11,6 +11,8 @@ nav:
   - Entregas: 
     - Unidade 1: 'unidade1.md'
     - Unidade 2: 'unidade2.md'
+    - Unidade 3: 'unidade3.md'
+    - Unidade 4: 'unidade4.md'
 
 theme:
   name: material
