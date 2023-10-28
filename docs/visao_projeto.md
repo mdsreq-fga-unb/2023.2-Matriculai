@@ -7,7 +7,7 @@
 | 25/09/2023 | 0.1 | Criando a visão de projeto | Luana Ribeiro |
 | 25/09/2023 | 0.2 | Adicionando organização do projeto | Júlia Yoshida e Luana Ribeiro |
 | 22/10/2023 | 0.3 | Edições organização do projeto | Luana Ribeiro |
-| 28/10/2023 | 0.4 | Adicionando atribuições SCRUM | Júlia Yoshida |
+| 28/10/2023 | 0.4 | Adicionando atribuições SCRUM e corrigindo a matriz de comunicação | Júlia Yoshida |
 
 ## Organização do projeto
 
@@ -48,8 +48,9 @@
 
 |Descrição|Área/Envolvidos|Periodicidade|Produtos Gerados|
 |--|--|--|--|
-|Acompanhamento das atividades em andamento, riscos, compromissos, ações pendentes e indicadores|Equipe|Diariamente|Ata de reunião das Sprints</br>Relatório de situação do projeto</br>Documentação da Sprint Planning e da Sprint Retrospective</br>Issues (GitHub)|
-|Comunicar situação do projeto|Equipe</br>Professor|Semanal|Documentação da Sprint</br>Relatório de Situação do Projeto|
+|Atividades de planejamento (Sprint Planning)| Equipe| A cada duas semanas| Documentação da Sprint Planning|
+|Acompanhamento das atividades em andamento, riscos, compromissos, ações pendentes e indicadores|Equipe|Diariamente|Issues (GitHub)|
+|Comunicar situação do projeto|Equipe</br>Professor|Semanal|Documentação da Sprint</br>Relatório de situação da disciplina|
 |Validação do produto|Equipe </br>Cliente |A cada duas semanas|Documentação da Sprint Review|
 
 ## Gerenciamento de riscos
