@@ -7,6 +7,7 @@
 | 25/09/2023 | 0.1 | Criando a visão de projeto | Luana Ribeiro |
 | 25/09/2023 | 0.2 | Adicionando organização do projeto | Júlia Yoshida e Luana Ribeiro |
 | 22/10/2023 | 0.3 | Edições organização do projeto | Luana Ribeiro |
+| 28/10/2023 | 0.4 | Adicionando atribuições SCRUM | Júlia Yoshida |
 
 ## Organização do projeto
 
