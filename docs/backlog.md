@@ -6,15 +6,7 @@
 | 29/10/2023 | 0.2 | Mesclando células das tabelas | Júlia Yoshida |
 
 
-## Requisitos Não Funcionais
-| Tipo | Descrição |
-|------|-------------------------|
-|Interface|**[RNF01]** A interface deve conter modo de alto contraste e texto alternativo, com o propósito de deixar a aplicação mais acessível.|
-|Interface|**[RNF02]** A aplicação deve conter estilização das páginas com cores, fontes e ícones padronizados.|
-|Usabilidade|**[RNF03]** A aplicação deve ser responsiva, podendo ser acessada por diferentes tamanhos de telas.|
-|Confiabilidade| **[RNF04]** A aplicação deve proporcionar um ambiente suficientemente seguro para garantir que apenas aqueles registrados no sistema tenham acesso a ele.|
-|Suportabilidade| **[RNF05]** O sistema deve ser modular e seguir as melhores práticas de programação, facilitando a manutenção futura e permitindo que novas funcionalidades sejam adicionadas sem causar impacto negativo em outras partes do sistema.|
-|Implementação| **[RNF06]** A aplicação deve seguir regras para garantir que os dados inseridos no banco de dados estejam corretos e válidos. Isso pode envolver restrições de tipo de dados, validação de formato, faixas de valores aceitáveis e verificação de integridade referencial.|
+
 
 ## Requisitos Funcionais - Backlog SAFe
 
@@ -106,6 +98,15 @@
 	</tbody>
 </table>
 
+## Requisitos Não Funcionais
+| Tipo | Descrição |
+|------|-------------------------|
+|Usabilidade|**[RNF01]** A interface precisa ser verificável quanto à presença de um modo de alto contraste e texto alternativo, com o objetivo de garantir a acessibilidade aprimorada da aplicação.|
+|Usabilidade|**[RNF02]** A aplicação deve conter estilização das páginas com cores, fontes e ícones padronizados, de acordo com o os padões de interface definidos.|
+|Usabilidade|**[RNF03]** A aplicação precisa demonstrar responsividade, permitindo adaptação da tela em notebook, celular, tablet e monitores de PC .|
+|Confiabilidade| **[RNF04]** A aplicação deve garantir que apenas aqueles registrados no sistema tenham acesso a ele. Dessa forma, pessoas não registradas não poderão inserir credenciais aleatórias e conseguir logar.|
+|Suportabilidade| **[RNF05]** O sistema deve ser desenvolvido de forma modular, aderindo às melhores práticas de programação como padrão de identação, comentários, nomes de variáveis e funções, etc. com o objetivo de simplificar as operações de manutenção no futuro. Além disso, deve possibilitar a incorporação de novas funcionalidades sem ocasionar impactos adversos em outras áreas do sistema.|
+|Implementação| **[RNF06]** A aplicação deve seguir regras para garantir que os dados inseridos no banco de dados estejam corretos e válidos. Isso envolve restrições de tipo de dados, validação de formato, faixas de valores aceitáveis e verificação de integridade referencial.|
 
 ## Valoração
 Na etapa de valoração utilizamos dois indicadores: complexidade técnica e valor de negócio. Seus graus e significados podem ser vistos nas tabelas a seguir:
@@ -335,3 +336,21 @@ Organização das US por Épicos por ordem de média do VN (valor de negócio) e
 		</tr>
 	</tbody>
 </table>
+
+# DoR e DoD
+## DoR - Definition of Ready
+
+* O Requisito foi aceito por todos da equipe?
+* O levantamento de requisitos, análise e documentação, validação e verificação estão claros e disponíveis?
+* A priorização do Requisito com relação ao backlog foi realizada?
+* O Requisito é compreendido por todos da equipe ?
+* O Requisito está suficientemente detalhado, de acordo com o modelo de história de usuário, com critérios de aceitação claros e compreensíveis?
+* O Requisito foi aceito e validado pelo Product Owner?
+* A equipe está tecnicamente preparada para realizar o desenvolvimento?
+
+## DoD - Definition of Done
+
+* O Requisito foi implementado de acordo com o backlog e seus critérios ?
+* O Requisito passou pela Estratégia de Testes?
+* Sua integração com o resto do sistema gerou algum impacto negativo?
+* A documentação está devidamente realizada?
