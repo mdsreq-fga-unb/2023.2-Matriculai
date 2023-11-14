@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
     
     
       
@@ -24,10 +24,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.d451bc0e.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a5377069.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -542,15 +542,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos-nao-funcionais" class="md-nav__link">
-    Requisitos Não Funcionais
+  <a href="#requisitos-funcionais-backlog-safe" class="md-nav__link">
+    Requisitos Funcionais - Backlog SAFe
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos-funcionais-backlog-safe" class="md-nav__link">
-    Requisitos Funcionais - Backlog SAFe
+  <a href="#requisitos-nao-funcionais" class="md-nav__link">
+    Requisitos Não Funcionais
   </a>
   
 </li>
@@ -594,6 +594,33 @@
           <li class="md-nav__item">
   <a href="#mvp-2" class="md-nav__link">
     MVP 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dor-e-dod" class="md-nav__link">
+    DoR e DoD
+  </a>
+  
+    <nav class="md-nav" aria-label="DoR e DoD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dor-definition-of-ready" class="md-nav__link">
+    DoR - Definition of Ready
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dod-definition-of-done" class="md-nav__link">
+    DoD - Definition of Done
   </a>
   
 </li>
@@ -796,41 +823,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="requisitos-nao-funcionais">Requisitos Não Funcionais</h2>
-<table>
-<thead>
-<tr>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Interface</td>
-<td><strong>[RNF01]</strong> A interface deve conter modo de alto contraste e texto alternativo, com o propósito de deixar a aplicação mais acessível.</td>
-</tr>
-<tr>
-<td>Interface</td>
-<td><strong>[RNF02]</strong> A aplicação deve conter estilização das páginas com cores, fontes e ícones padronizados.</td>
-</tr>
-<tr>
-<td>Usabilidade</td>
-<td><strong>[RNF03]</strong> A aplicação deve ser responsiva, podendo ser acessada por diferentes tamanhos de telas.</td>
-</tr>
-<tr>
-<td>Confiabilidade</td>
-<td><strong>[RNF04]</strong> A aplicação deve proporcionar um ambiente suficientemente seguro para garantir que apenas aqueles registrados no sistema tenham acesso a ele.</td>
-</tr>
-<tr>
-<td>Suportabilidade</td>
-<td><strong>[RNF05]</strong> O sistema deve ser modular e seguir as melhores práticas de programação, facilitando a manutenção futura e permitindo que novas funcionalidades sejam adicionadas sem causar impacto negativo em outras partes do sistema.</td>
-</tr>
-<tr>
-<td>Implementação</td>
-<td><strong>[RNF06]</strong> A aplicação deve seguir regras para garantir que os dados inseridos no banco de dados estejam corretos e válidos. Isso pode envolver restrições de tipo de dados, validação de formato, faixas de valores aceitáveis e verificação de integridade referencial.</td>
-</tr>
-</tbody>
-</table>
 <h2 id="requisitos-funcionais-backlog-safe">Requisitos Funcionais - Backlog SAFe</h2>
 <table>
     <tbody>
@@ -920,6 +912,41 @@
     </tbody>
 </table>
 
+<h2 id="requisitos-nao-funcionais">Requisitos Não Funcionais</h2>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usabilidade</td>
+<td><strong>[RNF01]</strong> A interface precisa ser verificável quanto à presença de um modo de alto contraste e texto alternativo, com o objetivo de garantir a acessibilidade aprimorada da aplicação.</td>
+</tr>
+<tr>
+<td>Usabilidade</td>
+<td><strong>[RNF02]</strong> A aplicação deve conter estilização das páginas com cores, fontes e ícones padronizados, de acordo com o os padões de interface definidos.</td>
+</tr>
+<tr>
+<td>Usabilidade</td>
+<td><strong>[RNF03]</strong> A aplicação precisa demonstrar responsividade, permitindo adaptação da tela em notebook, celular, tablet e monitores de PC .</td>
+</tr>
+<tr>
+<td>Confiabilidade</td>
+<td><strong>[RNF04]</strong> A aplicação deve garantir que apenas aqueles registrados no sistema tenham acesso a ele. Dessa forma, pessoas não registradas não poderão inserir credenciais aleatórias e conseguir logar.</td>
+</tr>
+<tr>
+<td>Suportabilidade</td>
+<td><strong>[RNF05]</strong> O sistema deve ser desenvolvido de forma modular, aderindo às melhores práticas de programação como padrão de identação, comentários, nomes de variáveis e funções, etc. com o objetivo de simplificar as operações de manutenção no futuro. Além disso, deve possibilitar a incorporação de novas funcionalidades sem ocasionar impactos adversos em outras áreas do sistema.</td>
+</tr>
+<tr>
+<td>Implementação</td>
+<td><strong>[RNF06]</strong> A aplicação deve seguir regras para garantir que os dados inseridos no banco de dados estejam corretos e válidos. Isso envolve restrições de tipo de dados, validação de formato, faixas de valores aceitáveis e verificação de integridade referencial.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="valoracao">Valoração</h2>
 <p>Na etapa de valoração utilizamos dois indicadores: complexidade técnica e valor de negócio. Seus graus e significados podem ser vistos nas tabelas a seguir:</p>
 <table>
@@ -1219,6 +1246,25 @@
     </tbody>
 </table>
 
+<h1 id="dor-e-dod">DoR e DoD</h1>
+<h2 id="dor-definition-of-ready">DoR - Definition of Ready</h2>
+<ul>
+<li>O Requisito foi aceito por todos da equipe?</li>
+<li>O levantamento de requisitos, análise e documentação, validação e verificação estão claros e disponíveis?</li>
+<li>A priorização do Requisito com relação ao backlog foi realizada?</li>
+<li>O Requisito é compreendido por todos da equipe ?</li>
+<li>O Requisito está suficientemente detalhado, de acordo com o modelo de história de usuário, com critérios de aceitação claros e compreensíveis?</li>
+<li>O Requisito foi aceito e validado pelo Product Owner?</li>
+<li>A equipe está tecnicamente preparada para realizar o desenvolvimento?</li>
+</ul>
+<h2 id="dod-definition-of-done">DoD - Definition of Done</h2>
+<ul>
+<li>O Requisito foi implementado de acordo com o backlog e seus critérios ?</li>
+<li>O Requisito passou pela Estratégia de Testes?</li>
+<li>Sua integração com o resto do sistema gerou algum impacto negativo?</li>
+<li>A documentação está devidamente realizada?</li>
+</ul>
+
 
 
 
@@ -1233,10 +1279,10 @@
         </div>
         
           <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Voltar ao topo
-          </button>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Voltar ao topo
+</button>
         
       </main>
       
@@ -1258,10 +1304,11 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.integrate", "content.action.edit", "content.action.view", "navigation.top", "content.tabs.link", "content.code.annotation", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "toc.integrate", "content.action.edit", "content.action.view", "navigation.top", "content.tabs.link", "content.code.annotation", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.726fbb30.min.js"></script>
+      <script src="../assets/javascripts/bundle.81fa17fe.min.js"></script>
       
     
   </body>
