@@ -12,7 +12,7 @@
         <link rel="prev" href="../sprints/">
       
       
-        <link rel="next" href="../licoes/">
+        <link rel="next" href="../padroes/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -261,6 +261,23 @@
     
   
   Backlog
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../padroes/" class="md-tabs__link">
+        
+  
+    
+  
+  Padrões de interface
 
       </a>
     </li>
@@ -542,15 +559,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos-nao-funcionais" class="md-nav__link">
-    Requisitos Não Funcionais
+  <a href="#requisitos-funcionais-backlog-safe" class="md-nav__link">
+    Requisitos Funcionais - Backlog SAFe
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#requisitos-funcionais-backlog-safe" class="md-nav__link">
-    Requisitos Funcionais - Backlog SAFe
+  <a href="#requisitos-nao-funcionais" class="md-nav__link">
+    Requisitos Não Funcionais
   </a>
   
 </li>
@@ -603,10 +620,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#dor-e-dod" class="md-nav__link">
+    DoR e DoD
+  </a>
+  
+    <nav class="md-nav" aria-label="DoR e DoD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dor-definition-of-ready" class="md-nav__link">
+    DoR - Definition of Ready
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dod-definition-of-done" class="md-nav__link">
+    DoD - Definition of Done
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../padroes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Padrões de interface
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -648,10 +711,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -662,8 +725,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Entregas
           </label>
@@ -796,41 +859,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="requisitos-nao-funcionais">Requisitos Não Funcionais</h2>
-<table>
-<thead>
-<tr>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Interface</td>
-<td><strong>[RNF01]</strong> A interface deve conter modo de alto contraste e texto alternativo, com o propósito de deixar a aplicação mais acessível.</td>
-</tr>
-<tr>
-<td>Interface</td>
-<td><strong>[RNF02]</strong> A aplicação deve conter estilização das páginas com cores, fontes e ícones padronizados.</td>
-</tr>
-<tr>
-<td>Usabilidade</td>
-<td><strong>[RNF03]</strong> A aplicação deve ser responsiva, podendo ser acessada por diferentes tamanhos de telas.</td>
-</tr>
-<tr>
-<td>Confiabilidade</td>
-<td><strong>[RNF04]</strong> A aplicação deve proporcionar um ambiente suficientemente seguro para garantir que apenas aqueles registrados no sistema tenham acesso a ele.</td>
-</tr>
-<tr>
-<td>Suportabilidade</td>
-<td><strong>[RNF05]</strong> O sistema deve ser modular e seguir as melhores práticas de programação, facilitando a manutenção futura e permitindo que novas funcionalidades sejam adicionadas sem causar impacto negativo em outras partes do sistema.</td>
-</tr>
-<tr>
-<td>Implementação</td>
-<td><strong>[RNF06]</strong> A aplicação deve seguir regras para garantir que os dados inseridos no banco de dados estejam corretos e válidos. Isso pode envolver restrições de tipo de dados, validação de formato, faixas de valores aceitáveis e verificação de integridade referencial.</td>
-</tr>
-</tbody>
-</table>
 <h2 id="requisitos-funcionais-backlog-safe">Requisitos Funcionais - Backlog SAFe</h2>
 <table>
     <tbody>
@@ -854,9 +882,9 @@
 </td>
         </tr>
         <tr>
-            <td rowspan="4">[EP02] Gestão de disciplinas    </td>
-            <td rowspan="4">[CA02] CRUD de disciplinas  </td>
-            <td rowspan="2">[FE02] Crud de eletivas </td>
+            <td rowspan="4">[EP02] Gestão de matriz curricular</td>
+            <td rowspan="4">[CA02] Gestão de disciplinas    </td>
+            <td rowspan="2">[FE02] Gestão de eletivas   </td>
             <td>[US03] Eu, como administrador, desejo poder adicionar uma nova matéria eletiva ao catálogo do sistema, para manter o catálogo atualizado.   </td>
             <td rowspan="4">Facilitar a escolha de disciplinas
 </td>
@@ -866,7 +894,7 @@
 </td>
         </tr>
         <tr>
-            <td rowspan="2">[FE03] Crud de trilhas  </td>
+            <td rowspan="2">[FE03] Gestão de trilhas    </td>
             <td>[US05] Eu, como administrador, desejo poder criar uma nova trilha, para manter o catálogo atualizado.
 </td>
         </tr>
@@ -875,11 +903,11 @@
 </td>
         </tr>
         <tr>
-            <td rowspan="7">[EP03] Gestão de matrículas </td>
+            <td rowspan="6">[EP03] Gestão de matrículas </td>
             <td rowspan="4">[CA03] Gestão do estudante com suas matrículas  </td>
             <td rowspan="2">[FE04] Solicitação de matrícula </td>
             <td>[US07] Eu, como estudante, desejo poder solicitar a matrícula em uma trilha, para compor minha grade horária.   </td>
-            <td rowspan="7">Apoiar a coordenação escolar
+            <td rowspan="6">Apoiar a coordenação escolar
 </td>
         </tr>
         <tr>
@@ -887,39 +915,71 @@
 </td>
         </tr>
         <tr>
-            <td>[FE05] Visualização de oferta de disciplinas    </td>
+            <td>[FE04] Solicitação de matrícula </td>
             <td>[US09] Eu, como estudante, desejo poder visualizar trilhas e as disciplinas eletivas recomendadas, para me orientar na escolha das disciplinas.
 </td>
         </tr>
         <tr>
-            <td>[FE06] Visualização do resultado da solicitação de matrícula</td>
+            <td>[FE05] Visualização de oferta de disciplinas    </td>
             <td>[US10] Eu, como estudante, desejo poder visualizar o resultado da solicitação de matrícula, para saber se fui matriculado ou não.
 </td>
         </tr>
         <tr>
-            <td rowspan="3">[CA04] Gestão do administrador com as matrículas    </td>
-            <td rowspan="3">[FE07] Relatórios de matrículas </td>
-            <td>[US11] Eu, como administrador, desejo ser capaz de abrir o período de matrícula, para que os alunos possam se matricular.
+            <td rowspan="2">[CA04] Gestão do administrador com as matrículas    </td>
+            <td>[FE06] Visualização do resultado da solicitação de matrícula    </td>
+            <td>[US11] Eu, como administrador, desejo ser capaz de definir o período de matrícula, para que os alunos possam se matricular.
 </td>
         </tr>
         <tr>
-            <td>[US12] Eu, como administrador, desejo ser capaz de fechar o período de matrícula, para realizar o processamento de matrículas.
-</td>
-        </tr>
-        <tr>
-            <td>[US13] Eu, como administrador, devo ser capaz de gerar uma lista de estudantes matriculados em uma trilha ou disciplina eletiva, para visualizar todos os estudantes matriculados
+            <td>[FE07] Relatórios de matrículas </td>
+            <td>[US12] Eu, como administrador, devo ser capaz de gerar uma lista de estudantes matriculados em uma trilha ou disciplina eletiva, para visualizar todos os estudantes matriculados
 </td>
         </tr>
         <tr>
             <td>[EP04] Gestão de dados  </td>
             <td>[CA05] Tratamento de dados importados   </td>
             <td>[FE08] Importação de dados  </td>
-            <td>[US14] Eu, como administrador, desejo poder importar dados básicos dos estudantes (nome, ano escolar e matrícula) de uma fonte externa para o sistema, para realizar as matrículas no sistema.  </td>
+            <td>[US13] Eu, como administrador, desejo poder importar dados básicos dos estudantes (nome, ano escolar e matrícula) de uma fonte externa para o sistema, para realizar as matrículas no sistema.  </td>
             <td>Promover a eficiência da escola</td>
         </tr>
     </tbody>
 </table>
 
+<h2 id="requisitos-nao-funcionais">Requisitos Não Funcionais</h2>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usabilidade</td>
+<td><strong>[RNF01]</strong> A interface precisa ser verificável quanto à presença de um modo de alto contraste e texto alternativo, com o objetivo de garantir a acessibilidade aprimorada da aplicação.</td>
+</tr>
+<tr>
+<td>Usabilidade</td>
+<td><strong>[RNF02]</strong> A aplicação deve conter estilização das páginas com cores, fontes e ícones padronizados, de acordo com o os padões de interface definidos.</td>
+</tr>
+<tr>
+<td>Usabilidade</td>
+<td><strong>[RNF03]</strong> A aplicação precisa demonstrar responsividade, permitindo adaptação da tela em notebook, celular, tablet e monitores de PC .</td>
+</tr>
+<tr>
+<td>Confiabilidade</td>
+<td><strong>[RNF04]</strong> A aplicação deve garantir que apenas aqueles registrados no sistema tenham acesso a ele. Dessa forma, pessoas não registradas não poderão inserir credenciais aleatórias e conseguir logar.</td>
+</tr>
+<tr>
+<td>Suportabilidade</td>
+<td><strong>[RNF05]</strong> O sistema deve ser desenvolvido de forma modular, aderindo às melhores práticas de programação como padrão de identação, comentários, nomes de variáveis e funções, etc. com o objetivo de simplificar as operações de manutenção no futuro. Além disso, deve possibilitar a incorporação de novas funcionalidades sem ocasionar impactos adversos em outras áreas do sistema.</td>
+</tr>
+<tr>
+<td>Implementação</td>
+<td><strong>[RNF06]</strong> A aplicação deve seguir regras para garantir que os dados inseridos no banco de dados estejam corretos e válidos. Isso envolve restrições de tipo de dados, validação de formato, faixas de valores aceitáveis e verificação de integridade referencial.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="valoracao">Valoração</h2>
 <p>Na etapa de valoração utilizamos dois indicadores: complexidade técnica e valor de negócio. Seus graus e significados podem ser vistos nas tabelas a seguir:</p>
 <table>
@@ -1000,7 +1060,7 @@
 <td>3,5</td>
 </tr>
 <tr>
-<td><strong>[EP02]</strong> Gestão de disciplinas</td>
+<td><strong>[EP02]</strong> Gestão de matriz curricular</td>
 <td>4</td>
 <td>5</td>
 <td>4,5</td>
@@ -1026,94 +1086,88 @@
         <tr>
             <td>Épico</td>
             <td>US</td>
-            <td>Complexidade Técnica    </td>
-            <td>Valor de Negócio    </td>
+            <td>Complexidade Técnica</td>
+            <td>Valor de Negócio</td>
             <td>Média</td>
         </tr>
         <tr>
-            <td rowspan="4">[EP02] Gestão de disciplinas    </td>
-            <td>[US03] Eu, como administrador, desejo poder adicionar uma nova matéria eletiva ao catálogo do sistema, para manter o catálogo atualizado.   </td>
+            <td rowspan="4">[EP02] Gestão de matriz curricular</td>
+            <td>[US03] Eu, como administrador, desejo poder adicionar uma nova matéria eletiva ao catálogo do sistema, para manter o catálogo atualizado.</td>
             <td>2</td>
             <td>5</td>
             <td>3,5</td>
         </tr>
         <tr>
-            <td>[US04] Eu, como administrador, desejo poder remover uma matéria eletiva do catálogo do sistema, para manter o catálogo atualizado.  </td>
+            <td>[US04] Eu, como administrador, desejo poder remover uma matéria eletiva do catálogo do sistema, para manter o catálogo atualizado.</td>
             <td>2</td>
             <td>5</td>
             <td>3,5</td>
         </tr>
         <tr>
-            <td>[US05] Eu, como administrador, desejo poder criar uma nova trilha, para manter o catálogo atualizado.   </td>
+            <td>[US05] Eu, como administrador, desejo poder criar uma nova trilha, para manter o catálogo atualizado.</td>
             <td>3</td>
             <td>5</td>
             <td>4</td>
         </tr>
         <tr>
-            <td>[US06] Eu, como administrador, desejo poder excluir uma trilha, para manter o catálogo atualizado.  </td>
+            <td>[US06] Eu, como administrador, desejo poder excluir uma trilha, para manter o catálogo atualizado.</td>
             <td>2</td>
             <td>5</td>
             <td>3,5</td>
         </tr>
         <tr>
-            <td rowspan="7">[EP03] Gestão de matrículas </td>
-            <td>[US07] Eu, como estudante, desejo poder solicitar a matricula em uma trilha, para compor minha grade horária.   </td>
+            <td rowspan="6">[EP03] Gestão de matrículas</td>
+            <td>[US07] Eu, como estudante, desejo poder solicitar a matricula em uma trilha, para compor minha grade horária.</td>
             <td>3</td>
             <td>5</td>
             <td>4</td>
         </tr>
         <tr>
-            <td>[US08] Eu, como estudante, desejo poder solicitar a matricula em disciplinas eletivas disponíveis, para compor minha grade horária. </td>
+            <td>[US08] Eu, como estudante, desejo poder solicitar a matricula em disciplinas eletivas disponíveis, para compor minha grade horária.</td>
             <td>3</td>
             <td>5</td>
             <td>4</td>
         </tr>
         <tr>
-            <td>[US09] Eu, como estudante, desejo poder visualizar trilhas e as disciplinas eletivas recomendadas, para me orientar na escolha das disciplinas. </td>
+            <td>[US09] Eu, como estudante, desejo poder visualizar trilhas e as disciplinas eletivas recomendadas, para me orientar na escolha das disciplinas.</td>
             <td>2</td>
             <td>4</td>
             <td>3</td>
         </tr>
         <tr>
-            <td>[US10] Eu, como estudante, desejo poder viualizar o resultado das minhas solicitaçoes de matricula, para saber se fui matriculado ou não.   </td>
+            <td>[US10] Eu, como estudante, desejo poder viualizar o resultado das minhas solicitaçoes de matricula, para saber se fui matriculado ou não.</td>
             <td>3</td>
             <td>4</td>
             <td>3,5</td>
         </tr>
         <tr>
-            <td>[US11] Eu, como administrador, desejo ser capaz de abrir o período de matrícula, para que os alunos possam se matricular.   </td>
+            <td>[US11] Eu, como administrador, desejo ser capaz de abrir o período de matrícula, para que os alunos possam se matricular.</td>
             <td>4</td>
             <td>5</td>
             <td>4,5</td>
         </tr>
         <tr>
-            <td>[US12] Eu, como administrador, desejo ser capaz de fechar o período de matrícula, para realizar o processamento de matrículas.  </td>
-            <td>4</td>
-            <td>5</td>
-            <td>4,5</td>
-        </tr>
-        <tr>
-            <td>[US13] Eu, como administrador, devo ser capaz de gerar uma lista de estudantes matriculados em uma trilha ou disciplina eletiva, para visualizar todos os estudantes matriculados   </td>
+            <td>[US12] Eu, como administrador, devo ser capaz de gerar uma lista de estudantes matriculados em uma trilha ou disciplina eletiva, para visualizar todos os estudantes matriculados.</td>
             <td>4</td>
             <td>4</td>
             <td>3,5</td>
         </tr>
         <tr>
-            <td rowspan="2">[EP01] Gestão de usuários da plataforma </td>
-            <td>[US01] Eu, como usuário, desejo poder inserir minhas credenciais (nome de usuário e senha) para acessar o sistema e utilizar os recursos disponíveis.   </td>
+            <td rowspan="2">[EP01] Gestão de usuários da plataforma</td>
+            <td>[US01] Eu, como usuário, desejo poder inserir minhas credenciais (nome de usuário e senha) para acessar o sistema e utilizar os recursos disponíveis.</td>
             <td>3</td>
             <td>4</td>
             <td>3,5</td>
         </tr>
         <tr>
-            <td>[US02] Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.   </td>
+            <td>[US02] Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.</td>
             <td>3</td>
             <td>4</td>
             <td>3,5</td>
         </tr>
         <tr>
-            <td>[EP04] Gestão de dados  </td>
-            <td>[US14] Eu, como administrador, desejo poder importar dados básicos dos estudantes (nome, ano escolar e matrícula) de uma fonte externa para o sistema, para realizar as matrículas no sistema.  </td>
+            <td>[EP04] Gestão de dados</td>
+            <td>[US13] Eu, como administrador, desejo poder importar dados básicos dos estudantes (nome, ano escolar e matrícula) de uma fonte externa para o sistema, para realizar as matrículas no sistema.</td>
             <td>5</td>
             <td>5</td>
             <td>5</td>
@@ -1124,114 +1178,130 @@
 <h1 id="mvps">MVPs</h1>
 <h2 id="mvp-1">MVP 1</h2>
 <table>
-<thead>
-<tr>
-<th>Épico</th>
-<th>Capability</th>
-<th>Feature</th>
-<th>User Story</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>[EP01]</strong> Gestão de usuários da plataforma</td>
-<td><strong>[CA01]</strong> Gestão de acesso</td>
-<td><strong>[FE01]</strong> Acesso a plataforma</td>
-<td><strong>[US01]</strong> Eu, como usuário, desejo poder inserir minhas credenciais (nome de usuário e senha) para acessar o sistema e utilizar os recursos disponíveis.</td>
-</tr>
-<tr>
-<td><strong>[EP01]</strong> Gestão de usuários da plataforma</td>
-<td><strong>[CA01]</strong> Gestão de acesso</td>
-<td><strong>[FE01]</strong> Acesso a plataforma</td>
-<td><strong>[US02]</strong> Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.</td>
-</tr>
-<tr>
-<td><strong>[EP02]</strong> Gestão de disciplinas</td>
-<td><strong>[CA02]</strong> CRUD de disciplinas</td>
-<td><strong>[FE02]</strong> Crud de eletivas</td>
-<td><strong>[US03]</strong> Eu, como administrador, desejo poder adicionar uma nova matéria eletiva ao catálogo do sistema, para manter o catálogo atualizado.</td>
-</tr>
-<tr>
-<td><strong>[EP02]</strong> Gestão de disciplinas</td>
-<td><strong>[CA02]</strong> CRUD de disciplinas</td>
-<td><strong>[FE02]</strong> Crud de eletivas</td>
-<td><strong>[US04]</strong> Eu, como administrador, desejo poder remover uma matéria eletiva do catálogo do sistema, para manter o catálogo atualizado.</td>
-</tr>
-<tr>
-<td><strong>[EP02]</strong> Gestão de disciplinas</td>
-<td><strong>[CA02]</strong> CRUD de disciplinas</td>
-<td><strong>[FE03]</strong> Crud de trilhas</td>
-<td><strong>[US05]</strong> Eu, como administrador, desejo poder criar uma nova trilha, para manter o catálogo atualizado.</td>
-</tr>
-<tr>
-<td><strong>[EP02]</strong> Gestão de disciplinas</td>
-<td><strong>[CA02]</strong> CRUD de disciplinas</td>
-<td><strong>[FE03]</strong> Crud de trilhas</td>
-<td><strong>[US06]</strong> Eu, como administrador, desejo poder excluir uma trilha, para manter o catálogo atualizado.</td>
-</tr>
-</tbody>
+    <tbody>
+        <tr>
+            <td>Épico</td>
+            <td>Capability</td>
+            <td>Feature </td>
+            <td>User Story
+</td>
+            <td>Critérios de aceitação</td>
+        </tr>
+        <tr>
+            <td rowspan="2">[EP01] Gestão de usuários da plataforma </td>
+            <td rowspan="2">[CA01] Gestão de acesso </td>
+            <td rowspan="2">[FE01] Acesso a plataforma  </td>
+            <td>[US01] Eu, como usuário, desejo poder inserir minhas credenciais (nome de usuário e senha) para acessar o sistema e utilizar os recursos disponíveis.
+</td>
+            <td>- O nome de usuário deve estar devidamente registrado no banco de dados do sistema;</br>- O usuário deve receber uma mensagem de negação do acesso, caso suas credenciais estejam incorretas.</td>
+        </tr>
+        <tr>
+            <td>[US02] Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.
+</td>
+            <td>- O usuário deve receber uma mensagem de confirmação para ter certeza de que deseja sair do sistema. </td>
+        </tr>
+        <tr>
+            <td rowspan="4">[EP02] Gestão de matriz curricular</td>
+            <td rowspan="4">[CA02] Gestão de disciplinas    </td>
+            <td rowspan="2">[FE02] Gestão de eletivas   </td>
+            <td>[US03] Eu, como administrador, desejo poder adicionar uma nova matéria eletiva ao catálogo do sistema, para manter o catálogo atualizado.
+</td>
+            <td>Devem ser preenchidos obrigatoriamente os campos:</br>- Nome da eletiva(de 3até 40 caracteres);</br>- Breve descrição(até 150 caracteres);</br>- Ano letivo(1, 2 ou 3);</br>- Professor responsável (10 a 30 caracteres);</br>- Número de vagas(mínimo 15 e máximo 30);</br>- Horário da disciplina(1º a 5º);</br>- Código da sala de aula;</br>- Deve ser recebida uma mensagem de confirmação ou não do cadastro da eletiva.</td>
+        </tr>
+        <tr>
+            <td>[US04] Eu, como administrador, desejo poder remover uma matéria eletiva do catálogo do sistema, para manter o catálogo atualizado.
+</td>
+            <td>- Deve aparecer uma lista de todas as matérias eletivas do sistema, em ordem alfabética, contendo o ano letivo de cada uma; </br>- Deve ser possível selecionar as matérias eletivas ao clicar na caixa de seleção ao lado delas; </br>- Deve ser possível excluir as eletivas selecionadas ao clicar no botão de exclusão; </br>- Deve aparecer uma mensagem de confirmação para que o usuário possa confirmar ou cancelar a exclusão da matéria eletiva do sistema. </td>
+        </tr>
+        <tr>
+            <td rowspan="2">[FE03] Gestão de trilhas    </td>
+            <td>[US05] Eu, como administrador, desejo poder criar uma nova trilha, para manter o catálogo atualizado.
+</td>
+            <td>Devem ser preenchidos obrigatoriamente os campos:</br>- Nome da trilha(entre 3 e 40 caracteres);</br>- Breve descrição(entre 10 e 150 caracteres);</br>- Selecionar eletivas relacionada;</br>- Ano letivo(1, 2 ou 3).</br>- Deve ser recebida uma mensagem de confirmação ou não do cadastro da trilha.</td>
+        </tr>
+        <tr>
+            <td>[US06] Eu, como administrador, desejo poder excluir uma trilha, para manter o catálogo atualizado.</td>
+            <td>- Deve aparecer uma lista de todas as trilhas do sistema, em ordem alfabética, contendo o ano letivo de cada uma; </br>- Deve ser possível selecionar as trilhas ao clicar na caixa de seleção ao lado delas; </br>- Deve ser possível excluir as trilhas selecionadas ao clicar no botão de exclusão; </br>- Deve aparecer uma mensagem de confirmação para que o usuário possa confirmar ou cancelar a exclusão da trilha do sistema. </td>
+        </tr>
+    </tbody>
 </table>
+
 <h2 id="mvp-2">MVP 2</h2>
 <table>
-<thead>
-<tr>
-<th>Épico</th>
-<th>Capability</th>
-<th>Feature</th>
-<th>User Story</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>[EP03]</strong> Gestão de matrículas</td>
-<td><strong>[CA03]</strong> Gestão do estudante com suas matrículas</td>
-<td><strong>[FE04]</strong> Solicitação de matrícula</td>
-<td><strong>[US07]</strong> Eu, como estudante, desejo poder solicitar a matricula em uma trilha, para compor minha grade horária.</td>
-</tr>
-<tr>
-<td><strong>[EP03]</strong> Gestão de matrículas</td>
-<td><strong>[CA03]</strong> Gestão do estudante com suas matrículas</td>
-<td><strong>[FE04]</strong> Solicitação de matrícula</td>
-<td><strong>[US08]</strong> Eu, como estudante, desejo poder solicitar a matricula em disciplinas eletivas disponíveis, para compor minha grade horária.</td>
-</tr>
-<tr>
-<td><strong>[EP03]</strong> Gestão de matrículas</td>
-<td><strong>[CA03]</strong> Gestão do estudante com suas matrículas</td>
-<td><strong>[FE05]</strong> Visualização de oferta de disciplinas</td>
-<td><strong>[US09]</strong> Eu, como estudante, desejo poder visualizar trilhas e as disciplinas eletivas recomendadas, para me orientar na escolha das disciplinas.</td>
-</tr>
-<tr>
-<td><strong>[EP03]</strong> Gestão de matrículas</td>
-<td><strong>[CA03]</strong> Gestão do estudante com suas matrículas</td>
-<td><strong>[FE06]</strong> Visualização do resultado da solicitação de matrícula</td>
-<td><strong>[US10]</strong> Eu, como estudante, desejo poder viualizar o resultado das minhas solicitacoes de matricula, para saber se fui matriculado ou não.</td>
-</tr>
-<tr>
-<td><strong>[EP03]</strong> Gestão de matrículas</td>
-<td><strong>[CA04]</strong> Gestão do administrador com as matrículas</td>
-<td><strong>[FE07]</strong> Relatórios de matrículas</td>
-<td><strong>[US11]</strong> Eu, como administrador, desejo ser capaz de abrir o período de matrícula, para que os alunos possam se matricular.</td>
-</tr>
-<tr>
-<td><strong>[EP03]</strong> Gestão de matrículas</td>
-<td><strong>[CA04]</strong> Gestão do administrador com as matrículas</td>
-<td><strong>[FE07]</strong> Relatórios de matrículas</td>
-<td><strong>[US12]</strong> Eu, como administrador, desejo ser capaz de fechar o período de matrícula, para realizar o processamento de matrículas.</td>
-</tr>
-<tr>
-<td><strong>[EP03]</strong> Gestão de matrículas</td>
-<td><strong>[CA04]</strong> Gestão do administrador com as matrículas</td>
-<td><strong>[FE07]</strong> Relatórios de matrículas</td>
-<td><strong>[US13]</strong> Eu, como administrador, devo ser capaz de gerar uma lista de estudantes matriculados em uma trilha ou disciplina eletiva, para visualizar todos os estudantes matriculados</td>
-</tr>
-<tr>
-<td><strong>[EP04]</strong> Gestão de dados</td>
-<td><strong>[CA05]</strong> Tratamento de dados importados</td>
-<td><strong>[FE08]</strong> Importação de dados</td>
-<td><strong>[US14]</strong> Eu, como administrador, desejo poder importar dados básicos dos estudantes (nome, ano escolar e matrícula) de uma fonte externa para o sistema, para realizar as matrículas no sistema.</td>
-</tr>
-</tbody>
+    <tbody>
+        <tr>
+            <td>Épico</td>
+            <td>Capability  </td>
+            <td>Feature</td>
+            <td>User Story
+</td>
+            <td>Critérios de aceitação</td>
+        </tr>
+        <tr>
+            <td rowspan="6">[EP03] Gestão de matrículas </td>
+            <td rowspan="4">[CA03] Gestão do estudante com suas matrículas  </td>
+            <td rowspan="2">[FE04] Solicitação de matrícula </td>
+            <td>[US07] Eu, como estudante, desejo poder solicitar a matricula em uma trilha, para compor minha grade horária.
+</td>
+            <td>- Se o aluno não estiver dentro do período letivo do 2º ano, ele não poderá solicitar matrícula na trilha;</br>- Deve ser apresentada uma mensagem de confirmação ou não da solicitação de matrícula.</td>
+        </tr>
+        <tr>
+            <td>[US08] Eu, como estudante, desejo poder solicitar a matricula em disciplinas eletivas disponíveis, para compor minha grade horária.
+</td>
+            <td>- Caso 1 (aluno do 1° ano):  o aluno poderá escolher 6 matérias eletivas, sendo 1 o Projeto de Vida obrigatoriamente;</br>- Caso 2 (aluno do 2° ano):  o aluno deverá escolher 4 eletivas, sendo 1 o Projeto de Vida obrigatoriamente;</br>- Caso 3 (aluno do 3° ano):  o aluno deverá escolher 4 eletivas sendo 1, o Projeto de Vida obrigatoriamente;</br>- Se o aluno não estiver dentro do caso do período letivo da trilha, ele não poderá solicitar matrícula na eletiva;</br>- Deve ser apresentada uma mensagem de confirmação ou não da solicitação de matrícula;</td>
+        </tr>
+        <tr>
+            <td>[FE05] Visualização de oferta de disciplinas    </td>
+            <td>[US09] Eu, como estudante, desejo poder visualizar trilhas e as disciplinas eletivas recomendadas, para me orientar na escolha das disciplinas.
+</td>
+            <td>Deve ser apresentada uma lista de trilhas contendo as seguintes informações:</br>- Nome da trilha(até 40 caracteres);</br>- Descrição(até 150 caracteres);</br>-  unidade curricular;</br>- Eletivas relacionadas;</br>Deve ser apresentada uma lista de eletivas, em ordem crescente do ano letivo, contendo as seguintes informações:</br>- Mome da eletiva(até 40 caracteres);</br>- Descrição(até 150 caractres);</br>- Ano letivo(1, 2 ou 3);</br>- Professor responsável(nome e sobrenome);</br>- Número de vagas;</br>- Horário da disciplina(formato horas:minutos);</br>- Código da sala de aula.</td>
+        </tr>
+        <tr>
+            <td>[FE06] Visualização do resultado da solicitação de matrícula    </td>
+            <td>[US10] Eu, como estudante, desejo poder viualizar o resultado das minhas solicitacoes de matrícula, para saber se fui matriculado ou não.
+</td>
+            <td>- Deve ser apresentado uma lista com as disciplinas homologadas e não-homologadas, organizadas em uma tabela com os nomes das disciplinas e o status(deferida ou indeferida), organizadas primeiramente por status e depois por ordem alfabética;</td>
+        </tr>
+        <tr>
+            <td rowspan="2">[CA04] Gestão do administrador com as matrículas    </td>
+            <td rowspan="2">[FE07] Relatórios de matrículas </td>
+            <td>[US11] Eu, como administrador, desejo ser capaz de definir o período de matrícula, para que os alunos possam se matricular.
+</td>
+            <td>Deve ser selecionado o período em que a função de matrícula estará disponível para os alunos: </br>- Data de início, no formato DD/MM/AAAA; </br>- Data de fim, no formato DD/MM/AAAA; </br>- Hora de início, no formato (horas:minutos) de 24 horas;</br>- Hora de fim, no formato (horas:minutos) de 24 horas. </td>
+        </tr>
+        <tr>
+            <td>[US12] Eu, como administrador, devo ser capaz de gerar uma lista de estudantes matriculados em uma trilha ou disciplina eletiva, para visualizar todos os estudantes matriculados
+</td>
+            <td>- Deve ser selecionado a opção da lista: trilha ou eletiva, e a partir disso, selecionar qual trilha ou eletiva deseja-se gerar a lista;</br>- A lista terá o nome da trilha/eletiva. </br>- A lista deve estar organizada por ordem alfabética e deve conter nome e sobrenome do aluno, além do seu número de matrícula.  </td>
+        </tr>
+        <tr>
+            <td>[EP04] Gestão de dados  </td>
+            <td>[CA05] Tratamento de dados importados   </td>
+            <td>[FE08] Importação de dados  </td>
+            <td>[US13] Eu, como administrador, desejo poder importar dados básicos dos estudantes (nome, ano escolar e matrícula) de uma fonte externa para o sistema, para realizar as matrículas no sistema.</td>
+            <td>- Os dados devem estar no formato: colunas para ano letivo, nome e matrícula;</br>- O ano letivo deve ser entre 1º e 3º ano;</br>- Nome deve ser nome completo (mínimo 10 caracteres e máximo 50 caracteres);</br>- A matrícula deve ser numérica de até 8 números ;</br>- Os arquivo deve estar formato .csv .- </td>
+        </tr>
+    </tbody>
 </table>
+
+<h1 id="dor-e-dod">DoR e DoD</h1>
+<h2 id="dor-definition-of-ready">DoR - Definition of Ready</h2>
+<ul>
+<li>O Requisito foi aceito por todos da equipe?</li>
+<li>O levantamento de requisitos, análise e documentação, validação e verificação estão claros e disponíveis?</li>
+<li>A priorização do Requisito com relação ao backlog foi realizada?</li>
+<li>O Requisito é compreendido por todos da equipe ?</li>
+<li>O Requisito está suficientemente detalhado, de acordo com o modelo de história de usuário, com critérios de aceitação claros e compreensíveis?</li>
+<li>O Requisito foi aceito e validado pelo Product Owner?</li>
+<li>A equipe está tecnicamente preparada para realizar o desenvolvimento?</li>
+</ul>
+<h2 id="dod-definition-of-done">DoD - Definition of Done</h2>
+<ul>
+<li>O Requisito foi implementado de acordo com o backlog e seus critérios ?</li>
+<li>O Requisito passou pela Estratégia de Testes?</li>
+<li>Sua integração com o resto do sistema gerou algum impacto negativo?</li>
+<li>A documentação está devidamente realizada?</li>
+</ul>
 
 
 
