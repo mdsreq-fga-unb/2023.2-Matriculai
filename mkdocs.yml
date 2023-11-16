@@ -7,6 +7,7 @@ nav:
     - Processos de desenvolvimento de software: 'desenvolvimento.md'
   - Sprints: 'sprints.md'
   - Backlog: 'backlog.md'
+  - Padrões de interface: 'padroes.md'
   - Lições Aprendidas: 'licoes.md'
   - Entregas: 
     - Unidade 1: 'unidade1.md'
