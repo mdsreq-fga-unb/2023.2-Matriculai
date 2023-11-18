@@ -1,5 +1,7 @@
 module.exports = (sequelize, DataTypes) =>{
+
     const Users = sequelize.define("Users", {
+
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -10,6 +12,7 @@ module.exports = (sequelize, DataTypes) =>{
                 },
             },
         },
+
         password: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -17,9 +20,11 @@ module.exports = (sequelize, DataTypes) =>{
                 len: [8, Infinity],
             },
         },
+
         token: {
             type: DataTypes.STRING,
         },
+
         tokenExpiration: {
             type: DataTypes.STRING,
         },

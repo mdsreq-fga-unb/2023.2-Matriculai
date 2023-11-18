@@ -1,9 +1,16 @@
+const cookieParser = require('cookie-parser');
 const express = require('express');
-const app = express();
 const database = require('./models/schemas');
-const port = 3001;
 const userRoute = require('./views/routes/Users');
+const app = express();
+const port = 3001;
+
+
+app.use(express.json());
 app.use(userRoute);
+app.use(cookieParser);
+
+require("dotenv").config();
 
 database.sequelize.sync().then(() => {
     app.listen(port, () => {
