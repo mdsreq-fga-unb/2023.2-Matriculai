@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
+    "migrate": "npx sequelize-cli db:migrate --env development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
