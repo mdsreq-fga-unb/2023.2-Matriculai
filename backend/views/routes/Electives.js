@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const userController =  require('../../controllers/ElectiveControllers')
+const electivesController =  require('../../controllers/ElectiveControllers')
 
-// router.post("/", userController.registerUser);
-// router.post("/teste", userController.teste);
+router.post("/elective/createElective", electivesController.createElective);
 
 module.exports = router; 
