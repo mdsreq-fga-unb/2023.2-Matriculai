@@ -1,10 +1,16 @@
 module.exports = (sequelize, DataTypes) =>{
 
     const Users = sequelize.define("Users", {
-
+        id: {
+            type: DataTypes.INTEGER,
+            field: "co_users",
+            primaryKey: true,
+            autoIncrement: true
+        },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
+            field: "ds_email",
             validate: {
                 isEmail: {
                     args: true,
@@ -14,6 +20,7 @@ module.exports = (sequelize, DataTypes) =>{
         },
 
         password: {
+            field: "ds_password",
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -22,12 +29,11 @@ module.exports = (sequelize, DataTypes) =>{
         },
 
         token: {
-            type: DataTypes.STRING,
-        },
-
-        tokenExpiration: {
+            field: "ds_token",
             type: DataTypes.STRING,
         },
     })
+
     return Users; 
+    
 }

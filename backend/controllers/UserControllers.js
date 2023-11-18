@@ -3,7 +3,6 @@ const bcrypt = require('bcrypt');
 const { sign } = require('jsonwebtoken');
 const { createToken, validateToken } = require('./middlewares/Auth');
 
-
 exports.userRegister = async(req, res) => {
     const { email, password } = req.body;
     bcrypt.hash(password, 15).then((hash) => {
@@ -30,12 +29,19 @@ exports.userLogin = async(req, res) => {
             if(!match){
                 res.status(400).json({error: 'Senha incorreta!'});
             } else {
-                const accessToken = createToken(user)
+                const accessToken = createToken(user);
                 res.cookie('access-token', accessToken, {
                     maxAge: 2592000000,
                     httpOnly: true,
                 });
-                res.json(accessToken);
+                Users.update(
+                    { token: accessToken },
+                    { where: { email: user.email } }
+                ).then(() => {
+                    res.json(accessToken);
+                }).catch((err) => {
+                    res.status(500).json({ error: 'Erro ao atualizar o token no banco de dados.' });
+                });
             };
         });
     };
