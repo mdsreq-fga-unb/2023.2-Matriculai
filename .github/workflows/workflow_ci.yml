@@ -16,12 +16,5 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd back-end
+          cd backend
           npm install
-  
-      - name: Run back-end
-        run: |
-          cd back-end
-          npm start
-          sleep 10
-          pkill -f "npm start"
