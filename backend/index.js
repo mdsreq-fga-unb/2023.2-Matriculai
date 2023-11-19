@@ -11,7 +11,7 @@ const port = 3001;
 app.use(express.json());
 app.use(validateToken);
 
-app.use('/', userRoute);
+app.use(userRoute);
 app.use('/elective', electiveRoute);
 app.use('/learning_paths', learningPathRoute);
 
