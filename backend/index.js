@@ -3,7 +3,7 @@ const express = require('express');
 const database = require('./models/schemas');
 const userRoute = require('./views/routes/Users');
 const electiveRoute = require('./views/routes/Electives')
-const learningPathRoute = require('./views/routes/LearningPaths')]
+const learningPathRoute = require('./views/routes/LearningPaths')
 
 require("dotenv").config();
 const app = express();
