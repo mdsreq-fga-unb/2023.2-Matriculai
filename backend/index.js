@@ -1,15 +1,20 @@
+const { validateToken } = require('./controllers/middlewares/Auth');
 const express = require('express');
-const app = express();
 const database = require('./models/schemas');
-const port = 3001;
 const userRoute = require('./views/routes/Users');
 const electiveRoute = require('./views/routes/Electives')
-const learningPathRoute = require('./views/routes/LearningPaths')
+const learningPathRoute = require('./views/routes/LearningPaths')]
 
+require("dotenv").config();
+const app = express();
+const port = 3001;
 app.use(express.json());
+app.use(validateToken);
+
 app.use('/', userRoute);
 app.use('/elective', electiveRoute);
 app.use('/learning_paths', learningPathRoute);
+
 
 database.sequelize.sync().then(() => {
     app.listen(port, () => {
