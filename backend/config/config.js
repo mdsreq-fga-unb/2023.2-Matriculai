@@ -1,8 +1,8 @@
 module.exports = {
   "development": {
-    "username": "root",
+    "username": process.env.DB_USERNAME,
     "password": process.env.DB_PASSWORD,
-    "database": "matriculai_development",
+    "database":process.env.DB_NAME,
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

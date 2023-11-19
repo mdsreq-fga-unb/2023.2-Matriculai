@@ -5,11 +5,11 @@ const port = 3001;
 const userRoute = require('./views/routes/Users');
 const electiveRoute = require('./views/routes/Electives')
 const learningPathRoute = require('./views/routes/LearningPaths')
+
 app.use(express.json());
-//ajustar rotas
-app.use(userRoute);
-app.use(electiveRoute);
-app.use(learningPathRoute);
+app.use('/', userRoute);
+app.use('/elective', electiveRoute);
+app.use('/learning_paths', learningPathRoute);
 
 database.sequelize.sync().then(() => {
     app.listen(port, () => {
