@@ -12,7 +12,7 @@ module.exports = {
                 ds_name: { type: Sequelize. STRING(40), allowNull: false },
                 ds_description: { type: Sequelize.STRING(150),allowNull: false },
                 ds_school_year: { type: Sequelize.INTEGER, allowNull: false },
-                ds_electives:   { type: Sequelize.JSON, allowNull: false}
+                ds_electives:   { type: Sequelize.TEXT, allowNull: false}
             })
 
             await transaction.commit()

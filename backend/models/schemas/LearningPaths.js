@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const LearningPaths = sequelize.define("LearningPaths", {
+    const LearningPath = sequelize.define("LearningPath", {
         id: {
             type: DataTypes.INTEGER,
             field: "co_learning_paths",
@@ -23,11 +23,11 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         electives: {
-            type: DataTypes.JSON,
+            type: DataTypes.TEXT,
             field: "ds_electives",
             allowNull: false
         }
     })
 
-    return LearningPaths; 
+    return LearningPath; 
 }

@@ -1,16 +1,14 @@
-const { Electives } = require('../models/schemas')
+const { LearningPath } = require('../models/schemas')
 
+exports.createLearningPaths = async(req, res) => {
+    const { name, description, school_year, electives} = req.body
+    let electives_object = JSON.stringify(electives)
 
-exports.createElective = async(req, res) => {
-    const { name, description, school_year, teacher, vacancies, schedules } = req.body
-    
-    await Electives.create({
+    await LearningPath.create({
         name: name,
         description: description,
         school_year: school_year,
-        teacher: teacher,
-        vacancies: vacancies, 
-        schedules: schedules
+        electives: electives_object
     }).then(() => {
         res.status(201).json("OK")
     }).catch((err) => {
@@ -20,9 +18,9 @@ exports.createElective = async(req, res) => {
     })
 }
 
-exports.deleteElective = async(req, res) => {
+exports.deleteLearningPaths = async(req, res) => {
     const { id }  = req.body
-    await Electives.destroy({ where: {id: id}}).then(() => {
+    await LearningPath.destroy({ where: {id: id}}).then(() => {
             res.status(200).json("OK")
     }).catch((err) => {
         if(err){
