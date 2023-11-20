@@ -1,7 +1,6 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -20,5 +19,6 @@
     "nodemon": "^3.0.1",
     "sequelize": "^6.35.0",
     "sequelize-cli": "^6.6.2"
-  }
+  },
+  "description": ""
 }

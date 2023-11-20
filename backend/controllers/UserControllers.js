@@ -46,3 +46,9 @@ exports.userLogin = async(req, res) => {
         });
     };
 };
+
+exports.userLogout = async(req, res) => {
+    res.cookie('jwt', '', {maxAge: 1 });
+    res.redirect('/');
+
+}
