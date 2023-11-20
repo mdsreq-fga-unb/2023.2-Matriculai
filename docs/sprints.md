@@ -92,7 +92,7 @@ Data:  14/11/2023 a 27/11/2023
 | Cerimônia | Atividades da Sprint |
 | ------------------------------------- | ----------------------------------------------------- |
 | Sprint Planning | - Goal: Correções finais do backlog e implementação do MVP1. |
-| Backlog da Sprint | - (Representação) Corrigir Critérios de Aceitação. Responsáveis: Luana, Yan e Yasmim </br>- (Verificação e Validação) Definir a Estratégia de Testes. Responsáveis: Luana.</br>- Desenvolvimento do MVP1. Responsáveis: Todos. </br> - (Verificação e Validação) Realização dos Testes para o MVP1. Responsável: Todos. |
+| Backlog da Sprint | - (Representação) Corrigir Critérios de Aceitação. Responsáveis: Luana, Yan e Yasmim </br>- (Verificação e Validação) Definir a Estratégia de Testes. Responsáveis: Luana.</br>- Desenvolvimento do MVP1(US01 até US06). Responsáveis: Todos. </br> - (Verificação e Validação) Realização dos Testes para o MVP1. Responsável: Todos. |
 | Sprint Review | -Feedback: Em desenvolvimento </br> - Prioridades para a próxima sprint: Em desenvolvimento |
 | Débitos Técnicos | Em desenvolvimento |
 | Sprint Retrospective |-Pontos Fortes: Em desenvolvimento </br> -Pontos Fracos:  Em desenvolvimento </br> -Pontos de Melhoria:  Em desenvolvimento |

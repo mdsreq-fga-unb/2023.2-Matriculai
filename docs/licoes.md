@@ -5,7 +5,7 @@
 | 27/09/2023 | 0.1 | Adicionando as lições aprendidas na unidade 1 | Júlia Yoshida |
 | 23/10/2023 | 0.2 | Detalhando melhor as lições aprendidas na unidade 1 | Luana Ribeiro |
 | 25/10/2023 | 0.3 | Adicionando as lições aprendidas na unidade 2 | Luana Ribeiro |
-
+| 20/11/2023 | 1.0 | Adicionando as lições aprendidas na unidade 3 | Luana Ribeiro |
 
 ## Unidade 1
 
@@ -21,5 +21,9 @@
 <p style="text-indent: 50px;text-align: justify;"> Com relação à equipe, o grupo está no processo de entrar no mesmo ritmo de trabalho, alguns ainda se sentem sobrecarregados, mas para solucionar este problema foi realizada uma conversa entre o grupo, analisando a melhora na participação dos integrantes.  </p>
 
 ## Unidade 3
+
+<p style="text-indent: 50px;text-align: justify;"> Nesta unidade, pudemos aprender sobre técnicas e ferramentas inovadoras que melhoram o processo de organização de um Projeto, como o PBB, BDD e o USM... Cada um com seu propósito e todos nos levam a sair da caixa de um projeto desgastante para ser elaborado. Através dessas ferramentas, é possível aplicar disciplinas da Engenharia de Requisitos de uma forma mais visual, informal e eficiente. </p>
+
+<p style="text-indent: 50px;text-align: justify;"> Nesta unidade, a equipe se desenvolveu e superou barreiras pessoais no sentido de desenvolvimento de software. Colocou à prova o companheirismo em prol de de finalizar as entregas, com um ajudando o outro. Dessa forma, apesar de haver pequenos atritos por falhas na comunicação entre a equipe, todos se ajudaram e criaram vínculos maiores.   </p>
 
 ## Unidade 4
