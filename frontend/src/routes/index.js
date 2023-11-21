@@ -4,8 +4,12 @@ import useAuth from "../hooks/useAuth";
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
+<<<<<<< HEAD
 import TrilhasList from "../pages/PathExclusion";
 import ElectivesList from "../pages/ElectivesExclusion"
+=======
+import CreateEletivas from "../pages/CreateEletivas";
+>>>>>>> b49d323 (Criando página de cadastro de eletivas)
 
 const Private = ({ Item }) => {
   const { signed } = useAuth();
@@ -24,6 +28,7 @@ const RoutesApp = () => {
           <Route path="*" element={<Signin />} />
           <Route path="/trilhas" element={<TrilhasList />} />
           <Route path="/eletivas" element={<ElectivesList />} />
+          <Route exact path="/CreateEletivas" element={<CreateEletivas />} />
         </Routes>
       </Fragment>
     </BrowserRouter>

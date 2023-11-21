@@ -10,3 +10,11 @@ const Button = ({ Text, onClick, Type = "button" }) => {
 };
 
 export default Button;
+
+const ButtonCadastrar = ({ Text, onClick, Type = "button" }) => {
+  return (
+    <C.Button type={Type} onClick={onClick}>
+      {Text}
+    </C.Button>
+  );
+};
