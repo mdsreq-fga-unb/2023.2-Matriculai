@@ -8,7 +8,8 @@ import { Image } from '@chakra-ui/react'
 import * as C from "./styles";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
-import { Text } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react';
+import axios from 'axios';
 
 const Signin = () => {
   const { signin } = useAuth();
@@ -23,31 +24,29 @@ const Signin = () => {
       setError("Preencha todos os campos");
       return;
     }
-
+    console.log(email);
+    console.log(senha);
     try {
-      const response = await fetch('sua-url-de-autenticacao', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, senha }),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
+      const response = await axios.post('localhost:3000', { email, senha });
+      
+      if (response.status === 200) {
         // Sucesso, redirecionar ou realizar outras ações necessárias
         navigate("/home");
       } else {
         // Exibir mensagem de erro
-        setError(data.message);
+        setError(response.data.message);
       }
     } catch (error) {
-      console.error("Erro ao fazer login:", error);
+      if (axios.isAxiosError(error)) {
+        // Imprime informações detalhadas sobre o erro Axios
+        console.error("Erro ao fazer login - Status:", error.response?.status);
+        console.error("Erro ao fazer login - Data:", error.response?.data);
+      } else {
+        console.error("Erro ao fazer login:", error);
+      }
       setError("Erro ao fazer login. Tente novamente mais tarde.");
     }
   };
-
   
   return (
     <C.Container>
@@ -79,7 +78,7 @@ const Signin = () => {
             </Center>
           </Box>
           
-          <Box marginTop={'3px'} background={student} overflow='hidden' paddingLeft='30px'>
+          <Box marginTop={'3px'} overflow='hidden' paddingLeft='30px'>
             <Image src={student} alt='student' style={{ maxWidth: '100%', height: 'auto' }} borderTopEndRadius='60px' borderBottomEndRadius='60px' objectFit={'cover'} overflow='hidden'/>
           </Box>
         </Grid>
