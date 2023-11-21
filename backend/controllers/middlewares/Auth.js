@@ -8,21 +8,23 @@ const createToken = (user) => {
 };
 
 const validateToken = (req, res, next) => {
-    const accessToken = req.cookies['access-token'];
-    if(!accessToken) {        //vê se o user já foi autenticado pelo cookie de sessão
-        return res.status(400).json({error: 'Usuário não autenticado!'});
-    };
-     
+    const accessToken = req.cookies && req.cookies['access-token']; 
+    if (!accessToken) {
+        return res.status(400).json({ error: 'Usuário não autenticado!' });
+    }
+
     try {
         const validToken = verify(accessToken, process.env.SECRET);
-        if(validToken){
+        if (validToken) {
             req.authenticated = true;
             return next();
         }
-    } catch(err) {
-        return res.status(400).json({error: err});
-    };
+    } catch (err) {
+        return res.status(400).json({ error: err.message || 'Erro na validação do token' });
+    }
 };
 
 module.exports = { createToken, validateToken };
 
+
+module.exports = { createToken, validateToken };
