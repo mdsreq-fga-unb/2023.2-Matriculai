@@ -4,6 +4,6 @@ const electivesController =  require('../../controllers/ElectiveControllers')
 
 router.post("/createElective", electivesController.createElective);
 router.delete("/deleteElective", electivesController.deleteElective);
-router.post("/electives", electivesController.listElectives)
+router.get("/electives", electivesController.listElectives)
 
 module.exports = router; 
