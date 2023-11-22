@@ -18,14 +18,14 @@ app.use('/elective', electiveRoute);
 app.use('/learning_paths', learningPathRoute);
 app.use('/api', logoutRoutes);
 
-sequelize
-  .sync()
-  .then(() => {
-    console.log('Conexão bem-sucedida com o banco de dados');
-  })
-  .catch((error) => {
-    console.error('Erro ao conectar-se ao banco de dados:', error);
-  });
+// sequelize
+//   .sync()
+//   .then(() => {
+//     console.log('Conexão bem-sucedida com o banco de dados');
+//   })
+//   .catch((error) => {
+//     console.error('Erro ao conectar-se ao banco de dados:', error);
+//   });
 
 
 database.sequelize.sync().then(() => {

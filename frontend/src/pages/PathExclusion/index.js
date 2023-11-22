@@ -1,6 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from '../Home/index'; 
+import Header from '../Home/index';
+import { ChakraProvider } from '@chakra-ui/react'
+
+import { 
+  Box,
+  Flex,
+  Heading,
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  Checkbox,
+  TableContainer,
+  Button
+} from "@chakra-ui/react"
+;
 
 const TrilhasList = () => {
   const [trilhas, setTrilhas] = useState([]);
@@ -46,53 +64,43 @@ const TrilhasList = () => {
     }
   };
 
+  const dados = [{"nomeTrilha": "teste", "anoTrilha": 2}]
+
   return (
-    <div>
-      <Header />
-      <h1 style={{ textAlign: 'center' }}>Lista de Trilhas</h1>
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        {trilhas.map((trilha) => (
-          <div
-            key={trilha.id}
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              border: '1px solid #ccc',
-              borderRadius: '5px',
-              padding: '10px',
-              marginBottom: '10px',
-              width: '300px', // largura do quadrado
-            }}
-          >
-            <div style={{ marginRight: '10px' }}>
-              <input
-                type="checkbox"
-                onChange={() => toggleSelecionada(trilha.id)}
-                checked={trilhasSelecionadas.includes(trilha.id)}
-              />
-            </div>
-            <div>
-              <p>Trilha: {trilha.numero}</p>
-              <p>Título: {trilha.titulo}</p>
-              {/* Adicione mais informações da trilha conforme necessário */}
-            </div>
-            <div
-              style={{
-                marginLeft: 'auto',
-                width: '20px', // largura do círculo de seleção
-                height: '20px', // altura do círculo de seleção
-                borderRadius: '50%',
-                border: '1px solid #000',
-                background: trilhasSelecionadas.includes(trilha.id) ? '#000' : 'transparent',
-              }}
-            ></div>
-          </div>
-        ))}
-        <button onClick={handleExcluirTrilhas} style={{ marginTop: '20px' }}>
-          Excluir Trilhas Selecionadas
-        </button>
-      </div>
-    </div>
+    <ChakraProvider>
+      <Header></Header>
+      <Flex align="center" justifyContent="center">
+        <Box width="60vh" marginTop="3vh" marginBottom="-9vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
+        <Box textAlign="center">
+          <Heading color= '#243A69'>Exclusão de Trilhas</Heading>
+        </Box>
+          <TableContainer>
+            <Table variant='simple'>
+              <Thead>
+                <Tr>
+                  <Th>Nome da trilha</Th>
+                  <Th>Ano letivo</Th>
+                  <Th></Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                {dados.map((linha, index) => (
+                  <Tr key={index}>
+                    <Td>{linha.nomeTrilha}</Td>
+                    <Td>{linha.anoTrilha}</Td>
+                    <Td><Checkbox colorScheme='red' defaultChecked></Checkbox></Td>
+                  </Tr>
+                ))}
+              </Tbody>
+            </Table>
+          </TableContainer>
+          <Box display="flex" justifyContent="center">
+          <Button color="#243A69" variant='solid' margin="2vh">Excluir</Button>
+          </Box>
+        </Box>
+      </Flex>
+    </ChakraProvider>
+
   );
 };
 

@@ -49,7 +49,7 @@ const Header = () => {
     >
       <Box>
         <Heading as="h1" size="lg">
-          <Box maxWidth={'120px'} maxHeight={'120px'}  paddingLeft='30px'>
+          <Box maxWidth={'16vh'} maxHeight={'16vh'}  paddingLeft='3vh'>
             <Image src={cmtnLogo} alt='student' style={{ maxWidth: '100%', height: 'auto' }} />
           </Box>
         </Heading>
@@ -57,7 +57,7 @@ const Header = () => {
       <Spacer />
       <Box>
         <Link to="/">Home</Link>
-        <Box maxWidth={'40px'} maxHeight={'40px'} marginTop={'-12px'} marginBottom={'3px'} >
+        <Box maxWidth={'5vh'} maxHeight={'2vh'} marginTop={'-0.5px'} marginBottom={'3vh'} >
           <Menu>
             <MenuButton border={'none'} bgColor={'#243A69'} >
               <Image src={menuHamburguer} alt='menuHamburguer' style={{ maxWidth: '100%', height: 'auto' }}/>

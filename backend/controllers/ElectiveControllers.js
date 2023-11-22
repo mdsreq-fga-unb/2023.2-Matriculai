@@ -26,5 +26,13 @@ exports.deleteElective = async(req, res) => {
         if(err){
             res.status(400).json({error: err});
         };
-    });
+    })};
+
+exports.listElectives = async (req, res) => {
+    try {
+        const electives = await Electives.findAll();
+        res.status(200).json(electives);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    }
 };
