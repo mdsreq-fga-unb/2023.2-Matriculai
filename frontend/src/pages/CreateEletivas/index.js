@@ -14,6 +14,7 @@ import {
   Box,
   Center,
   Flex,
+  Form,
   FormControl,
   FormLabel,
   HStack,
@@ -39,66 +40,49 @@ const CreateEletivas = () => {
   return (
    <Box h="100vh">
         <Header></Header>
-    <Center
-      as="header"
-      h={150}
-      bg="teal.500"
-      color='#F4F4F2'
-      fontweight="bold"
-      fontSize="4xl"
-      pb="8"
-      Content
-      >     
-    </Center>
+   
     
     <Flex
-      maxHeight='100vh'
-      width='full'
+      //maxHeight='100vh'
+      //width='full'
       align="center"
       justify="center"
-      bg="blackAlpha.200"
+      //bg="blackAlpha.200"
       //h="calc(100vh - 200 px)"
     >
       <Box
-        
         px={12}
         py={12}
-        width='full'
-        maxWidth='450px'
-        textAlign='center'
-        boxShadow='lg'
-        background='#F4F4F2'
-        borderRadius='6px'
+        //width='full'
+        //maxWidth='450px'
+        //textAlign='center'
+        //boxShadow='lg'
+        //background='#F4F4F2'
+        //borderRadius='6px'
         >
-          <form action="" autoComplete='off'>
+          <div >
             <FormControl display="flex" flexDirection="column" gap="4">
                         
-              <Heading>
+              <C.titulo>
                 <Text color='#243A69' fontSize='2xl' > Cadastro de Eletivas</Text>
-              </Heading>
+              </C.titulo>
                
               <FormLabel color= '#243A69'>Nome da eletiva</FormLabel>
-              <Input  
-                //placeholder =  'Nome da eletiva' 
-                //_placeholder={{opacity:1, color: 'inherit' }} 
-                //color= '#243A69' size='ls'
-                isRequired 
+              <Input 
+                isRequired
+                placeholder='Nome da eletiva'
               />
 
-              <FormLabel color= '#243A69'>Descrição</FormLabel> 
+              <FormLabel color= '#243A69'>Descrição da eletiva</FormLabel> 
               <Input 
-                //placeholder =  'Descrição'  
-                //_placeholder={{opacity:1, color: 'inherit' }} 
-                //color= '#243A69' 
-                //size='md'
-                isRequired 
+                isRequired
+                placeholder='Descrição da eletiva'
               />
+
               <FormLabel color= '#243A69'>Série</FormLabel> 
               <Select 
                 placeholder='Selecione a série' 
-                _placeholder={{opacity:1, color: 'inherit' }} 
-                //color= '#243A69' 
-                //size='md'
+                _placeholder={{opacity:1, color: '#243A69' }} 
                 isRequired
               >
                 <option value='option1'> 1</option>
@@ -107,19 +91,28 @@ const CreateEletivas = () => {
               </Select>
 
               <FormLabel color= '#243A69'>Professor Responsável</FormLabel> 
-              <Input isRequired/>
+              <Input 
+                isRequired
+                placeholder='Professor Responsável'
+              />
               
               <FormLabel color= '#243A69'>Número de vagas</FormLabel> 
-              <Input isRequired />
+              <Input 
+                isRequired
+                placeholder='Número de vagas'
+              />
               
               <FormLabel color= '#243A69'>Horário da aula</FormLabel> 
-              <Input isRequired/>
+              <Input 
+                isRequired
+                placeholder='Horário da aula'
+              />
               
               <ButtonCadastrar Text="Cadastrar" />
                 
               
             </FormControl>
-          </form>
+          </div>
       </Box>
       
     </Flex>
