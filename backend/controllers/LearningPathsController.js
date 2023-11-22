@@ -27,6 +27,7 @@ exports.deleteLearningPaths = async(req, res) => {
             res.status(400).json({error: err});
         };
     });
+}
 
     exports.LearningPath = async (req, res) => {
         try {
@@ -39,4 +40,3 @@ exports.deleteLearningPaths = async(req, res) => {
 
     
     }
-};
