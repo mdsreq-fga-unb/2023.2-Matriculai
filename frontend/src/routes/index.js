@@ -9,6 +9,7 @@ import TrilhasList from "../pages/PathExclusion";
 import ElectivesList from "../pages/ElectivesExclusion"
 =======
 import CreateEletivas from "../pages/CreateEletivas";
+import CreateTrilhas from "../pages/CreateTrilhas";
 >>>>>>> b49d323 (Criando página de cadastro de eletivas)
 
 const Private = ({ Item }) => {
@@ -29,6 +30,7 @@ const RoutesApp = () => {
           <Route path="/trilhas" element={<TrilhasList />} />
           <Route path="/eletivas" element={<ElectivesList />} />
           <Route exact path="/CreateEletivas" element={<CreateEletivas />} />
+          <Route exact path="/CreateTrilhas" element={<CreateTrilhas />} />
         </Routes>
       </Fragment>
     </BrowserRouter>

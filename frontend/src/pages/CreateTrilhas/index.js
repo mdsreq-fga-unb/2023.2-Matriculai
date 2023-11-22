@@ -25,41 +25,37 @@ import {
 } from "@chakra-ui/react";
 
 
-const CreateEletivas = () => {
+const CreateTrilhas = () => {
   const { createEletivas } = useAuth();
   const navigate = useNavigate();
   const toastIdRef = React.useRef()
 
   const toast = useToast();  
-  const [nomeEletiva, setEletiva] = useState("");
+  const [nomeTrilha, setTrilha] = useState("");
   const [descricao, setDescricao] = useState("");
   const [serie, setSerie] = useState("");
-  const [professor, setProfessor] = useState("");
-  const [vagas, setVagas] = useState("");
-  const [horario, setHorario] = useState("");
+  const [eletivas, setEletivas] = useState("");
   const [error, setError] = useState("");
 
   const handleCadastro = async () => {
-    if (!nomeEletiva || !descricao || !serie || !professor || !vagas || !horario) {
+    if (!nomeTrilha || !descricao || !serie || !eletivas) {
       
       setError("Preencha todos os campos");
        return;
     };
-    console.log(nomeEletiva);
+    console.log(nomeTrilha);
     console.log(descricao);
     console.log(serie);
-    console.log(professor);
-    console.log(vagas);
-    console.log(horario);
+    console.log(eletivas);
 
     try {
-      const response = await axios.post('localhost:3000', {nomeEletiva, descricao, serie, professor, vagas, horario   });
+      const response = await axios.post('localhost:3000', {nomeTrilha, descricao, serie, eletivas   });
       
       if (response.status === 200) {
         
         toast({
-          title: 'Account created.',
-          description: "We've created your account for you.",
+          title: 'Trilha cadastrada.',
+          description: "Trilha cadastrada com sucesso!",
           status: 'success',
           duration: 2800,
           isClosable: true,
@@ -97,28 +93,28 @@ const CreateEletivas = () => {
               
               <Center paddingTop='5'>
                 <C.titulo >
-                  <Text textAlign={'center'} fontSize={'x-large'} color={'#243A69'} as={'b'}>CADASTRO DE ELETIVAS</Text>
+                  <Text textAlign={'center'} fontSize={'x-large'} color={'#243A69'} as={'b'}>CADASTRO DE TRILHAS</Text>
                 </C.titulo>
               </Center>
 
               <Stack spacing={2}>
 
               
-              <FormLabel  color= '#243A69'>Nome da eletiva </FormLabel>
+              <FormLabel  color= '#243A69'>Nome da trilha </FormLabel>
               <Input
                 type='text' 
                 size='lg'
                 isRequired
-                placeholder='Nome da eletiva'
-                value={nomeEletiva}
-                onChange={(e)=>[setEletiva(e.target.value), setError("")]}
+                placeholder='Nome da trilha'
+                value={nomeTrilha}
+                onChange={(e)=>[setTrilha(e.target.value), setError("")]}
                 />
 
-              <FormLabel color= '#243A69'>Descrição da eletiva</FormLabel> 
+              <FormLabel color= '#243A69'>Descrição da trilha</FormLabel> 
               <Input 
                 type='text'
                 isRequired
-                placeholder='Descrição da eletiva'
+                placeholder='Descrição da trilha'
                 value={descricao}
                 onChange={(e)=>[setDescricao(e.target.value), setError("")]}
                 />
@@ -137,32 +133,20 @@ const CreateEletivas = () => {
                 <option value='option3'> 3</option>
               </Select>
 
-              <FormLabel color= '#243A69'>Professor Responsável</FormLabel> 
-              <Input
-                type='text' 
-                isRequired
-                placeholder='Professor Responsável'
-                value={professor}
-                onChange={(e) => [setProfessor(e.target.value), setError("")]}
-                />
-              
-              <FormLabel color= '#243A69'>Número de vagas</FormLabel> 
-              <Input
-                type='text' 
-                isRequired
-                placeholder='Número de vagas'
-                value={vagas}
-                onChange={(e)=>[setVagas(e.target.value), setError("")]}
-                />
-              
-              <FormLabel color= '#243A69'>Horário da aula</FormLabel> 
-              <Input
+              <FormLabel color= '#243A69'>Eletivas relacionadas </FormLabel>
+              <Select
                 type='text'
+                placeholder='Selecione as eletivas relacionadas' 
+                _placeholder={{opacity:1, color: '#243A69' }} 
                 isRequired
-                placeholder='Horário da aula'
-                value={horario}
-                onChange={(e)=>[setHorario(e.target.value), setError("")]}
-                />
+                value={eletivas}
+                onChange={(e)=>[setEletivas(e.target.value), setError("")]}
+                >
+                <option value='option1'> 1</option>
+                <option value='option2'> 2</option>
+                <option value='option3'> 3</option>
+              </Select>
+              
               <C.labelError>{error}</C.labelError>   
               <Center paddingBottom={5}>
 
@@ -181,4 +165,4 @@ const CreateEletivas = () => {
   );
 };
 
-export default CreateEletivas;
+export default CreateTrilhas;
