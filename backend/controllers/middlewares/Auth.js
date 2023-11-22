@@ -9,7 +9,7 @@ const createToken = (user) => {
 
 const validateToken = (req, res, next) => {
 
-    if (req.path === '/register' && req.method === 'POST') {
+    if (req.path === '/auth/register' && req.method === 'POST') {
         return next();
     }
     
