@@ -4,6 +4,8 @@ const database = require('./models/schemas');
 const userRoute = require('./views/routes/Users');
 const electiveRoute = require('./views/routes/Electives')
 const learningPathRoute = require('./views/routes/LearningPaths')
+const logoutRoutes = require('./views/routes/Users');
+const sequelize = require('sequelize');
 
 require("dotenv").config();
 const app = express();
@@ -14,6 +16,16 @@ app.use(cors());
 app.use('/auth', userRoute);
 app.use('/elective', electiveRoute);
 app.use('/learning_paths', learningPathRoute);
+app.use('/api', logoutRoutes);
+
+sequelize
+  .sync()
+  .then(() => {
+    console.log('Conexão bem-sucedida com o banco de dados');
+  })
+  .catch((error) => {
+    console.error('Erro ao conectar-se ao banco de dados:', error);
+  });
 
 
 database.sequelize.sync().then(() => {

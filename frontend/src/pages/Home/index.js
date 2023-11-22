@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios"
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Flex, Box, Heading, Spacer, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
@@ -10,7 +11,12 @@ import settingsIcon from '../../icon/definicoes 1.png';
 import helpIcon from '../../icon/interrogatorio 1.png';
 import logoutIcon from '../../icon/sair-alt 1.png';
 
+
+
 const Header = () => {
+
+
+  
   const StyledMenuList = styled(MenuList)`
     list-style: 'circle';
     padding: 0;
@@ -71,7 +77,7 @@ const Header = () => {
               </StyledMenuItem>
               <StyledMenuItem>
                 <StyledImage src={logoutIcon} alt='Logout Icon' />
-                Sair
+                <button>Sair</button>
               </StyledMenuItem>
             </StyledMenuList>
           </Menu>

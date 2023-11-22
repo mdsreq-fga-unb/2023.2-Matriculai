@@ -4,5 +4,6 @@ const learningPathsController =  require('../../controllers/LearningPathsControl
 
 router.post("/createLearningPaths", learningPathsController.createLearningPaths);
 router.delete("/deleteLearningPaths", learningPathsController.deleteLearningPaths)
+router.get('/trilhas', learningPathsController.LearningPath);
 
 module.exports = router; 
