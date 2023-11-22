@@ -1,58 +1,59 @@
 const { Users } = require('../models/schemas');
 const bcrypt = require('bcrypt');
-const { sign } = require('jsonwebtoken');
 const { createToken, validateToken } = require('./middlewares/Auth');
 
 exports.userRegister = async (req, res) => {
-    const { email, password } = req.body;
-    const existingUser = await Users.findOne({ where: { email: email } });
+    try {
+        const { email, password } = req.body;
+        const existingUser = await Users.findOne({ where: { email: email } });
 
-    if (existingUser) {
-        return res.status(400).json({ error: 'E-mail já cadastrado!' });
-    }
+        if (existingUser) {
+            return res.status(400).json({ error: 'E-mail já cadastrado!' });
+        }
 
-    bcrypt.hash(password, 15).then((hash) => {
-        Users.create({
+        const hash = await bcrypt.hash(password, 15);
+        await Users.create({
             email: email,
             password: hash,
-        })
-        .then(() => {
-            res.json('Solicitação bem sucedida!');
-        })
-        .catch((err) => {
-            if (err) {
-                res.status(400).json({ error: err });
-            }
         });
-    });
+
+        res.json('Solicitação bem sucedida!');
+    } catch (err) {
+        res.status(400).json({ error: err.message || 'Erro desconhecido durante o registro.' });
+    }
 };
 
+exports.userLogin = async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const user = await Users.findOne({ where: { email: email } });
 
-exports.userLogin = async(req, res) => {
-    const { email, password } = req.body;
-    const user = await Users.findOne({where: {email: email}});
-    if(!user){
-        res.status(400).json({error: 'E-mail não cadastrado!'});
-    } else {
-        bcrypt.compare(password, user.password).then((match) =>{
-            if(!match){
-                res.status(400).json({error: 'Senha incorreta!'});
-            } else {
-                const accessToken = createToken(user);
-                res.cookie('access-token', accessToken, {
-                    maxAge: 2592000000,
-                    httpOnly: true,
-                    secure: true,
-                });
-                Users.update(
-                    { token: accessToken },
-                    { where: { email: user.email } }
-                ).then(() => {
-                    res.json(accessToken);
-                }).catch((err) => {
-                    res.status(500).json({ error: 'Erro ao atualizar o token no banco de dados.' });
-                });
-            };
+        if (!user) {
+            return res.status(400).json({ error: 'E-mail não cadastrado!' });
+        }
+
+        const match = await bcrypt.compare(password, user.password);
+
+        if (!match) {
+            return res.status(400).json({ error: 'Senha incorreta!' });
+        }
+
+        const accessToken = createToken(user);
+
+        await Users.update(
+            { token: accessToken },
+            { where: { email: user.email } }
+        );
+
+        res.cookie('access-token', accessToken, {
+            maxAge: 2592000000, // 30 dias em milissegundos
+            httpOnly: true,
+            secure: true,
         });
-    };
+
+        res.json({ accessToken: accessToken });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Erro durante o login.' });
+    }
 };

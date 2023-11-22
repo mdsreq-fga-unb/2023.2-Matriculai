@@ -20,31 +20,26 @@ const Signin = () => {
   const [error, setError] = useState("");
 
   const handleLogin = async () => {
-    if (!email || !senha) {
-      setError("Preencha todos os campos");
-      return;
-    }
-    console.log(email);
-    console.log(senha);
     try {
-      const response = await axios.post('localhost:3000', { email, senha });
-      
-      if (response.status === 200) {
-        // Sucesso, redirecionar ou realizar outras ações necessárias
+      const response = await axios.post("http://localhost:3001/auth/login", {
+        email: email,
+        password: senha,
+      });
+  
+      if (response.data.accessToken) {
+        signin(response.data.accessToken);
         navigate("/home");
       } else {
-        // Exibir mensagem de erro
-        setError(response.data.message);
+        setError("Credenciais inválidas");
       }
     } catch (error) {
-      if (axios.isAxiosError(error)) {
-        // Imprime informações detalhadas sobre o erro Axios
-        console.error("Erro ao fazer login - Status:", error.response?.status);
-        console.error("Erro ao fazer login - Data:", error.response?.data);
+      console.error("Error during login:", error);
+      if (error.response) {
+        console.error("Server response:", error.response.data);
+        setError(error.response.data.error || "Erro durante o login");
       } else {
-        console.error("Erro ao fazer login:", error);
+        setError("Erro durante o login");
       }
-      setError("Erro ao fazer login. Tente novamente mais tarde.");
     }
   };
   

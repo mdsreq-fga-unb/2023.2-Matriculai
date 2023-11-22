@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const database = require('./models/schemas');
 const userRoute = require('./views/routes/Users');
 const electiveRoute = require('./views/routes/Electives')
@@ -8,6 +9,7 @@ require("dotenv").config();
 const app = express();
 const port = 3001;
 app.use(express.json());
+app.use(cors());
 
 app.use('/auth', userRoute);
 app.use('/elective', electiveRoute);
