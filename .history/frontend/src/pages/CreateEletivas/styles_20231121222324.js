@@ -22,7 +22,7 @@ export const Content = styled.div`
   background-color: #f4f4f2;
   max-width: 650px;
   max-height: 650px;
-  padding: 0px;
+  //padding: 0px;
   border-radius: 60px;
 `;
 

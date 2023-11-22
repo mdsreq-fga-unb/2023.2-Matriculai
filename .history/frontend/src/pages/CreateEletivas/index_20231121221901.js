@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ChakraProvider } from '@chakra-ui/react'
+import { Image } from '@chakra-ui/react'
+import cmtnLogo from '../../img/cmtnLogo.png'
+import menuHamburguer from '../../icon/menuHamburguer.png'
 import Header from "../Home";
 import ButtonCadastrar from "../../components/Button";
 import * as C from "./styles";
+
 
 import { 
   Input,
@@ -28,7 +33,12 @@ const CreateEletivas = () => {
   return (
    <Box h="200vh">
         <Header></Header>
-        
+        <Stack spacing={3}>
+  <Input variant='outline' placeholder='Outline' />
+  <Input variant='filled' placeholder='Filled' />
+  <Input variant='flushed' placeholder='Flushed' />
+  <Input variant='unstyled' placeholder='Unstyled' />
+</Stack>
   <C.Container>
 
   

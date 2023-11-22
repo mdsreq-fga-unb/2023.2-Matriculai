@@ -15,14 +15,14 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  //flex-direction: column;
   width: 100%;
   height: 100%;
   box-shadow: 0 1px 2px #0003;
   background-color: #f4f4f2;
-  max-width: 650px;
+  max-width: 1000px;
   max-height: 650px;
-  padding: 0px;
+  //padding: 0px;
   border-radius: 60px;
 `;
 

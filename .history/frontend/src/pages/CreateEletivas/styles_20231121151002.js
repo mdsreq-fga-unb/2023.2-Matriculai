@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 10px;
   height: 100vh;
-  background-color: 'white';
+  background-color: #243a69;
 `;
 
 export const Content = styled.div`
@@ -20,7 +20,7 @@ export const Content = styled.div`
   height: 100%;
   box-shadow: 0 1px 2px #0003;
   background-color: #f4f4f2;
-  max-width: 650px;
+  max-width: 1000px;
   max-height: 650px;
   padding: 0px;
   border-radius: 60px;
@@ -56,12 +56,6 @@ export const titulo = styled.div`
   color: #243A69;
   margin-left: 20px;
   margin-top: 20px;
-  align: center;
 `;
-export const box = styled.div`
-`;
-
-export const texto = styled.label`
-  color: #243A69;
-
-`;
+export const box 
+  
