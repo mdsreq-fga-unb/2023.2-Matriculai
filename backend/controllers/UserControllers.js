@@ -33,6 +33,7 @@ exports.userLogin = async(req, res) => {
                 res.cookie('access-token', accessToken, {
                     maxAge: 2592000000,
                     httpOnly: true,
+                    secure: true,
                 });
                 Users.update(
                     { token: accessToken },

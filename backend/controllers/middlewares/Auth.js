@@ -8,10 +8,6 @@ const createToken = (user) => {
 };
 
 const validateToken = (req, res, next) => {
-
-    if (req.path === '/auth/register' && req.method === 'POST') {
-        return next();
-    }
     
     const accessToken = req.cookies && req.cookies['access-token']; 
     if (!accessToken) {
