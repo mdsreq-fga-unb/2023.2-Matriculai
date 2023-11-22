@@ -1,3 +1,7 @@
+| Data | Versão | Descrição | Autores |
+| ---------- | ----------- | -------------- | -------------- |
+| 21/11/2023 | 1.0 | Adição das Atividades | Luana Ribeiro |
+
 # Exercícios da Equipe 
 
 Exercícios realizados pela equipe sobre os temas abordados em aula.

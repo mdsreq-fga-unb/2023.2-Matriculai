@@ -1,6 +1,6 @@
 # Olá, bem-vindo ao Matriculaí!
 
-O Matriculaí é uma solução web que visa facilitar a matícula de alunos e Ensino Médio da escola CEMTN - Centro de Ensino Médio Taguatinga Norte
+O Matriculaí é uma solução web que visa facilitar a matrícula de alunos e Ensino Médio da escola CEMTN - Centro de Ensino Médio Taguatinga Norte
 
 ## Nossa Equipe
 

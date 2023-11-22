@@ -5,9 +5,6 @@
 | 25/10/2023 | 0.1 | Criando backlog SAFe | Yasmim Rosa |
 | 29/10/2023 | 0.2 | Mesclando células das tabelas | Júlia Yoshida |
 
-
-
-
 ## Requisitos Funcionais - Backlog SAFe
 
 <table>
@@ -262,7 +259,7 @@ Organização das US por Épicos por ordem de média do VN (valor de negócio) e
 			<td rowspan="2">[FE02] Gestão de eletivas	</td>
 			<td>[US03] Eu, como administrador, desejo poder adicionar uma nova matéria eletiva ao catálogo do sistema, para manter o catálogo atualizado.
 </td>
-			<td>Devem ser preenchidos obrigatoriamente os campos:</br>- Nome da eletiva(de 3até 40 caracteres);</br>- Breve descrição(até 150 caracteres);</br>- Ano letivo(1, 2 ou 3);</br>- Professor responsável (10 a 30 caracteres);</br>- Número de vagas(mínimo 15 e máximo 30);</br>- Horário da disciplina(1º a 5º);</br>- Código da sala de aula;</br>- Deve ser recebida uma mensagem de confirmação ou não do cadastro da eletiva.</td>
+			<td>Devem ser preenchidos obrigatoriamente os campos:</br>- Nome da eletiva(de 3até 40 caracteres);</br>- Breve descrição(até 150 caracteres);</br>- Ano letivo(1, 2 ou 3);</br>- Professor responsável (10 a 30 caracteres);</br>- Número de vagas(mínimo 15 e máximo 30);</br>- Horário da disciplina(1º a 5º);</br>- Deve ser recebida uma mensagem de confirmação ou não do cadastro da eletiva.</td>
 		</tr>
 		<tr>
 			<td>[US04] Eu, como administrador, desejo poder remover uma matéria eletiva do catálogo do sistema, para manter o catálogo atualizado.
@@ -357,4 +354,3 @@ Organização das US por Épicos por ordem de média do VN (valor de negócio) e
 * O Requisito foi implementado de acordo com o backlog e seus critérios ?
 * O Requisito passou pela Estratégia de Testes?
 * Sua integração com o resto do sistema gerou algum impacto negativo?
-* A documentação está devidamente realizada?

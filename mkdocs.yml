@@ -19,6 +19,9 @@ nav:
   - Exercícios: 
       - Exercícios Cruzados: 'exercicios_cruzados.md'
       - Exercícios da Equipe: 'exercicio_nosso.md'
+  - Testes:
+      - MVP 1: 'mvp1.md'
+      - MVP 2: 'mvp2.md'
 
 theme:
   name: material

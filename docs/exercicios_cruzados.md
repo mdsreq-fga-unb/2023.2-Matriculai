@@ -1,3 +1,7 @@
+| Data | Versão | Descrição | Autores |
+| ---------- | ----------- | -------------- | -------------- |
+| 21/11/2023 | 1.0 | Adição das atividades | Luana Ribeiro |
+
 # Exercícios da Disciplina
 
 Exercícios realizados em sala de aula, abordando os conteúdos da disciplina em atividades práticas.
