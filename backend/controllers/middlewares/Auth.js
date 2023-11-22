@@ -8,6 +8,11 @@ const createToken = (user) => {
 };
 
 const validateToken = (req, res, next) => {
+
+    if (req.path === '/register' && req.method === 'POST') {
+        return next();
+    }
+    
     const accessToken = req.cookies && req.cookies['access-token']; 
     if (!accessToken) {
         return res.status(400).json({ error: 'Usuário não autenticado!' });
@@ -26,5 +31,3 @@ const validateToken = (req, res, next) => {
 
 module.exports = { createToken, validateToken };
 
-
-module.exports = { createToken, validateToken };

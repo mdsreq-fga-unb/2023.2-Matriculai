@@ -5,7 +5,7 @@ const userController =  require('../../controllers/UserControllers');
 const { validateToken } = require('../../controllers/middlewares/Auth');
 
 router.use(cookieParser());
-router.post('/', userController.userRegister);
+router.post('/register', userController.userRegister);
 router.post('/login', userController.userLogin);
 
 router.get('/profile', validateToken, (req, res) => {
