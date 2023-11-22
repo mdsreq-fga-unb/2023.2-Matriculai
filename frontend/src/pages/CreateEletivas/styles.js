@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  //justify-content: center;
+   
   flex-direction: column;
   gap: 10px;
   height: 100vh;
@@ -21,8 +22,8 @@ export const Content = styled.div`
   box-shadow: 0 1px 2px #0003;
   background-color: #f4f4f2;
   max-width: 650px;
-  max-height: 650px;
-  padding: 0px;
+  max-height: 85%;
+  margin-top: 2%;
   border-radius: 60px;
 `;
 
