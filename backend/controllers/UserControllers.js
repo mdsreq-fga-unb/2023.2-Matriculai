@@ -3,21 +3,30 @@ const bcrypt = require('bcrypt');
 const { sign } = require('jsonwebtoken');
 const { createToken, validateToken } = require('./middlewares/Auth');
 
-exports.userRegister = async(req, res) => {
+exports.userRegister = async (req, res) => {
     const { email, password } = req.body;
+    const existingUser = await Users.findOne({ where: { email: email } });
+
+    if (existingUser) {
+        return res.status(400).json({ error: 'E-mail já cadastrado!' });
+    }
+
     bcrypt.hash(password, 15).then((hash) => {
         Users.create({
             email: email,
             password: hash,
-        }).then(() =>{
+        })
+        .then(() => {
             res.json('Solicitação bem sucedida!');
-        }).catch((err) => {
-            if(err){
-                res.status(400).json({error: err});
+        })
+        .catch((err) => {
+            if (err) {
+                res.status(400).json({ error: err });
             }
         });
     });
 };
+
 
 exports.userLogin = async(req, res) => {
     const { email, password } = req.body;
