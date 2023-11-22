@@ -16,6 +16,9 @@ nav:
     - Unidade 2: 'unidade2.md'
     - Unidade 3: 'unidade3.md'
     - Unidade 4: 'unidade4.md'
+  - Exercícios: 
+      - Exercícios Cruzados: 'exercicios_cruzados.md'
+      - Exercícios da Equipe: 'exercicio_nosso.md'
 
 theme:
   name: material
