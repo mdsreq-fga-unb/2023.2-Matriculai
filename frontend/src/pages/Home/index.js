@@ -11,12 +11,12 @@ const Home = () => {
       <Container flex="1">
         
         <Center>
-          <Link to='/criar-trilhas'>Cria trilha</Link>
-          <Link to='/criar-eletivas'>Cria Eletiva </Link>
+          <Link to='/criar-trilha'>Cria trilha</Link>
+          <Link to='/criar-eletiva'>Cria Eletiva </Link>
         </Center>
         <Center>
-          <Link to='/exclui-trilhas'>Exclui trilha</Link>
-          <Link to='/exclui-eletivas'>Exclui eletiva</Link>
+          <Link to='/excluir-trilhas'>Exclui trilha</Link>
+          <Link to='/excluir-eletivas'>Exclui eletiva</Link>
         </Center>
       </Container>
       <Footer />
