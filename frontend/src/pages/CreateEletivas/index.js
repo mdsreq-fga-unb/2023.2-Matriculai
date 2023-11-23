@@ -71,12 +71,14 @@ const CreateEletivas = () => {
           <Header></Header>
         <Container flex='1'>
 
-          <Box width="100%" marginTop="10vh" marginBottom="10vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
+          <Box width="100%" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
             <FormControl display="flex" flexDirection="column" gap="1">
-              
-              <Box textAlign="center">
-                <Heading color= '#243A69'>CADASTRAR ELETIVAS</Heading>
-              </Box>
+              <Center>
+
+            <C.titulo >
+                  <Text textAlign={'center'} fontSize={'x-large'} color={'#243A69'} as={'b'}>CADASTRO DE ELETIVAS</Text>
+                </C.titulo>
+              </Center>
               <FormLabel  color= '#243A69'>Nome da eletiva </FormLabel>
               <Input
                 type='text' 
@@ -149,7 +151,7 @@ const CreateEletivas = () => {
           
         </Container>
         <Footer> </Footer>
-                </Flex>
+        </Flex>
     </ChakraProvider>
    
       

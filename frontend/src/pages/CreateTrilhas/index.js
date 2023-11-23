@@ -2,25 +2,30 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ChakraProvider } from '@chakra-ui/react'
-import Header from "../Home";
-import ButtonCadastrar from "../../components/Button";
+import ButtonCadastrar from "../../components/Button/index.js";
 import * as C from "./styles";
 import axios from "axios";
-import useAuth from "../../hooks/useAuth";  
+import useAuth from "../../hooks/useAuth";
+import Header from "../../components/Header/index.js";
+import Footer from "../../components/Footer/index.js";
 
 
 import { 
   Input,
+  Button,
   Box,
   Center,
+  Flex,
   FormControl,
   FormLabel,
+  Heading,
   Select,
   Text,
   Stack,
   Alert,
   AlertIcon,
   useToast,
+  Container,
   
 } from "@chakra-ui/react";
 
@@ -80,12 +85,12 @@ const CreateTrilhas = () => {
   }
   return (
     <ChakraProvider>
-        
-        
-        <C.Container>
-          <C.Content>
+        <Flex direction="column" minH="100vh">
+        <Header></Header>
+        <Container flex='1'>
+        <Box width="100%"  paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
 
-          <Box  alignSelf={'center'} >
+          <Box  textAlign='center' alignSelf={'center'} >
             <FormControl display="flex" flexDirection="column" gap="4">
               
               <Center paddingTop='5'>
@@ -153,9 +158,11 @@ const CreateTrilhas = () => {
               
             </FormControl>
           </Box>
-          </C.Content>
-        </C.Container>
-      
+          
+        </Box>
+        </Container>
+        <Footer></Footer>
+      </Flex>
     </ChakraProvider>
    
       
