@@ -43,15 +43,12 @@ const CreateTrilhas = () => {
       setError("Preencha todos os campos");
        return;
     };
-    console.log(nomeTrilha);
-    console.log(descricao);
-    console.log(serie);
-    console.log(eletivas);
 
     try {
-      const response = await axios.post('localhost:3000', {nomeTrilha, descricao, serie, eletivas   });
+      const response = await axios.post('http://localhost:3001/learningpath/createLearningPaths', {name: nomeTrilha, description: descricao, school_year: parseInt(serie), electives: eletivas });
       
-      if (response.status === 200) {
+      console.log(response)
+      if (response.status === 201) {
         
         toast({
           title: 'Trilha cadastrada.',
@@ -128,9 +125,9 @@ const CreateTrilhas = () => {
                 value={serie}
                 onChange={(e)=>[setSerie(e.target.value), setError("")]}
                 >
-                <option value='option1'> 1</option>
-                <option value='option2'> 2</option>
-                <option value='option3'> 3</option>
+                <option value={1}> 1</option>
+                <option value={2}> 2</option>
+                <option value={3}> 3</option>
               </Select>
 
               <FormLabel color= '#243A69'>Eletivas relacionadas </FormLabel>

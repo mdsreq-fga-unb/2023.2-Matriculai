@@ -40,54 +40,28 @@ const CreateEletivas = () => {
   const [error, setError] = useState("");
 
   const handleCadastro = async () => {
-    if (!nomeEletiva || !descricao || !serie || !professor || !vagas || !horario) {
-      
-      setError("Preencha todos os campos");
-       return;
-    };
-    console.log(nomeEletiva);
-    console.log(descricao);
-    console.log(serie);
-    console.log(professor);
-    console.log(vagas);
-    console.log(horario);
+    try{
+      const data = {
+        name: nomeEletiva,
+        description: descricao,
+        school_year: parseInt(serie),
+        teacher: professor,
+        vacancies: parseInt(vagas),
+        schedules: parseInt(horario)
+      };
 
-    try {
-      const response = await axios.post('localhost:3000', {nomeEletiva, descricao, serie, professor, vagas, horario   });
-      
-      if (response.status === 200) {
-        
-        toast({
-          title: 'Account created.',
-          description: "We've created your account for you.",
-          status: 'success',
-          duration: 2800,
-          isClosable: true,
-          position: 'top'
-        })
-
-        // Sucesso, redirecionar ou realizar outras ações necessárias
-        navigate("/home");
-      } else {
-        // Exibir mensagem de erro
-        setError(response.data.message);
-      }
-    } catch (error) {
-      if (axios.isAxiosError(error)) {
-        // Imprime informações detalhadas sobre o erro Axios
-        console.error("Erro ao fazer cadastro - Status:", error.response?.status);
-        console.error("Erro ao fazer cadastro - Data:", error.response?.data);
-      } else {
-        console.error("Erro ao cadastrar:", error);
-      }
-      
-      setError("Erro ao cadastrar. Tente novamente mais tarde.");
+      const response = await axios.post('http://localhost:3001/elective/createElective', data)
+      console.log(response.data);
+      navigate('/home')
+    
+    }catch(err) {
+      console.error('Erro no cadastro:', err);
     }
+  };
 
-  }
+  
   return (
     <ChakraProvider>
-        
         
         <C.Container>
           <C.Content>
@@ -132,9 +106,9 @@ const CreateEletivas = () => {
                 value={serie}
                 onChange={(e)=>[setSerie(e.target.value), setError("")]}
                 >
-                <option value='option1'> 1</option>
-                <option value='option2'> 2</option>
-                <option value='option3'> 3</option>
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
               </Select>
 
               <FormLabel color= '#243A69'>Professor Responsável</FormLabel> 
