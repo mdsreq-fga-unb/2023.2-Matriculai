@@ -14,7 +14,6 @@ import {
   Button,
   Box,
   Center,
-  Flex,
   FormControl,
   FormLabel,
   Heading,
@@ -66,17 +65,17 @@ const CreateEletivas = () => {
   
   return (
     <ChakraProvider>
-        <Flex direction="column" minH="100vh">
-
+        
           <Header></Header>
         <Container flex='1'>
 
           <Box width="100%" marginTop="10vh" marginBottom="10vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
-            <FormControl display="flex" flexDirection="column" gap="1">
+            <FormControl display="flex" flexDirection="column" gap="4">
               
-              <Box textAlign="center">
-                <Heading color= '#243A69'>CADASTRAR ELETIVAS</Heading>
-              </Box>
+            <Box textAlign="center">
+          <Heading color= '#243A69'>CADASTRAR ELETIVAS</Heading>
+        </Box>
+              
               <FormLabel  color= '#243A69'>Nome da eletiva </FormLabel>
               <Input
                 type='text' 
@@ -137,7 +136,7 @@ const CreateEletivas = () => {
                 onChange={(e)=>[setHorario(e.target.value), setError("")]}
                 />
               <C.labelError>{error}</C.labelError>   
-              <Center paddingBottom={5} padding={5}>
+              <Center paddingBottom={5}>
 
               <ButtonCadastrar Text="Cadastrar" onClick={handleCadastro}> </ButtonCadastrar>
               </Center>
@@ -149,7 +148,6 @@ const CreateEletivas = () => {
           
         </Container>
         <Footer> </Footer>
-                </Flex>
     </ChakraProvider>
    
       

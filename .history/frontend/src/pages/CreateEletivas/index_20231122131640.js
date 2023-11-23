@@ -2,29 +2,25 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ChakraProvider } from '@chakra-ui/react'
-import ButtonCadastrar from "../../components/Button/index.js";
+import Header from "../Home";
+import ButtonCadastrar from "../../components/Button";
 import * as C from "./styles";
 import axios from "axios";
-import useAuth from "../../hooks/useAuth";
-import Header from "../../components/Header/index.js";
-import Footer from "../../components/Footer/index.js";
+import useAuth from "../../hooks/useAuth";  
+
 
 import { 
   Input,
-  Button,
   Box,
   Center,
-  Flex,
   FormControl,
   FormLabel,
-  Heading,
   Select,
   Text,
   Stack,
   Alert,
   AlertIcon,
   useToast,
-  Container,
   
 } from "@chakra-ui/react";
 
@@ -35,6 +31,11 @@ const CreateEletivas = () => {
   const toastIdRef = React.useRef()
 
   const toast = useToast();  
+  function close() {
+    if (toastIdRef.current) {
+      toast.close(toastIdRef.current)
+    }
+  }
   const [nomeEletiva, setEletiva] = useState("");
   const [descricao, setDescricao] = useState("");
   const [serie, setSerie] = useState("");
@@ -44,39 +45,76 @@ const CreateEletivas = () => {
   const [error, setError] = useState("");
 
   const handleCadastro = async () => {
-    try{
-      const data = {
-        name: nomeEletiva,
-        description: descricao,
-        school_year: parseInt(serie),
-        teacher: professor,
-        vacancies: parseInt(vagas),
-        schedules: parseInt(horario)
-      };
+    if (!nomeEletiva || !descricao || !serie || !professor || !vagas || !horario) {
+      
+      toast({
+        title: 'Account created.',
+        description: "We've created your account for you.",
+        status: 'success',
+        duration: 600,
+        isClosable: true,
 
-      const response = await axios.post('http://localhost:3001/elective/createElective', data)
-      console.log(response.data);
-      navigate('/home')
-    
-    }catch(err) {
-      console.error('Erro no cadastro:', err);
+      })
+      //navigate("/home");
+      
+      setError("Preencha todos os campos");
+       return;
+    };
+    console.log(nomeEletiva);
+    console.log(descricao);
+    console.log(serie);
+    console.log(professor);
+    console.log(vagas);
+    console.log(horario);
+
+    try {
+      const response = await axios.post('localhost:3000', {nomeEletiva, descricao, serie, professor, vagas, horario   });
+      
+      if (response.status === 200) {
+        
+        <Alert status='success'>
+        <AlertIcon />
+          Eletiva cadastrada com sucesso!
+        </Alert>
+
+        // Sucesso, redirecionar ou realizar outras ações necessárias
+        navigate("/home");
+      } else {
+        // Exibir mensagem de erro
+        setError(response.data.message);
+      }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        // Imprime informações detalhadas sobre o erro Axios
+        console.error("Erro ao fazer cadastro - Status:", error.response?.status);
+        console.error("Erro ao fazer cadastro - Data:", error.response?.data);
+      } else {
+        console.error("Erro ao cadastrar:", error);
+      }
+      
+      setError("Erro ao cadastrar. Tente novamente mais tarde.");
     }
-  };
 
-  
+  }
   return (
     <ChakraProvider>
-        <Flex direction="column" minH="100vh">
+        
+        
+        <C.Container>
+          <C.Content>
 
-          <Header></Header>
-        <Container flex='1'>
-
-          <Box width="100%" marginTop="10vh" marginBottom="10vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
-            <FormControl display="flex" flexDirection="column" gap="1">
+          <Box  alignSelf={'center'} >
+            <FormControl display="flex" flexDirection="column" gap="4">
               
-              <Box textAlign="center">
-                <Heading color= '#243A69'>CADASTRAR ELETIVAS</Heading>
-              </Box>
+              <Center paddingTop='5'>
+                <C.titulo >
+                  <Text textAlign={'center'} fontSize={'x-large'} color={'#243A69'} as={'b'}>CADASTRO DE ELETIVAS</Text>
+                </C.titulo>
+              </Center>
+
+              <Stack spacing={2}>
+
+              
               <FormLabel  color= '#243A69'>Nome da eletiva </FormLabel>
               <Input
                 type='text' 
@@ -105,9 +143,9 @@ const CreateEletivas = () => {
                 value={serie}
                 onChange={(e)=>[setSerie(e.target.value), setError("")]}
                 >
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
+                <option value='option1'> 1</option>
+                <option value='option2'> 2</option>
+                <option value='option3'> 3</option>
               </Select>
 
               <FormLabel color= '#243A69'>Professor Responsável</FormLabel> 
@@ -137,19 +175,17 @@ const CreateEletivas = () => {
                 onChange={(e)=>[setHorario(e.target.value), setError("")]}
                 />
               <C.labelError>{error}</C.labelError>   
-              <Center paddingBottom={5} padding={5}>
+              <Center paddingBottom={5}>
 
               <ButtonCadastrar Text="Cadastrar" onClick={handleCadastro}> </ButtonCadastrar>
               </Center>
-              
-              
+              </Stack>
               
             </FormControl>
           </Box>
-          
-        </Container>
-        <Footer> </Footer>
-                </Flex>
+          </C.Content>
+        </C.Container>
+      
     </ChakraProvider>
    
       

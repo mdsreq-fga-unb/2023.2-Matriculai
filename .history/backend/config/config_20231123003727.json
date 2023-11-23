@@ -2,7 +2,7 @@
   "development": {
   "username": "eu",
   "password": "12345",
-  "database": "matriculai",
+  "database": "matriculai_development",
   "host": "localhost",
   "dialect": "mysql"
 },

@@ -2,22 +2,18 @@ import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ChakraProvider } from '@chakra-ui/react'
-import ButtonCadastrar from "../../components/Button/index.js";
+import ButtonCadastrar from "../../components/Button";
 import * as C from "./styles";
 import axios from "axios";
-import useAuth from "../../hooks/useAuth";
-import Header from "../../components/Header/index.js";
-import Footer from "../../components/Footer/index.js";
+import useAuth from "../../hooks/useAuth";  
+
 
 import { 
   Input,
-  Button,
   Box,
   Center,
-  Flex,
   FormControl,
   FormLabel,
-  Heading,
   Select,
   Text,
   Stack,
@@ -66,17 +62,23 @@ const CreateEletivas = () => {
   
   return (
     <ChakraProvider>
-        <Flex direction="column" minH="100vh">
-
-          <Header></Header>
+        
         <Container flex='1'>
+          <Header></Header>
+          <C.Content>
 
-          <Box width="100%" marginTop="10vh" marginBottom="10vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
-            <FormControl display="flex" flexDirection="column" gap="1">
+          <Box  alignSelf={'center'} >
+            <FormControl display="flex" flexDirection="column" gap="4">
               
-              <Box textAlign="center">
-                <Heading color= '#243A69'>CADASTRAR ELETIVAS</Heading>
-              </Box>
+              <Center paddingTop='5'>
+                <C.titulo >
+                  <Text textAlign={'center'} fontSize={'x-large'} color={'#243A69'} as={'b'}>CADASTRO DE ELETIVAS</Text>
+                </C.titulo>
+              </Center>
+
+              <Stack spacing={2}>
+
+              
               <FormLabel  color= '#243A69'>Nome da eletiva </FormLabel>
               <Input
                 type='text' 
@@ -137,19 +139,17 @@ const CreateEletivas = () => {
                 onChange={(e)=>[setHorario(e.target.value), setError("")]}
                 />
               <C.labelError>{error}</C.labelError>   
-              <Center paddingBottom={5} padding={5}>
+              <Center paddingBottom={5}>
 
               <ButtonCadastrar Text="Cadastrar" onClick={handleCadastro}> </ButtonCadastrar>
               </Center>
-              
-              
+              </Stack>
               
             </FormControl>
           </Box>
-          
+          </C.Content>
         </Container>
-        <Footer> </Footer>
-                </Flex>
+      
     </ChakraProvider>
    
       

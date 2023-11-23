@@ -72,7 +72,7 @@ const CreateEletivas = () => {
         <Container flex='1'>
 
           <Box width="100%" marginTop="10vh" marginBottom="10vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
-            <FormControl display="flex" flexDirection="column" gap="1">
+            <FormControl display="flex" flexDirection="column" gap="">
               
               <Box textAlign="center">
                 <Heading color= '#243A69'>CADASTRAR ELETIVAS</Heading>
@@ -137,7 +137,7 @@ const CreateEletivas = () => {
                 onChange={(e)=>[setHorario(e.target.value), setError("")]}
                 />
               <C.labelError>{error}</C.labelError>   
-              <Center paddingBottom={5} padding={5}>
+              <Center paddingBottom={5}>
 
               <ButtonCadastrar Text="Cadastrar" onClick={handleCadastro}> </ButtonCadastrar>
               </Center>

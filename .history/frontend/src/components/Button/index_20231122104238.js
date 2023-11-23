@@ -11,11 +11,10 @@ const Button = ({ Text, onClick, Type = "button" }) => {
 
 export default Button;
 
-const ButtonCadastrar = ({ Text, onClick, Type = "button" }) => {
+const ButtonCadastrar = ({ Text, onClick, Type = "button", PaddingBottom='20' }) => {
   return (
-    <C.Button type={Type} onClick={onClick}  >
+    <C.Button type={Type} onClick={onClick} >
       {Text}
     </C.Button>
   );
 };
-export { ButtonCadastrar };

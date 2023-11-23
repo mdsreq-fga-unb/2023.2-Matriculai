@@ -137,7 +137,7 @@ const CreateEletivas = () => {
                 onChange={(e)=>[setHorario(e.target.value), setError("")]}
                 />
               <C.labelError>{error}</C.labelError>   
-              <Center paddingBottom={5} padding={5}>
+              <Center paddingBottom={5}>
 
               <ButtonCadastrar Text="Cadastrar" onClick={handleCadastro}> </ButtonCadastrar>
               </Center>

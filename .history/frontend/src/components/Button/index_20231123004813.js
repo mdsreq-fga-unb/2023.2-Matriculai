@@ -18,4 +18,4 @@ const ButtonCadastrar = ({ Text, onClick, Type = "button" }) => {
     </C.Button>
   );
 };
-export { ButtonCadastrar };
+export default{ ButtonCadastrar };
