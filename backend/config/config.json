@@ -1,7 +1,7 @@
 {
   "development": {
-  "username": "eu",
-  "password": "12345",
+  "username": "root",
+  "password": "password",
   "database": "matriculai",
   "host": "localhost",
   "dialect": "mysql"
