@@ -6,6 +6,7 @@ const electiveRoute = require('./views/routes/Electives')
 const learningPathRoute = require('./views/routes/LearningPaths')
 const logoutRoutes = require('./views/routes/Users');
 const sequelize = require('sequelize');
+const deleteLearningPathsRoute = require('./views/routes/LearningPaths');
 
 require("dotenv").config();
 const app = express();
@@ -15,7 +16,8 @@ app.use(cors());
 
 app.use('/auth', userRoute);
 app.use('/elective', electiveRoute);
-app.use('/learning_paths', learningPathRoute);
+app.use('/learningpath', learningPathRoute);
+app.use('/deleteLearningPaths', deleteLearningPathsRoute);
 app.use('/api', logoutRoutes);
 
 // sequelize

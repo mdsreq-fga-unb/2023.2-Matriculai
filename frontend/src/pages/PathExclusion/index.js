@@ -28,7 +28,7 @@ const TrilhasList = () => {
   useEffect(() => {
     async function fetchTrilhas() {
       try {
-        const response = await axios.get('http://localhost:3000/api/trilhas'); // Endpoint para buscar trilhas
+        const response = await axios.get('http://localhost:3000/learningpath/learningpath'); // Endpoint para buscar trilhas
         setTrilhas(response.data); // Define as trilhas na state 'trilhas'
       } catch (error) {
         console.error('Erro ao buscar trilhas:', error);
@@ -38,33 +38,43 @@ const TrilhasList = () => {
   }, []);
 
   // Função para marcar/desmarcar trilha selecionada
-  const toggleSelecionada = (id) => {
+  const handleCheckboxChange = (id) => {
     const isSelected = trilhasSelecionadas.includes(id);
+
     if (isSelected) {
-      const updatedSelection = trilhasSelecionadas.filter((trilhaId) => trilhaId !== id);
-      setTrilhasSelecionadas(updatedSelection);
+      // Se já estiver selecionado, remova da lista de selecionados
+      setTrilhasSelecionadas(trilhasSelecionadas.filter((eleId) => eleId !== id));
     } else {
+      // Se não estiver selecionado, adicione à lista de selecionados
       setTrilhasSelecionadas([...trilhasSelecionadas, id]);
     }
+
+    console.log(trilhasSelecionadas)
   };
 
+
   // Função para excluir trilhas selecionadas
-  const handleExcluirTrilhas = async () => {
+  const handleExcluirClick = async () => {
     try {
-      await axios.delete('http://localhost:3000/api/deleteLearningPaths', {
-        data: { id: trilhasSelecionadas }, // Envia os IDs das trilhas selecionadas para exclusão
-      });
-      // Atualiza a lista de trilhas após a exclusão
-      const updatedTrilhas = trilhas.filter((trilha) => !trilhasSelecionadas.includes(trilha.id));
-      setTrilhas(updatedTrilhas);
-      setTrilhasSelecionadas([]); // Limpa as trilhas selecionadas após a exclusão
-      alert('Trilhas excluídas com sucesso!');
+      // Enviar uma solicitação para excluir as eletivas selecionadas
+      trilhasSelecionadas.map(async (eletiva)  => {
+        await axios.delete('http://localhost:3001/elective/deleteElective', {
+          data: { id: eletiva },
+        });
+      })
+  
+      // Atualizar a lista de eletivas após a exclusão
+      const response = await axios.get('http://localhost:3000/learningpath/deleteLearningPaths');
+      setTrilhas(response.data);
+  
+      // Limpar a lista de eletivas selecionadas
+      setTrilhasSelecionadas([]);
     } catch (error) {
       console.error('Erro ao excluir trilhas:', error);
     }
   };
 
-  const dados = [{"nomeTrilha": "teste", "anoTrilha": 2}]
+
 
   return (
     <ChakraProvider>
@@ -84,18 +94,18 @@ const TrilhasList = () => {
                 </Tr>
               </Thead>
               <Tbody>
-                {dados.map((linha, index) => (
+                {trilhas.map((linha, index) => (
                   <Tr key={index}>
                     <Td>{linha.nomeTrilha}</Td>
                     <Td>{linha.anoTrilha}</Td>
-                    <Td><Checkbox colorScheme='red' defaultChecked></Checkbox></Td>
+                    <Td><Checkbox colorScheme='red' onChange={() => handleCheckboxChange(linha.id)}></Checkbox></Td>
                   </Tr>
                 ))}
               </Tbody>
             </Table>
           </TableContainer>
           <Box display="flex" justifyContent="center">
-          <Button color="#243A69" variant='solid' margin="2vh">Excluir</Button>
+          <Button color="#243A69" variant='solid' margin="2vh" onClick={handleExcluirClick}>Excluir trilha selecionadas</Button>
           </Box>
         </Box>
       </Flex>
