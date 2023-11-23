@@ -58,3 +58,16 @@ exports.userLogin = async (req, res) => {
     }
 };
 
+exports.userLogout = async (req, res) => {
+    try {
+        const { accessToken } = req.body;
+        await Users.update(
+            { token: null },
+            { where: { token: accessToken } }
+        );
+        res.json({ message: 'Logout bem-sucedido' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Erro durante o logout.' });
+    }
+};

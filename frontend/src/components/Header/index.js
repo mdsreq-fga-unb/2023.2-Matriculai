@@ -17,19 +17,12 @@ const Header = () => {
 
   const handleLogout = async () => {
     const accessToken = sessionStorage.getItem("accessToken");
-    
     try {
-      // Chamar o backend para remover o token no banco de dados
       await axios.post('http://localhost:3001/auth/logout', { accessToken });
-  
-      // Remover o token da sessionStorage
       sessionStorage.removeItem("accessToken");
-  
-      // Redirecionar para a página de login
       navigate("/login");
     } catch (error) {
       console.error("Erro ao fazer logout:", error.message);
-      // Lidar com erros, se necessário
     }
   };
 
