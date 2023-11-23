@@ -1,11 +1,11 @@
 {
-  "development": {
-  "username": "eu",
-  "password": "12345",
-  "database": "matriculai",
-  "host": "localhost",
-  "dialect": "mysql"
-},
+    "development": {
+    "username": "root",
+    "password": "banco",
+    "database": "matriculai",
+    "host": "104.154.26.234",
+    "dialect": "mysql"
+  },
   "test": {
     "username": "root",
     "password": null,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Flex, Box, Spacer, Menu, MenuButton } from "@chakra-ui/react";
 import { Image } from '@chakra-ui/react'
@@ -14,16 +14,22 @@ import axios from 'axios';
 
 const Header = () => {
   const navigate = useNavigate();
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
   const handleLogout = async () => {
     const accessToken = sessionStorage.getItem("accessToken");
     try {
       await axios.post('http://localhost:3001/auth/logout', { accessToken });
       sessionStorage.removeItem("accessToken");
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       console.error("Erro ao fazer logout:", error.message);
     }
+  };
+
+  const cancelLogout = () => {
+    // Se o usuário cancelar o logout, você fecha a mensagem de confirmação
+    setShowConfirmation(false);
   };
 
   return (
@@ -61,11 +67,19 @@ const Header = () => {
               </StyledMenuItem>
             <StyledMenuItem>
               <StyledImage src={logoutIcon} alt='Logout Icon' />
-              <button onClick={handleLogout}>Sair</button>
+              <button onClick={() => setShowConfirmation(true)}>Sair</button>
             </StyledMenuItem>
           </StyledMenuList>
         </Menu>
       </Box>
+       {/* Mensagem de confirmação */}
+       {showConfirmation && (
+        <div>
+          <p>Deseja realmente sair?</p>
+          <button onClick={handleLogout}>Sim</button>
+          <button onClick={cancelLogout}>Cancelar</button>
+        </div>
+      )}
     </Flex>
   );
 };
