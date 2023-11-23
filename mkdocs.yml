@@ -5,11 +5,14 @@ nav:
     - Visão de produto: 'visao_produto.md'
     - Visão de projeto: 'visao_projeto.md'
     - Processos de desenvolvimento de software: 'desenvolvimento.md'
-  - Sprints: 'sprints.md'
   - Backlog: 'backlog.md'
   - Design: 
       - Arquitetura: 'arquitetura.md'
       - Padrões de interface: 'padroes.md'
+  - Sprints: 'sprints.md'
+  - Testes:
+      - MVP 1: 'mvp1.md'
+      - MVP 2: 'mvp2.md'
   - Lições Aprendidas: 'licoes.md'
   - Entregas: 
     - Unidade 1: 'unidade1.md'
@@ -19,9 +22,7 @@ nav:
   - Exercícios: 
       - Exercícios Cruzados: 'exercicios_cruzados.md'
       - Exercícios da Equipe: 'exercicio_nosso.md'
-  - Testes:
-      - MVP 1: 'mvp1.md'
-      - MVP 2: 'mvp2.md'
+  
 
 theme:
   name: material

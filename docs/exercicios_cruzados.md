@@ -2,11 +2,9 @@
 | ---------- | ----------- | -------------- | -------------- |
 | 21/11/2023 | 1.0 | Adição das atividades | Luana Ribeiro |
 
-# Exercícios da Disciplina
-
-Exercícios realizados em sala de aula, abordando os conteúdos da disciplina em atividades práticas.
-
 # Exercícios Cruzados
+
+Exercícios realizados em sala de aula, abordando os conteúdos da disciplina em atividades práticas. Essas atividades foram realizadas de forma cruzada, em que uma equipe valida a atividade realizada por outra, dessa forma, as validações a seguir foram das equipes associadas nessa avaliação cruzada. 
 
 # Equipe: TabeçaTeam
 
