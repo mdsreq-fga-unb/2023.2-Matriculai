@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from '../Home/index';
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, useDisclosure } from '@chakra-ui/react'
+import Header from "../../components/Header/index.js";
+import Footer from "../../components/Footer/index.js";
 
 import { 
   Box,
@@ -16,19 +17,32 @@ import {
   Td,
   Checkbox,
   TableContainer,
-  Button
+  Button,
+  AlertDialog,
+  AlertDialogOverlay,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogBody,
+  AlertDialogFooter,
+  Container,
+  Alert,
+  AlertIcon
 } from "@chakra-ui/react"
 ;
 
 const ExclusionTrilhas = () => {
   const [trilhas, setTrilhas] = useState([]);
   const [trilhasSelecionadas, setTrilhasSelecionadas] = useState([]);
+  
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const cancelRef = React.useRef()
 
+  const [showAlert, setShowAlert] = useState(false);
   // Carregar trilhas do backend ao carregar o componente
   useEffect(() => {
     async function fetchTrilhas() {
       try {
-        const response = await axios.get('http://localhost:3000/learningpath/learningpath'); // Endpoint para buscar trilhas
+        const response = await axios.get('http://localhost:3001/learningpath/learningpath'); // Endpoint para buscar trilhas
         setTrilhas(response.data); // Define as trilhas na state 'trilhas'
       } catch (error) {
         console.error('Erro ao buscar trilhas:', error);
@@ -58,17 +72,22 @@ const ExclusionTrilhas = () => {
     try {
       // Enviar uma solicitação para excluir as eletivas selecionadas
       trilhasSelecionadas.map(async (eletiva)  => {
-        await axios.delete('http://localhost:3001/elective/deleteElective', {
+        await axios.delete('http://localhost:3001/learningpath/deleteLearningPaths', {
           data: { id: eletiva },
         });
       })
   
       // Atualizar a lista de eletivas após a exclusão
-      const response = await axios.get('http://localhost:3000/learningpath/deleteLearningPaths');
+      const response = await axios.get('http://localhost:3001/learningpath/learningpath');
       setTrilhas(response.data);
   
       // Limpar a lista de eletivas selecionadas
       setTrilhasSelecionadas([]);
+      onClose();
+      setTimeout(() => {
+        window.location.reload();;
+      }, 2000);
+      setShowAlert(true);
     } catch (error) {
       console.error('Erro ao excluir trilhas:', error);
     }
@@ -78,38 +97,73 @@ const ExclusionTrilhas = () => {
 
   return (
     <ChakraProvider>
-      <Header></Header>
-      <Flex align="center" justifyContent="center">
-        <Box width="60vh" marginTop="3vh" marginBottom="-9vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
-        <Box textAlign="center">
-          <Heading color= '#243A69'>Exclusão de Trilhas</Heading>
-        </Box>
-          <TableContainer>
-            <Table variant='simple'>
-              <Thead>
+    <Flex direction="column" minH="100vh">
+    <Header />
+    <Container flex="1">
+    <Box width="100%" marginTop="10vh" marginBottom="2vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
+      <Box textAlign="center">
+        <Heading color= '#243A69'>Exclusão de Trilhas</Heading>
+      </Box>
+        <TableContainer>
+          <Table variant='simple'>
+            <Thead>
+              <Tr>
+                <Th>Nome da eletiva</Th>
+                <Th>Ano letivo</Th>
+                <Th></Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              {trilhas.map((linha) => (
                 <Tr>
-                  <Th>Nome da trilha</Th>
-                  <Th>Ano letivo</Th>
-                  <Th></Th>
+                  <Td>{linha.name}</Td>
+                  <Td>{linha.school_year}</Td>
+                  <Td><Checkbox colorScheme='red' onChange={() => handleCheckboxChange(linha.id)}></Checkbox></Td>
                 </Tr>
-              </Thead>
-              <Tbody>
-                {trilhas.map((linha, index) => (
-                  <Tr key={index}>
-                    <Td>{linha.nomeTrilha}</Td>
-                    <Td>{linha.anoTrilha}</Td>
-                    <Td><Checkbox colorScheme='red' onChange={() => handleCheckboxChange(linha.id)}></Checkbox></Td>
-                  </Tr>
-                ))}
-              </Tbody>
-            </Table>
-          </TableContainer>
-          <Box display="flex" justifyContent="center">
-          <Button color="#243A69" variant='solid' margin="2vh" onClick={handleExcluirClick}>Excluir trilha selecionadas</Button>
-          </Box>
+              ))}
+            </Tbody>
+          </Table>
+        </TableContainer>
+        <Box display="flex" justifyContent="center">
+        <Button color="#243A69" variant='solid' margin="2vh" onClick={onOpen} >Excluir trilhas selecionadas</Button>
+            <AlertDialog
+          isOpen={isOpen}
+          leastDestructiveRef={cancelRef}
+          onClose={onClose}
+        >
+          <AlertDialogOverlay>
+            <AlertDialogContent>
+              <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+                Excluir Trilhas
+              </AlertDialogHeader>
+
+              <AlertDialogBody>
+                Você tem certeza? Essa ação não pode ser desfeita.
+              </AlertDialogBody>
+
+              <AlertDialogFooter>
+                <Button ref={cancelRef} onClick={onClose}>
+                  Cancelar
+                </Button>
+                <Button colorScheme='red' onClick={handleExcluirClick} ml={3}>
+                  Excluir
+                </Button>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialogOverlay>
+        </AlertDialog>
         </Box>
-      </Flex>
-    </ChakraProvider>
+      </Box>
+      {showAlert && (<Box>
+        <Alert status='success' variant='subtle'>
+        <AlertIcon />
+        Trilhas excluídas com sucesso!
+        </Alert>
+      </Box>)}
+    </Container>
+    <Footer />
+  </Flex>
+  </ChakraProvider>
 
   );
 };

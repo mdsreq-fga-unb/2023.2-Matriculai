@@ -29,14 +29,11 @@ exports.deleteLearningPaths = async(req, res) => {
     });
 }
 
-    exports.LearningPath = async (req, res) => {
-        try {
-          const trilhas = await LearningPath.findAll();
-          res.json(trilhas);
-        } catch (error) {
-          console.error('Erro ao buscar trilhas:', error);
-          res.status(500).json({ message: 'Erro ao buscar trilhas' });
-        }
-
-    
-    }
+exports.LearningPath = async (req, res) => {
+    try {
+        const trilhas = await LearningPath.findAll();
+        res.status(200).json(trilhas);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    } 
+}

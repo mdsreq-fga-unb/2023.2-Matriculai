@@ -17,7 +17,6 @@ app.use(cors());
 app.use('/auth', userRoute);
 app.use('/elective', electiveRoute);
 app.use('/learningpath', learningPathRoute);
-app.use('/deleteLearningPaths', deleteLearningPathsRoute);
 app.use('/api', logoutRoutes);
 
 // sequelize

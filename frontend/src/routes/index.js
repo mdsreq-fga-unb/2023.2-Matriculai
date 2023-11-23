@@ -24,9 +24,9 @@ const RoutesApp = () => {
           <Route path="/" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/criar-eletiva" element={<CreateEletivas />} />
-          <Route path="/exclui-eletivas" element={<ExclusionEletivas />} />
+          <Route path="/excluir-eletivas" element={<ExclusionEletivas />} />
           <Route path="/criar-trilha" element={<CreateTrilhas />} />
-          <Route path="/exclui-trilhas" element={<ExclusionTrilhas />} />
+          <Route path="/excluir-trilhas" element={<ExclusionTrilhas />} />
         </Routes>
       </Fragment>
     </BrowserRouter>
