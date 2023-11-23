@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <Flex direction="column" minH="100vh">
       <Header />
-      <Container ali>
+      <Container flex="1">
         
         <Center>
           <Link to='/criar-trilhas'>Cria trilha</Link>

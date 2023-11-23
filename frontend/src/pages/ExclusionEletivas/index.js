@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from '../Home/index';
+import Header from "../../components/Header/index.js";
+import Footer from "../../components/Footer/index.js";
 import { ChakraProvider } from '@chakra-ui/react'
 
 import { 
+  Center, 
+  Link,
   Box,
   Flex,
   Heading,
@@ -16,7 +19,8 @@ import {
   Td,
   Checkbox,
   TableContainer,
-  Button
+  Button,
+  Container
 } from "@chakra-ui/react"
 ;
 
@@ -73,9 +77,10 @@ const ExclusionEletivas = () => {
 
   return (
     <ChakraProvider>
-      <Header></Header>
-      <Flex align="center" justifyContent="center">
-        <Box width="100vh" marginTop="3vh" marginBottom="-9vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
+        <Flex direction="column" minH="100vh">
+      <Header />
+      <Container flex="1">
+      <Box width="100%" marginTop="10vh" marginBottom="10vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
         <Box textAlign="center">
           <Heading color= '#243A69'>Exclusão de Eletivas</Heading>
         </Box>
@@ -102,10 +107,13 @@ const ExclusionEletivas = () => {
           <Box display="flex" justifyContent="center">
           <Button color="#243A69" variant='solid' margin="2vh" onClick={handleExcluirClick}>Excluir eletivas selecionadas</Button>
           </Box>
-        </Box>
-      </Flex>
+      </Box>
+        
+      </Container>
+      <Footer />
+    </Flex>
     </ChakraProvider>
-
+    
   );
 };
 

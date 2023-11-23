@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "development": {
     "username": "root",
     "password": "banco",
@@ -6,6 +7,15 @@
     "host": "104.154.26.234",
     "dialect": "mysql"
   },
+=======
+  "development": {
+  "username": "root",
+  "password": "password",
+  "database": "matriculai",
+  "host": "localhost",
+  "dialect": "mysql"
+},
+>>>>>>> 6c7689a41778ed6a9282495e865a7db9f0e490cc
   "test": {
     "username": "root",
     "password": null,
