@@ -1,67 +1,115 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
-import { ChakraProvider } from '@chakra-ui/react'
-import ButtonCadastrar from "../../components/Button/index.js";
+import { ChakraProvider } from "@chakra-ui/react";
+import ButtonCadastrar from "../../components/Button";
 import * as C from "./styles";
 import axios from "axios";
-import useAuth from "../../hooks/useAuth";
-import Header from "../../components/Header/index.js";
-import Footer from "../../components/Footer/index.js";
-
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import { 
   Input,
-  Button,
   Box,
   Center,
-  Flex,
   FormControl,
   FormLabel,
-  Heading,
   Select,
   Text,
   Stack,
-  Alert,
-  AlertIcon,
-  useToast,
+  Flex,
   Container,
-  
 } from "@chakra-ui/react";
-
+import { useToast } from "@chakra-ui/react";
+import * as yup from "yup";
 
 const CreateEletivas = () => {
-  const { createEletivas } = useAuth();
   const navigate = useNavigate();
-  const toastIdRef = React.useRef()
+  const toast = useToast();
 
-  const toast = useToast();  
-  const [nomeEletiva, setEletiva] = useState("");
-  const [descricao, setDescricao] = useState("");
-  const [serie, setSerie] = useState("");
-  const [professor, setProfessor] = useState("");
-  const [vagas, setVagas] = useState("");
-  const [horario, setHorario] = useState("");
-  const [error, setError] = useState("");
+  const formik = useFormik({
+    initialValues: {
+      nomeEletiva: "",
+      descricao: "",
+      serie: "",
+      professor: "",
+      vagas: "",
+      horario: "",
+    },
+    validationSchema: yup.object({
+      nomeEletiva: yup
+        .string()
+        .required("O nome da eletiva é obrigatório")
+        .min(3, "O nome da eletiva deve ter pelo menos 3 caracteres")
+        .max(40, "O nome da eletiva deve ter no máximo 40 caracteres"),
+      descricao: yup
+        .string()
+        .required("A breve descrição é obrigatória")
+        .max(150, "A breve descrição deve ter no máximo 150 caracteres"),
+      serie: yup.string().required("A série é obrigatória"),
+      professor: yup
+      .string()
+      .required("O professor responsável é obrigatório")
+      .matches(/^[A-Za-z\s]+$/, "O nome do professor responsável não pode conter números"),
+      vagas: yup
+        .number()
+        .required("O número de vagas é obrigatório")
+        .min(15, "O número de vagas deve ser no mínimo 15")
+        .max(30, "O número de vagas deve ser no máximo 30"),
+      horario: yup
+        .number()
+        .required("O horário da disciplina é obrigatório")
+        .min(1, "O horário da disciplina deve ser no mínimo o primeiro horário(1)")
+        .max(5, "O horário da disciplina deve ser no máximo o quinto horário(5)"),
+    }),
+    onSubmit: async (values) => {
+      try {
+        const data = {
+          name: values.nomeEletiva,
+          description: values.descricao,
+          school_year: parseInt(values.serie),
+          teacher: values.professor,
+          vacancies: parseInt(values.vagas),
+          schedules: parseInt(values.horario),
+        };
 
-  const handleCadastro = async () => {
-    try{
-      const data = {
-        name: nomeEletiva,
-        description: descricao,
-        school_year: parseInt(serie),
-        teacher: professor,
-        vacancies: parseInt(vagas),
-        schedules: parseInt(horario)
-      };
+        const response = await axios.post("http://localhost:3001/elective/createElective", data);
 
-      const response = await axios.post('http://localhost:3001/elective/createElective', data)
-      console.log(response.data);
-      navigate('/home')
-    
-    }catch(err) {
-      console.error('Erro no cadastro:', err);
-    }
-  };
+        if (response.status === 201) {
+          toast({
+            title: "Eletiva cadastrada.",
+            description: "Eletiva cadastrada com sucesso!",
+            status: "success",
+            duration: 2800,
+            isClosable: true,
+            position: "top",
+          });
+
+          // Sucesso, redirecionar ou realizar outras ações necessárias
+          navigate("/home");
+        } else {
+          // Exibir mensagem de erro
+          toast({
+            title: "Erro ao cadastrar eletiva.",
+            description: response.data.message || "Erro desconhecido.",
+            status: "error",
+            duration: 2800,
+            isClosable: true,
+            position: "top",
+          });
+        }
+      } catch (error) {
+        console.error("Erro ao cadastrar:", error);
+        toast({
+          title: "Erro ao cadastrar eletiva.",
+          description: "Tente novamente mais tarde.",
+          status: "error",
+          duration: 2800,
+          isClosable: true,
+          position: "top",
+        });
+      }
+    },
+  });
 
   
   return (
@@ -85,18 +133,26 @@ const CreateEletivas = () => {
                 size='lg'
                 isRequired
                 placeholder='Nome da eletiva'
-                value={nomeEletiva}
-                onChange={(e)=>[setEletiva(e.target.value), setError("")]}
+                {...formik.getFieldProps("nomeEletiva")}
                 />
+                {formik.touched.nomeEletiva && formik.errors.nomeEletiva && (
+                  <Text color="red.500" fontSize="sm">
+                    {formik.errors.nomeEletiva}
+                  </Text>
+                )}
 
               <FormLabel color= '#243A69'>Descrição da eletiva</FormLabel> 
               <Input 
                 type='text'
                 isRequired
                 placeholder='Descrição da eletiva'
-                value={descricao}
-                onChange={(e)=>[setDescricao(e.target.value), setError("")]}
+                {...formik.getFieldProps("descricao")}
                 />
+                {formik.touched.descricao && formik.errors.descricao && (
+                  <Text color="red.500" fontSize="sm">
+                    {formik.errors.descricao}
+                  </Text>
+                )}
 
               <FormLabel color= '#243A69'>Série</FormLabel> 
               <Select
@@ -104,45 +160,61 @@ const CreateEletivas = () => {
                 placeholder='Selecione a série' 
                 _placeholder={{opacity:1, color: '#243A69' }} 
                 isRequired
-                value={serie}
-                onChange={(e)=>[setSerie(e.target.value), setError("")]}
+                {...formik.getFieldProps("serie")}
                 >
                 <option value={1}>1</option>
                 <option value={2}>2</option>
                 <option value={3}>3</option>
               </Select>
+              {formik.touched.serie && formik.errors.serie && (
+                  <Text color="red.500" fontSize="sm">
+                    {formik.errors.serie}
+                  </Text>
+                )}
 
               <FormLabel color= '#243A69'>Professor Responsável</FormLabel> 
               <Input
                 type='text' 
                 isRequired
                 placeholder='Professor Responsável'
-                value={professor}
-                onChange={(e) => [setProfessor(e.target.value), setError("")]}
+                {...formik.getFieldProps("professor")}
                 />
+                {formik.touched.professor && formik.errors.professor && (
+                  <Text color="red.500" fontSize="sm">
+                    {formik.errors.professor}
+                  </Text>
+                )}
+
               
               <FormLabel color= '#243A69'>Número de vagas</FormLabel> 
               <Input
                 type='text' 
                 isRequired
                 placeholder='Número de vagas'
-                value={vagas}
-                onChange={(e)=>[setVagas(e.target.value), setError("")]}
+                {...formik.getFieldProps("vagas")}
                 />
+                {formik.touched.vagas && formik.errors.vagas && (
+                  <Text color="red.500" fontSize="sm">
+                    {formik.errors.vagas}
+                  </Text>
+                )}
               
               <FormLabel color= '#243A69'>Horário da aula</FormLabel> 
               <Input
                 type='text'
                 isRequired
                 placeholder='Horário da aula'
-                value={horario}
-                onChange={(e)=>[setHorario(e.target.value), setError("")]}
+                {...formik.getFieldProps("horario")}
                 />
-              <C.labelError>{error}</C.labelError>   
+                {formik.touched.horario && formik.errors.horario && (
+                  <Text color="red.500" fontSize="sm">
+                    {formik.errors.horario}
+                  </Text>
+                )}
+              
               <Center paddingBottom={5} padding={5}>
 
-              <ButtonCadastrar Text="Cadastrar" onClick={handleCadastro}> </ButtonCadastrar>
-              </Center>
+              <ButtonCadastrar Text="Cadastrar" onClick={formik.handleSubmit}></ButtonCadastrar>              </Center>
               
               
               
