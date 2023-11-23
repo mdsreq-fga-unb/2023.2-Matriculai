@@ -123,7 +123,7 @@ const ExclusionEletivas = () => {
             </Table>
           </TableContainer>
           <Box display="flex" justifyContent="center">
-          <Button color="#243A69" variant='solid' margin="2vh" onClick={onOpen} >Excluir eletivas selecionadas</Button>
+          <Button colorScheme='facebook' variant='solid' margin="2vh" onClick={onOpen}  isDisabled={eletivasSelecionadas.length === 0}>Excluir eletivas selecionadas</Button>
               <AlertDialog
             isOpen={isOpen}
             leastDestructiveRef={cancelRef}

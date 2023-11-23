@@ -125,7 +125,7 @@ const ExclusionTrilhas = () => {
           </Table>
         </TableContainer>
         <Box display="flex" justifyContent="center">
-        <Button color="#243A69" variant='solid' margin="2vh" onClick={onOpen} >Excluir trilhas selecionadas</Button>
+        <Button colorScheme='facebook' variant='solid' margin="2vh" onClick={onOpen} isDisabled={trilhasSelecionadas.length === 0}>Excluir trilhas selecionadas</Button>
             <AlertDialog
           isOpen={isOpen}
           leastDestructiveRef={cancelRef}
