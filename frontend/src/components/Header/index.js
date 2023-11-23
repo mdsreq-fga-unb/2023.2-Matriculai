@@ -9,9 +9,29 @@ import settingsIcon from '../../icon/definicoes 1.png';
 import helpIcon from '../../icon/interrogatorio 1.png';
 import logoutIcon from '../../icon/sair-alt 1.png';
 import { StyledMenuList, StyledImage, StyledMenuItem } from "./styles";
-
+import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    const accessToken = sessionStorage.getItem("accessToken");
+    
+    try {
+      // Chamar o backend para remover o token no banco de dados
+      await axios.post('http://localhost:3001/auth/logout', { accessToken });
+  
+      // Remover o token da sessionStorage
+      sessionStorage.removeItem("accessToken");
+  
+      // Redirecionar para a página de login
+      navigate("/login");
+    } catch (error) {
+      console.error("Erro ao fazer logout:", error.message);
+      // Lidar com erros, se necessário
+    }
+  };
 
   return (
     <Flex
@@ -48,7 +68,7 @@ const Header = () => {
               </StyledMenuItem>
             <StyledMenuItem>
               <StyledImage src={logoutIcon} alt='Logout Icon' />
-              <button>Sair</button>
+              <button onClick={handleLogout}>Sair</button>
             </StyledMenuItem>
           </StyledMenuList>
         </Menu>
