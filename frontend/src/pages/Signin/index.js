@@ -24,12 +24,13 @@ const Signin = () => {
       const response = await axios.post("http://localhost:3001/auth/login", {
         email: email,
         password: senha,
-      });
+      })
   
       if (response.data.accessToken) {
         signin(response.data.accessToken);
         navigate("/home");
-      } else {
+        sessionStorage.setItem("accessToken", response.data.accessToken);
+        } else {
         setError("Credenciais inválidas");
       }
     } catch (error) {

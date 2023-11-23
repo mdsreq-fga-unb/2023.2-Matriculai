@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios"
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Flex, Box, Heading, Spacer, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { Image } from '@chakra-ui/react'
 import cmtnLogo from '../../img/cmtnLogo.png'
@@ -12,8 +13,8 @@ import helpIcon from '../../icon/interrogatorio 1.png';
 import logoutIcon from '../../icon/sair-alt 1.png';
 
 
-
 const Header = () => {
+  const navigate = useNavigate();
 
 
   
@@ -37,6 +38,12 @@ const Header = () => {
     max-height: 24px;
     margin-right: 10px; /* Adiciona um espaçamento entre a imagem e o texto */
   `;
+
+  const handleLogout = () =>{
+    sessionStorage.removeItem("accessToken");
+    navigate("/login");
+  }
+
 
   return (
     <Flex
@@ -77,8 +84,8 @@ const Header = () => {
               </StyledMenuItem>
               <StyledMenuItem>
                 <StyledImage src={logoutIcon} alt='Logout Icon' />
-                <button>Sair</button>
-              </StyledMenuItem>
+                <button Text="Sair" onClick={handleLogout}></button>              
+                </StyledMenuItem>
             </StyledMenuList>
           </Menu>
         </Box>
