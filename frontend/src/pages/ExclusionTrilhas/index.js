@@ -20,79 +20,84 @@ import {
 } from "@chakra-ui/react"
 ;
 
-const ElectivesList = () => {
-  const [eletivas, setEletivas] = useState([]);
-  const [eletivasSelecionadas, setEletivasSelecionadas] = useState([]);
+const ExclusionTrilhas = () => {
+  const [trilhas, setTrilhas] = useState([]);
+  const [trilhasSelecionadas, setTrilhasSelecionadas] = useState([]);
 
+  // Carregar trilhas do backend ao carregar o componente
   useEffect(() => {
-    async function fetchEletivas() {
+    async function fetchTrilhas() {
       try {
-        const response = await axios.get('http://localhost:3001/elective/electives'); // Endpoint para buscar trilhas
-        setEletivas(response.data); // Define as trilhas na state 'trilhas'
+        const response = await axios.get('http://localhost:3000/learningpath/learningpath'); // Endpoint para buscar trilhas
+        setTrilhas(response.data); // Define as trilhas na state 'trilhas'
       } catch (error) {
         console.error('Erro ao buscar trilhas:', error);
       }
     }
-    fetchEletivas();
+    fetchTrilhas();
   }, []);
 
+  // Função para marcar/desmarcar trilha selecionada
   const handleCheckboxChange = (id) => {
-    const isSelected = eletivasSelecionadas.includes(id);
+    const isSelected = trilhasSelecionadas.includes(id);
 
     if (isSelected) {
       // Se já estiver selecionado, remova da lista de selecionados
-      setEletivasSelecionadas(eletivasSelecionadas.filter((eleId) => eleId !== id));
+      setTrilhasSelecionadas(trilhasSelecionadas.filter((eleId) => eleId !== id));
     } else {
       // Se não estiver selecionado, adicione à lista de selecionados
-      setEletivasSelecionadas([...eletivasSelecionadas, id]);
+      setTrilhasSelecionadas([...trilhasSelecionadas, id]);
     }
 
-    console.log(eletivasSelecionadas)
+    console.log(trilhasSelecionadas)
   };
 
+
+  // Função para excluir trilhas selecionadas
   const handleExcluirClick = async () => {
     try {
       // Enviar uma solicitação para excluir as eletivas selecionadas
-      eletivasSelecionadas.map(async (eletiva)  => {
+      trilhasSelecionadas.map(async (eletiva)  => {
         await axios.delete('http://localhost:3001/elective/deleteElective', {
           data: { id: eletiva },
         });
       })
   
       // Atualizar a lista de eletivas após a exclusão
-      const response = await axios.get('http://localhost:3001/elective/electives');
-      setEletivas(response.data);
+      const response = await axios.get('http://localhost:3000/learningpath/deleteLearningPaths');
+      setTrilhas(response.data);
   
       // Limpar a lista de eletivas selecionadas
-      setEletivasSelecionadas([]);
+      setTrilhasSelecionadas([]);
     } catch (error) {
-      console.error('Erro ao excluir eletivas:', error);
+      console.error('Erro ao excluir trilhas:', error);
     }
   };
+
 
 
   return (
     <ChakraProvider>
       <Header></Header>
       <Flex align="center" justifyContent="center">
-        <Box width="100vh" marginTop="3vh" marginBottom="-9vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
+        <Box width="60vh" marginTop="3vh" marginBottom="-9vh" paddingLeft="2vh" paddingRight="2vh" paddingTop="2vh" borderWidth={1} borderRadius={8} boxShadow="lg">
         <Box textAlign="center">
-          <Heading color= '#243A69'>Exclusão de Eletivas</Heading>
+          <Heading color= '#243A69'>Exclusão de Trilhas</Heading>
         </Box>
           <TableContainer>
             <Table variant='simple'>
               <Thead>
                 <Tr>
-                  <Th>Nome da eletiva</Th>
+                  <Th>Nome da trilha</Th>
                   <Th>Ano letivo</Th>
                   <Th></Th>
                 </Tr>
               </Thead>
               <Tbody>
-                {eletivas.map((linha) => (
-                  <Tr>
-                    <Td>{linha.name}</Td>
-                    <Td>{linha.school_year}</Td>
+                {trilhas.map((linha, index) => (
+                  <Tr key={index}>
+                    <Td>{linha.nomeTrilha}</Td>
+                    <Td>{linha.anoTrilha}</Td>
                     <Td><Checkbox colorScheme='red' onChange={() => handleCheckboxChange(linha.id)}></Checkbox></Td>
                   </Tr>
                 ))}
@@ -100,7 +105,7 @@ const ElectivesList = () => {
             </Table>
           </TableContainer>
           <Box display="flex" justifyContent="center">
-          <Button color="#243A69" variant='solid' margin="2vh" onClick={handleExcluirClick}>Excluir eletivas selecionadas</Button>
+          <Button color="#243A69" variant='solid' margin="2vh" onClick={handleExcluirClick}>Excluir trilha selecionadas</Button>
           </Box>
         </Box>
       </Flex>
@@ -109,4 +114,4 @@ const ElectivesList = () => {
   );
 };
 
-export default ElectivesList;
+export default ExclusionTrilhas;
