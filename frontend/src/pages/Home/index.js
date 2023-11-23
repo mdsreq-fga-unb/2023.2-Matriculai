@@ -2,25 +2,38 @@ import React from "react";
 import { Container, Flex, Stack, Box, Wrap, WrapItem, Button, Center } from "@chakra-ui/react";
 import Header from "../../components/Header/index.js";
 import Footer from "../../components/Footer/index.js";
+import { ChakraProvider } from "@chakra-ui/react";
+
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <Flex direction="column" minH="100vh">
+    <ChakraProvider>
+      <Flex direction="column" minH="100vh">
       <Header />
       <Container flex="1">
-        
         <Center>
-          <Link to='/criar-trilha'>Cria trilha</Link>
-          <Link to='/criar-eletiva'>Cria Eletiva </Link>
+        <Button colorScheme='blue' variant='ghost'>
+        <Link to='/criar-trilha'>Criar trilha</Link>
+        </Button>
+        <Button colorScheme='blue' variant='ghost'>
+        <Link to='/criar-eletiva'>Criar Eletiva </Link>
+        </Button>
+
+        <Button colorScheme='blue' variant='ghost'>
+        <Link to='/excluir-trilhas'>Excluir trilha</Link>
+        </Button>
+        <Button colorScheme='blue' variant='ghost'>
+        <Link to='/excluir-eletivas'>Excluir eletiva</Link>
+        </Button>
         </Center>
         <Center>
-          <Link to='/excluir-trilhas'>Exclui trilha</Link>
-          <Link to='/excluir-eletivas'>Exclui eletiva</Link>
         </Center>
       </Container>
       <Footer />
     </Flex>
+    </ChakraProvider>
+    
   );
 };
 

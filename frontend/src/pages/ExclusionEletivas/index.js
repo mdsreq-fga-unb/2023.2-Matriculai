@@ -84,7 +84,7 @@ const ExclusionEletivas = () => {
       setEletivasSelecionadas([]);
       onClose();
       setTimeout(() => {
-        window.location.reload();;
+        window.location.reload();
       }, 2000);
       setShowAlert(true);
     } catch (error) {

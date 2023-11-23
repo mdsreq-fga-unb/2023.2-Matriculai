@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -18,7 +18,9 @@ import {
   Text,
   Stack,
   Flex,
-  Container, 
+  Container,
+  Alert,
+  AlertIcon
 } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
 import * as yup from "yup";
@@ -27,6 +29,8 @@ const CreateTrilhas = () => {
   const { createEletivas } = useAuth();
   const navigate = useNavigate();
   const toast = useToast();
+
+  const [showAlert, setShowAlert] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -69,7 +73,10 @@ const CreateTrilhas = () => {
           });
 
           // Sucesso, redirecionar ou realizar outras ações necessárias
-          navigate("/home");
+          setShowAlert(true);
+          setTimeout(() => {
+            navigate("/home");
+          }, 1000);
         } else {
           // Exibir mensagem de erro
           toast({
@@ -185,7 +192,6 @@ const CreateTrilhas = () => {
               
             </FormControl>
           </Box>
-          
         </Box>
         </Container>
         <Footer></Footer>
