@@ -4,12 +4,10 @@ import useAuth from "../hooks/useAuth";
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
-import TrilhasList from "../pages/ExclusionTrilhas";
-import ElectivesList from "../pages/ExclusionEletivas"
+import ExclusionTrilhas from "../pages/ExclusionTrilhas";
+import ExclusionEletivas from "../pages/ExclusionEletivas"
 import CreateEletivas from "../pages/CreateEletivas";
 import CreateTrilhas from "../pages/CreateTrilhas";
-import ExclusionTrilhas from "../pages/ExclusionTrilhas";
-import ExclusionEletivas from "../pages/ExclusionEletivas";
 
 const Private = ({ Item }) => {
   const { signed } = useAuth();
@@ -22,14 +20,13 @@ const RoutesApp = () => {
     <BrowserRouter>
       <Fragment>
         <Routes>
-          <Route exact path="/home" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/" element={<Signin />} />
-          <Route exact path="/signup" element={<Signup />} />
-          <Route path="*" element={<Signin />} />
-          <Route path="/eletivas" element={<ExclusionEletivas />} />
-          <Route path="/trilhas" element={<ExclusionTrilhas />} />
-          <Route exact path="/criar-eletiva" element={<CreateEletivas />} />
-          <Route exact path="/criar-trilha" element={<CreateTrilhas />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/criar-eletiva" element={<CreateEletivas />} />
+          <Route path="/exclui-eletivas" element={<ExclusionEletivas />} />
+          <Route path="/criar-trilha" element={<CreateTrilhas />} />
+          <Route path="/exclui-trilhas" element={<ExclusionTrilhas />} />
         </Routes>
       </Fragment>
     </BrowserRouter>

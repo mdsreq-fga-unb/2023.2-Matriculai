@@ -8,14 +8,15 @@ const Home = () => {
   return (
     <Flex direction="column" minH="100vh">
       <Header />
-      <Container flex="2">
+      <Container ali>
+        
         <Center>
-          <Link to='/criar-trilhas'>Vasco</Link>
-          <Link to='/criar-eletivas'>Vasco</Link>
+          <Link to='/criar-trilhas'>Cria trilha</Link>
+          <Link to='/criar-eletivas'>Cria Eletiva </Link>
         </Center>
         <Center>
-          <Link to='/trilhas'>Vasco</Link>
-          <Link to='/eletivas'>Vasco</Link>
+          <Link to='/exclui-trilhas'>Exclui trilha</Link>
+          <Link to='/exclui-eletivas'>Exclui eletiva</Link>
         </Center>
       </Container>
       <Footer />
