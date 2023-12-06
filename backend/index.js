@@ -19,14 +19,7 @@ app.use('/elective', electiveRoute);
 app.use('/learningpath', learningPathRoute);
 app.use('/api', logoutRoutes);
 
-// sequelize
-//   .sync()
-//   .then(() => {
-//     console.log('Conexão bem-sucedida com o banco de dados');
-//   })
-//   .catch((error) => {
-//     console.error('Erro ao conectar-se ao banco de dados:', error);
-//   });
+let test = process.env.DB_USERNAME
 
 
 database.sequelize.sync().then(() => {
