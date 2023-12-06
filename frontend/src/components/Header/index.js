@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Flex, Box, Spacer, Menu, MenuButton } from "@chakra-ui/react";
+import { Flex, Box, Spacer, Menu, MenuButton, Button, Container, Center } from "@chakra-ui/react";
 import { Image } from '@chakra-ui/react'
 import cmtnLogo from '../../img/cmtnLogo.png'
 import menuHamburguer from '../../icon/menuHamburguer.png'
@@ -19,7 +19,7 @@ const Header = () => {
   const handleLogout = async () => {
     const accessToken = sessionStorage.getItem("accessToken");
     try {
-      await axios.post('http://localhost:3001/auth/logout', { accessToken });
+      await axios.post("http://localhost:3001/auth/logout", { accessToken });
       sessionStorage.removeItem("accessToken");
       navigate("/");
     } catch (error) {
