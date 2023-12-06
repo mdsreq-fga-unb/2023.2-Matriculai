@@ -20,7 +20,9 @@ import {
   Flex,
   Container,
   Alert,
-  AlertIcon
+  AlertIcon,
+  Checkbox,
+  CheckboxGroup
 } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
 import * as yup from "yup";
@@ -31,6 +33,9 @@ const CreateTrilhas = () => {
   const toast = useToast();
 
   const [showAlert, setShowAlert] = useState(false);
+  const [eletivas, setEletivas] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
 
   const formik = useFormik({
     initialValues: {
@@ -101,6 +106,21 @@ const CreateTrilhas = () => {
       }
     },
   });
+
+  const fetchEletivas = async () => {
+    try {
+      const response = await axios.get('http://localhost:3001/elective/electives');
+      setEletivas(response.data);
+    } catch (error) {
+      console.error('Erro ao buscar eletivas:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  fetchEletivas();
+
+ 
   return (
     <ChakraProvider>
         <Flex direction="column" minH="100vh">
@@ -166,17 +186,38 @@ const CreateTrilhas = () => {
                 )}
 
               <FormLabel color= '#243A69'>Eletivas relacionadas </FormLabel>
-              <Select
+              {/* <Select
                 type='text'
                 placeholder='Selecione as eletivas relacionadas' 
                 _placeholder={{opacity:1, color: '#243A69' }} 
                 isRequired
                 {...formik.getFieldProps("eletivas")}
                 >
-                <option value='option1'> 1</option>
-                <option value='option2'> 2</option>
-                <option value='option3'> 3</option>
-              </Select>
+                {isLoading ? (
+                    <option value="" disabled>Carregando...</option>
+                  ): (
+                    eletivas.map((eletiva) => (
+                      <option key={eletiva.id} value={eletiva.name}>
+                      {eletiva.name}
+                      </option>
+                    ))
+                  )}
+              </Select> */}
+              <CheckboxGroup colorScheme='green' defaultValue={[]}>
+                <Stack spacing={[1, 2]} direction={['column', 'column']}>
+                  {isLoading? (
+                    <Text color="red.500" fontSize="sm">
+                    {formik.errors.eletivas}
+                  </Text>
+                  ): (
+                    eletivas.map((eletiva) => (
+                      <Checkbox value={eletiva.name}>
+                      {eletiva.name}
+                      </Checkbox>
+                    ))
+                  )}                  
+                </Stack>
+              </CheckboxGroup>
               {formik.touched.eletivas && formik.errors.eletivas && (
                   <Text color="red.500" fontSize="sm">
                     {formik.errors.eletivas}
