@@ -107,15 +107,25 @@ const CreateEletivas = () => {
           });
         }
       } catch (error) {
-        console.error("Erro ao cadastrar:", error);
-        toast({
-          title: "Erro ao cadastrar eletiva.",
-          description: "Tente novamente mais tarde.",
-          status: "error",
-          duration: 2800,
-          isClosable: true,
-          position: "top",
-        });
+        if(error.response.status === 401){
+          toast({
+            title: "Erro ao cadastrar eletiva.",
+            description: "Essa eletiva já existe!",
+            status: "error",
+            duration: 2800,
+            isClosable: true,
+            position: "top",
+          });
+        } else {
+          toast({
+            title: "Erro ao cadastrar eletiva.",
+            description: "Tente novamente mais tarde.",
+            status: "error",
+            duration: 2800,
+            isClosable: true,
+            position: "top",
+          });
+        }
       }
     },
   });

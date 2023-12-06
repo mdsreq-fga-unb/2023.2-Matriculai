@@ -42,7 +42,7 @@ const CreateTrilhas = () => {
       nomeTrilha: "",
       descricao: "",
       serie: "",
-      eletivas: "",
+      eletivas: [],
     },
     validationSchema: yup.object({
       nomeTrilha: yup
@@ -211,7 +211,7 @@ const CreateTrilhas = () => {
                   </Text>
                   ): (
                     eletivas.map((eletiva) => (
-                      <Checkbox value={eletiva.name}>
+                      <Checkbox value={eletiva.id}>
                       {eletiva.name}
                       </Checkbox>
                     ))
