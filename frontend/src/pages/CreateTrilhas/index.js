@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import  React, {useState, useEffect} from "react";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -42,7 +42,7 @@ const CreateTrilhas = () => {
       nomeTrilha: "",
       descricao: "",
       serie: "",
-      eletivas: [],
+      eletivas: "", 
     },
     validationSchema: yup.object({
       nomeTrilha: yup
@@ -107,18 +107,20 @@ const CreateTrilhas = () => {
     },
   });
 
-  const fetchEletivas = async () => {
-    try {
-      const response = await axios.get('http://localhost:3001/elective/electives');
-      setEletivas(response.data);
-    } catch (error) {
-      console.error('Erro ao buscar eletivas:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  useEffect(() => {
+    const fetchEletivas = async () => {
+      try {
+        const response = await axios.get('http://localhost:3001/elective/electives');
+        setEletivas(response.data);
+      } catch (error) {
+        console.error('Erro ao buscar eletivas:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-  fetchEletivas();
+    fetchEletivas(); // Chama a função apenas uma vez durante a montagem do componente
+  }, []);
 
  
   return (
@@ -211,7 +213,7 @@ const CreateTrilhas = () => {
                   </Text>
                   ): (
                     eletivas.map((eletiva) => (
-                      <Checkbox value={eletiva.id}>
+                      <Checkbox value={eletiva.name}>
                       {eletiva.name}
                       </Checkbox>
                     ))
