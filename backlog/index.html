@@ -1133,6 +1133,12 @@
 <td>Mesclando células das tabelas</td>
 <td>Júlia Yoshida</td>
 </tr>
+<tr>
+<td>06/12/2023</td>
+<td>1.1</td>
+<td>Adição us14</td>
+<td>Luana Ribeiro</td>
+</tr>
 </tbody>
 </table>
 <h2 id="requisitos-funcionais-backlog-safe">Requisitos Funcionais - Backlog SAFe</h2>
@@ -1146,16 +1152,17 @@
             <td>Objetivo</td>
         </tr>
         <tr>
-            <td rowspan="2">[EP01] Gestão de usuários da plataforma </td>
-            <td rowspan="2">[CA01] Gestão de acesso </td>
-            <td rowspan="2">[FE01] Acesso a plataforma  </td>
+            <td rowspan="3">[EP01] Gestão de usuários da plataforma </td>
+            <td rowspan="3">[CA01] Gestão de acesso </td>
+            <td rowspan="3">[FE01] Acesso a plataforma  </td>
             <td>[US01] Eu, como usuário, desejo poder inserir minhas credenciais (nome de usuário e senha) para acessar o sistema e utilizar os recursos disponíveis.   </td>
-            <td rowspan="2">Promover a eficiência da escola
-</td>
+            <td rowspan="3">Promover a eficiência da escola</td>
         </tr>
         <tr>
-            <td>[US02] Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.
-</td>
+            <td>[US02] Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.</td>
+        </tr>
+        <tr>
+            <td>[US14] Eu, como administrador, desejo enviar token de acesso para alunos cadastrados, para que eles participem da plataforma.</td>
         </tr>
         <tr>
             <td rowspan="4">[EP02] Gestão de matriz curricular</td>
@@ -1429,7 +1436,7 @@
             <td>3,5</td>
         </tr>
         <tr>
-            <td rowspan="2">[EP01] Gestão de usuários da plataforma</td>
+            <td rowspan="3">[EP01] Gestão de usuários da plataforma</td>
             <td>[US01] Eu, como usuário, desejo poder inserir minhas credenciais (nome de usuário e senha) para acessar o sistema e utilizar os recursos disponíveis.</td>
             <td>3</td>
             <td>4</td>
@@ -1437,6 +1444,12 @@
         </tr>
         <tr>
             <td>[US02] Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3,5</td>
+        </tr>
+        <tr>
+            <td>[US14] Eu, como administrador, desejo enviar token de acesso para alunos cadastrados, para que eles participem da plataforma.</td>
             <td>3</td>
             <td>4</td>
             <td>3,5</td>
@@ -1512,6 +1525,14 @@
             <td>User Story
 </td>
             <td>Critérios de aceitação</td>
+        </tr>
+        <tr>
+            <td rowspan="1">[EP01] Gestão de usuários da plataforma </td>
+            <td rowspan="1">[CA01] Gestão de acesso </td>
+            <td rowspan="1">[FE01] Acesso a plataforma  </td>
+            <td>[US14] Eu, como administrador, desejo enviar token de acesso para alunos cadastrados, para que eles participem da plataforma.
+</td>
+            <td>- O token deverá ser enviado para o email dos alunos  ;</br>- O administrador deve selecionar a série e depois a turma para a qual os alunos receberão os tokens; </br> -O administrador deverá receber uma mensagem de confirmação do envio do token. </td>
         </tr>
         <tr>
             <td rowspan="6">[EP03] Gestão de matrículas </td>
