@@ -2,7 +2,7 @@
 
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
-| 22/11/2023 | 1.0 | Definição da Estratégia | Luana Ribeiro |
+| 22/11/2023 | 0.1 | Definição da Estratégia | Luana Ribeiro |
 
 # Estratégia de Testes do MVP 1
 

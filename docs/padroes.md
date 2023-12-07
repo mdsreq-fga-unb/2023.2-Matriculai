@@ -3,7 +3,7 @@
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
 | 15/11/2023 | 0.1 | Adicionando os padrões de interface | Júlia Yoshida |
-| 06/12/2023 | 1.1 | Adicionando protótipos MVP2 | Luana Ribeiro |
+| 06/12/2023 | 0.2 | Adicionando protótipos MVP2 | Luana Ribeiro |
 
 # Paleta de cores
 <p style="text-indent: 50px;text-align: justify;"> Essa é a paleta de cores que será utilizada. </p>

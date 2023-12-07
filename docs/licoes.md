@@ -5,7 +5,7 @@
 | 27/09/2023 | 0.1 | Adicionando as lições aprendidas na unidade 1 | Júlia Yoshida |
 | 23/10/2023 | 0.2 | Detalhando melhor as lições aprendidas na unidade 1 | Luana Ribeiro |
 | 25/10/2023 | 0.3 | Adicionando as lições aprendidas na unidade 2 | Luana Ribeiro |
-| 20/11/2023 | 1.0 | Adicionando as lições aprendidas na unidade 3 | Luana Ribeiro |
+| 20/11/2023 | 0.4 | Adicionando as lições aprendidas na unidade 3 | Luana Ribeiro |
 
 ## Unidade 1
 

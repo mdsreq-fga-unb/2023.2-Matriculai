@@ -1,6 +1,7 @@
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
-| 21/11/2023 | 1.0 | Adição das atividades | Luana Ribeiro |
+| 21/11/2023 | 0.1 | Adição das atividades | Luana Ribeiro |
+| 06/12/2023 | 0.2 | Adição do BDD do TabeçaTeam | Júlia Yoshida |
 
 # Exercícios Cruzados
 
@@ -115,6 +116,237 @@ Behavior Driven Development (BDD) é uma especificação executável para valida
 | US16 - Eu, como Diretor de Tecnologia, quero uma solução escalável, segura e em conformidade com as regulamentações, para garantir a integridade e a proteção dos dados da "HealthNet". | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | US17 - Eu, como Diretor de Tecnologia, quero ferramentas de monitoramento e relatório, para assegurar o desempenho eficiente do sistema e identificar possíveis áreas de melhoria. | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | US18 - Eu, como Diretor de Tecnologia, quero capacidade para realizar atualizações e melhorias sem interrupções significativas, para manter a infraestrutura tecnológica da "HealthNet" atualizada e eficiente. | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+
+### User Stories e BDD
+
+<table>
+	<tbody>
+		<tr>
+			<td>User Story</td>
+			<td>Cenário</td>
+		</tr>
+		<tr>
+			<td rowspan="2">US01 - Eu, como recepcionista, quero registrar um novo paciente, para que eu possa
+manter um registro do mesmo.
+</td>
+			<td>Visualização de paciente registrado</br>
+1. Dado que as informações do paciente foram registradas no sistema</br>
+2. Quando o recepcionista solicitar a visualização das informações</br>
+3. Então, o sistema deverá exibir as informações junto a um número de identificação
+</td>
+		</tr>
+		<tr>
+			<td>Registro de paciente</br>
+1. Dado um paciente para ser registrado</br>
+2. Quando o recepcionista for adicioná-lo é atribuído um número de identificação</br>
+3. Então, os dados do novo paciente devem ser visualizados para confirmação.
+</td>
+		</tr>
+		<tr>
+			<td rowspan="2">US02 - Eu, como recepcionista, quero atualizar dados de um paciente, para que eu
+possa ter todos os seus dados mais recentes.
+</td>
+			<td>Atualização dos dados cadastrais</br>
+1. Dado que as informações do paciente estão cadastradas no sistema</br>
+2. Quando um paciente for selecionado para atualização</br>
+3. Então, a recepcionista deve poder atualizar e visualizar os dados que foram modificados.
+</td>
+		</tr>
+		<tr>
+			<td>Atualização de dados cadastrais de um paciente inexistente</br>
+1. Dado que as informações do paciente não estão cadastradas no sistema</br>
+2. Quando for realizada a busca</br>
+3. Então, o sistema deve informar ao usuário a inexistência do paciente.
+</td>
+		</tr>
+		<tr>
+			<td>US03 - Eu, como recepcionista, quero acessar o histórico do paciente, para que eu
+possa consultar dados sobre consultas anteriores.
+</td>
+			<td>Consulta de consultas médicas anteriores</br>
+1. Dado que o paciente cadastrado  que já realizou consultas médicas</br>
+2. Quando a recepcionista solicitar a visualização do histórico de consultas</br>
+3. Então, o sistema deve mostrar o histórico de tratamentos, consultas e prescrições.
+</td>
+		</tr>
+		<tr>
+			<td>US04 - Eu, como médico clínico geral, quero ter acesso rápido ao histórico de um
+paciente, para que eu possa saber sobre ele e seguir de forma precisa com sua
+consulta e tratamento.</td>
+			<td>Acesso ao histórico de um paciente</br>
+1. Dado que o médico está diante de um paciente durante uma consulta</br>
+2. Quando acessar o histórico do paciente</br>
+3. Então, o sistema deve mostrar suas consultas anteriores, resultados de exames e outras prescrições.
+</td>
+		</tr>
+		<tr>
+			<td>US05 - Eu, como médico clínico geral, quero inserir notas e prescrições, para que eu possa registrar informações sobre o atendimento e tratamento.</td>
+			<td>Inserir nota ou prescrição </br>
+1. Dado que o médico deseja inserir uma nota ou prescrição sobre um paciente</br>
+2. Quando realizar o registro da nota ou prescrição</br>
+3. Então, o sistema deverá associá-las ao paciente correto junto com o horário que foram inseridas.
+</td>
+		</tr>
+		<tr>
+			<td>US06 - Eu, como médico clínico geral, quero receber alertas sobre interações entre medicamentos, para evitar possíveis erros.
+</td>
+			<td>Receber um alerta</br>
+1. Dado um médico escrevendo a prescrição</br>
+2. Quando for inserido um medicamento com possível interação medicamentosa</br>
+3. Então, o sistema deve exibir um alerta e salvar a interação do médico com o mesmo.
+</td>
+		</tr>
+		<tr>
+			<td rowspan="2">US07 - Eu, como farmacêutica, quero acessar as informações sobre cada
+medicamento, para que eu possa saber sobre ele.
+</td>
+			<td>Acessar informações sobre um medicamento</br>
+1. Dado que um farmacêutico precisa da descrição dos medicamentos</br>
+2. Quando pesquisar um medicamento disponível na farmácia</br>
+3. Então, o sistema deve fornecer a composição, posologia e possíveis efeitos colaterais.
+</td>
+		</tr>
+		<tr>
+			<td>Acessar informações sobre um medicamento indisponível</br>
+1. Dado que um farmacêutico precisa da descrição dos medicamentos</br>
+2. Quando pesquisar um medicamento indisponível na farmácia</br>
+3. Então, o sistema deve avisar sobre a falta de disponibilidade
+</td>
+		</tr>
+		<tr>
+			<td>US08 - Eu, como farmacêutica, dispensar medicamentos conforme as prescrições,
+para garantir tratamentos eficazes e a saúde dos pacientes.
+</td>
+			<td>Dispensar medicamento</br>
+1. Dado que um paciente chega para retirar um medicamento prescrito</br>
+2. Quando o farmacêutico visualizar a prescrição e validar</br>
+3. Então, a dispensação é confirmada a partir da assinatura eletrônica ou confirmação verbal
+</td>
+		</tr>
+		<tr>
+			<td rowspan="2">US09 - Eu, como farmacêutica, quero receber alertas sobre interações entre
+medicamentos, para evitar possíveis erros.
+</td>
+			<td>Receber alerta sobre interação entre medicamentos</br>
+1. Dado que tenha dois medicamentos A e B</br>
+2. Quando os medicamentos possuem uma interação perigosa</br>
+3. Então o sistema, deve-se notificar o farmacêutico
+</td>
+		</tr>
+		<tr>
+			<td>Medicamentos não possuem interação</br>
+1. Dado que tenha dois medicamentos A e B</br>
+2. Quando os medicamentos não possuem uma interação perigosa</br>
+3. Então o sistema, não vai enviar notificação. 
+</td>
+		</tr>
+		<tr>
+			<td>US10 - Eu, como coordenador de Agendamento, quero agendar consultas com
+especialistas em uma tela, para facilitar e agilizar o processo de marcação.
+</td>
+			<td>
+1. Dado que desejo agendar consultas com um especialista</br>
+2. Quando for necessário</br>
+3. Então, o sistema deve permitir que esse agendamento ocorra sem sobreposição de horário e de forma ágil.</br>
+</td>
+		</tr>
+		<tr>
+			<td>US11 - Eu, como coordenador de Agendamento, quero receber alertas de conflitos de
+horário, para evitar sobreposições e manter a agenda organizada.
+</td>
+			<td>Alertar conflito de horário</br>
+1. Dado que o coordenador está realizando um agendamento</br>
+2. Quando o horário já estiver ocupado</br>
+3. Então, o sistema deve alertar especificamente e recomendar outro horário
+</td>
+		</tr>
+		<tr>
+			<td rowspan="2">US12 - Eu, como coordenador de Agendamento, quero enviar notificações de
+agendamento para pacientes, para mantê-los informados e reduzir faltas nas
+consultas.
+</td>
+			<td>Enviar notificação de agendamento</br>
+1. Dado que está sendo realizado um agendamento</br>
+2. Quando finalizado </br>
+3. Então, o paciente deve receber uma notificação com consulta, data, hora e local do agendamento
+</td>
+		</tr>
+		<tr>
+			<td>Receber notificação de agendamento</br>
+1. Dado que o paciente realizou um agendamento</br>
+2. Quando for notificado</br>
+3. Então, o paciente deve poder confirmar, reagendar ou cancelar o agendamento
+</td>
+		</tr>
+		<tr>
+			<td>US13 - Eu, como paciente, quero visualizar histórico médico e resultados de exames,
+para ter acesso fácil a informações relevantes sobre meu tratamento.
+</td>
+			<td>Visualizar o meu histórico médico e resultado de exames</br>
+1. Dado que o paciente deseja ver suas informações</br>
+2. Quando acessar o portal </br>
+3. Então, deverá visualizar seu histórico médico e resultado de exames.
+</td>
+		</tr>
+		<tr>
+			<td>US14 - Eu, como paciente, quero agendar consultas de maneira fácil, para garantir
+atendimento quando necessário.
+</td>
+			<td>Paciente deseja agendar consultas </br>
+1. Dado que o paciente deseja agendar consultas </br>
+2. Quando for necessário</br>
+3. Então, deverá ser possível agendar sem conflitos e com o especialista desejado. 
+</td>
+		</tr>
+		<tr>
+			<td rowspan="2">US15 - Eu, como paciente, quero receber lembretes de consultas, resultados e
+medicações, para manter-me informado e organizado em relação aos cuidados com a
+minha saúde.
+</td>
+			<td>Lembretes de consultas</br>
+1. Dado que o sistema envia automaticamente lembretes de consulta</br>
+2. Quando o paciente possuir uma consulta nos dias subsequentes</br>
+3. Então, o sistema deverá mandar, com antecedência, um aviso ao paciente 
+</td>
+		</tr>
+		<tr>
+			<td>Lembretes de medicações</br>
+1. Dado que o paciente recebeu prescrição médica para automedicação </br>
+2. Quando o horário para tomar a medicação estiver próximo </br>
+3. Então, o sistema deverá alertar o paciente para que tome sua medicação conforme a prescrição médica.
+</td>
+		</tr>
+		<tr>
+			<td>US16 - Eu, como Diretor de Tecnologia, quero uma solução escalável, segura e em
+conformidade com todas as regulamentações, para garantir a integridade e a
+proteção dos dados da "HealthNet".
+</td>
+			<td>REQUISITO NÃO-FUNCIONAL</td>
+		</tr>
+		<tr>
+			<td>US17 - Eu, como Diretor de Tecnologia, quero ferramentas de monitoramento e
+relatório, para assegurar o desempenho eficiente do sistema e identificar possíveis
+áreas de melhoria.
+</td>
+			<td>Alertas de problemas ao usuário</br>
+1. Dado que o sistema possui ferramentas de monitoramento em tempo real</br>
+2. Quando possíveis problemas danosos ao usuário forem identificados</br>
+3. Então, o sistema irá alertar a equipe de tecnologia 
+</td>
+		</tr>
+		<tr>
+			<td>US18 - Eu, como Diretor de Tecnologia, quero capacidade para realizar atualizações e
+melhorias sem interrupções significativas, para manter a infraestrutura tecnológica
+da "HealthNet" atualizada e eficiente.
+</td>
+			<td>Atualização do sistema</br>
+1. Dado que o sistema está desatualizado </br>
+2. Quando atualizações forem implementadas</br>
+3. Então, um backup das informações anteriores deve ser realizado
+</td>
+		</tr>
+	</tbody>
+</table>
 
 # Equipe: BabyHoney
 

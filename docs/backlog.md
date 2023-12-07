@@ -4,7 +4,7 @@
 | ---------- | ----------- | -------------- | -------------- |
 | 25/10/2023 | 0.1 | Criando backlog SAFe | Yasmim Rosa |
 | 29/10/2023 | 0.2 | Mesclando células das tabelas | Júlia Yoshida |
-| 06/12/2023 | 1.1 | Adição us14 | Luana Ribeiro |
+| 06/12/2023 | 0.3 | Adição us14 | Luana Ribeiro |
 
 ## Requisitos Funcionais - Backlog SAFe
 

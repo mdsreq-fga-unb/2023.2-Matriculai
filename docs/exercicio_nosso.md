@@ -1,6 +1,6 @@
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
-| 21/11/2023 | 1.0 | Adição das Atividades | Luana Ribeiro |
+| 21/11/2023 | 0.1 | Adição das Atividades | Luana Ribeiro |
 
 # Exercícios da Equipe 
 

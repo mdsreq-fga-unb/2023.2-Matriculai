@@ -1,7 +1,7 @@
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
-| 22/11/2023 | 1.0 | Definição da Estratégia | Luana Ribeiro |
-| 06/12/2023 | 1.1 | Adição do DoR e DoD | Luana Ribeiro |
+| 22/11/2023 | 0.1 | Definição da Estratégia | Luana Ribeiro |
+| 06/12/2023 | 0.2 | Adição do DoR e DoD | Luana Ribeiro |
 
 # Estratégia de Testes MVP 2
 

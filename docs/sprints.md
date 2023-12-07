@@ -9,7 +9,7 @@
 | 22/10/2023 | 0.3 | Documentação da Sprint 1 | Luana Ribeiro |
 | 24/10/2023 | 0.4 | Documentação da Sprint 2 | Júlia Yoshida e Luana Ribeiro |
 | 14/11/2023 | 0.5 | Documentação Sprint 2,3 e 4 | Luana Ribeiro |
-| 06/12/2023 | 1.1 | Adição da Sprint 5 | Luana Ribeiro |
+| 06/12/2023 | 0.6 | Adição da Sprint 5 | Luana Ribeiro |
 
 ## Sprint 0
 
