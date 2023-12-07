@@ -3,6 +3,7 @@
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
 | 15/11/2023 | 0.1 | Adicionando os padrões de interface | Júlia Yoshida |
+| 06/12/2023 | 1.1 | Adicionando protótipos MVP2 | Luana Ribeiro |
 
 # Paleta de cores
 <p style="text-indent: 50px;text-align: justify;"> Essa é a paleta de cores que será utilizada. </p>
@@ -98,6 +99,15 @@ Para projetar uma interface pensada na experiência do usuário, utilizaremos as
 ![Imagem 4](./images/exclusao1.jpg)
 ![Imagem 5](./images/add2.jpg)
 ![Imagem 6](./images/exclusao2.jpg)
+![Imagem 7](./images/imp.png)
+![Imagem 8](./images/datamat.png)
+![Imagem 9](./images/matelet.png)
+![Imagem 10](./images/mattril.png)
+![Imagem 11](./images/verlist.png)
+![Imagem 12](./images/vermat.png)
+![Imagem 13](./images/vermat2.png)
+![Imagem 14](./images/vermat3.png)
+![Imagem 15](./images/vermat4.png)
 
 # Referências bibliográficas
 

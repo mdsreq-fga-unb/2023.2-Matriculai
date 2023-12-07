@@ -4,6 +4,7 @@
 | ---------- | ----------- | -------------- | -------------- |
 | 25/10/2023 | 0.1 | Criando backlog SAFe | Yasmim Rosa |
 | 29/10/2023 | 0.2 | Mesclando células das tabelas | Júlia Yoshida |
+| 06/12/2023 | 1.1 | Adição us14 | Luana Ribeiro |
 
 ## Requisitos Funcionais - Backlog SAFe
 
@@ -17,16 +18,17 @@
 			<td>Objetivo</td>
 		</tr>
 		<tr>
-			<td rowspan="2">[EP01] Gestão de usuários da plataforma	</td>
-			<td rowspan="2">[CA01] Gestão de acesso	</td>
-			<td rowspan="2">[FE01] Acesso a plataforma	</td>
+			<td rowspan="3">[EP01] Gestão de usuários da plataforma	</td>
+			<td rowspan="3">[CA01] Gestão de acesso	</td>
+			<td rowspan="3">[FE01] Acesso a plataforma	</td>
 			<td>[US01] Eu, como usuário, desejo poder inserir minhas credenciais (nome de usuário e senha) para acessar o sistema e utilizar os recursos disponíveis.	</td>
-			<td rowspan="2">Promover a eficiência da escola
-</td>
+			<td rowspan="3">Promover a eficiência da escola</td>
 		</tr>
 		<tr>
-			<td>[US02] Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.
-</td>
+			<td>[US02] Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.</td>
+		</tr>
+		<tr>
+			<td>[US14] Eu, como administrador, desejo enviar token de acesso para alunos cadastrados, para que eles participem da plataforma.</td>
 		</tr>
 		<tr>
 			<td rowspan="4">[EP02] Gestão de matriz curricular</td>
@@ -205,7 +207,7 @@ Organização das US por Épicos por ordem de média do VN (valor de negócio) e
 			<td>3,5</td>
 		</tr>
 		<tr>
-			<td rowspan="2">[EP01] Gestão de usuários da plataforma</td>
+			<td rowspan="3">[EP01] Gestão de usuários da plataforma</td>
 			<td>[US01] Eu, como usuário, desejo poder inserir minhas credenciais (nome de usuário e senha) para acessar o sistema e utilizar os recursos disponíveis.</td>
 			<td>3</td>
 			<td>4</td>
@@ -213,6 +215,12 @@ Organização das US por Épicos por ordem de média do VN (valor de negócio) e
 		</tr>
 		<tr>
 			<td>[US02] Eu, como usuário, desejo poder realizar logout do sistema, para garantir a segurança da minha conta e dos meus dados pessoais.</td>
+			<td>3</td>
+			<td>4</td>
+			<td>3,5</td>
+		</tr>
+		<tr>
+			<td>[US14] Eu, como administrador, desejo enviar token de acesso para alunos cadastrados, para que eles participem da plataforma.</td>
 			<td>3</td>
 			<td>4</td>
 			<td>3,5</td>
@@ -290,6 +298,14 @@ Organização das US por Épicos por ordem de média do VN (valor de negócio) e
 			<td>User Story
 </td>
 			<td>Critérios de aceitação</td>
+		</tr>
+		<tr>
+			<td rowspan="1">[EP01] Gestão de usuários da plataforma	</td>
+			<td rowspan="1">[CA01] Gestão de acesso	</td>
+			<td rowspan="1">[FE01] Acesso a plataforma	</td>
+			<td>[US14] Eu, como administrador, desejo enviar token de acesso para alunos cadastrados, para que eles participem da plataforma.
+</td>
+			<td>- O token deverá ser enviado para o email dos alunos  ;</br>- O administrador deve selecionar a série e depois a turma para a qual os alunos receberão os tokens; </br> -O administrador deverá receber uma mensagem de confirmação do envio do token. </td>
 		</tr>
 		<tr>
 			<td rowspan="6">[EP03] Gestão de matrículas	</td>

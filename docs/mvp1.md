@@ -67,9 +67,9 @@
 
 | DoD | US01 | US02 | US03 | US04 | US05 | US06 | Obs. |
 | -------------------------- | ---- | ----- | ----- | ------ | ----- | ----- | ---- |
-| O Requisito foi implementado de acordo com o backlog e seus critérios | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| O Requisito passou pela Estratégia de Testes? | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |  |
-| Sua integração com o resto do sistema gerou algum impacto negativo? | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | |
+| O Requisito foi implementado de acordo com o backlog e seus critérios | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |
+| O Requisito passou pela Estratégia de Testes? | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |  |
+| Sua integração com o resto do sistema gerou algum impacto negativo? | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ | |
 
 ## Testes Funcionais
 

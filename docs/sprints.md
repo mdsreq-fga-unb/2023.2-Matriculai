@@ -9,6 +9,7 @@
 | 22/10/2023 | 0.3 | Documentação da Sprint 1 | Luana Ribeiro |
 | 24/10/2023 | 0.4 | Documentação da Sprint 2 | Júlia Yoshida e Luana Ribeiro |
 | 14/11/2023 | 0.5 | Documentação Sprint 2,3 e 4 | Luana Ribeiro |
+| 06/12/2023 | 1.1 | Adição da Sprint 5 | Luana Ribeiro |
 
 ## Sprint 0
 
@@ -93,6 +94,64 @@ Data:  14/11/2023 a 27/11/2023
 | ------------------------------------- | ----------------------------------------------------- |
 | Sprint Planning | - Goal: Correções finais do backlog e implementação do MVP1. |
 | Backlog da Sprint | - (Representação) Corrigir Critérios de Aceitação. Responsáveis: Luana, Yan e Yasmim </br>- (Verificação e Validação) Definir a Estratégia de Testes. Responsáveis: Luana.</br>- Desenvolvimento do MVP1(US01 até US06). Responsáveis: Todos. </br> - (Verificação e Validação) Realização dos Testes para o MVP1. Responsável: Todos. |
-| Sprint Review | -Feedback: Em desenvolvimento </br> - Prioridades para a próxima sprint: Em desenvolvimento |
-| Débitos Técnicos | Em desenvolvimento |
-| Sprint Retrospective |-Pontos Fortes: Em desenvolvimento </br> -Pontos Fracos:  Em desenvolvimento </br> -Pontos de Melhoria:  Em desenvolvimento |
+| Sprint Review | -Feedback: O projeto e as pessoas envolvidas demonstram muito interesse e sempre que tem dúvidas, tentam saná-las. </br> - Prioridades para a próxima sprint: Precisamos ver a possibilidade de testar e, dependo dos testes, fazer as melhorias e/ou correções. |
+| Débitos Técnicos | US05- Criar trilha. A funcionaliade foi implementada inicialmente, porém sua integração com o sistema não funcionou; </br> - Adicionar Projeto de vida|
+| Sprint Retrospective |-Pontos Fortes: Envolvimento da equipe nas entregas; Melhora no entrosamento </br> -Pontos Fracos: Comunicação piorou </br> -Pontos de Melhoria: Comunicação, para o entendimento de todos sobre o que está sendo e o que deve-se fazer e para evitar de estar fazendo o mesmo trabalho que outra pessoa sem notar |
+
+### XP
+
+|Estratégia|Descrição|
+|-|-|
+|Metáfora|Utilizamos o método da metáfora, para conseguirmos nos comunicar com o cliente de maneira mais simples.|
+|Propriedade coletiva|Utilizamos a propriedade coletiva, para que todos pudessem desenvolver o GitPages.|
+|Jogo de Planejamento|Utilizamos no início da Sprint, para priorizar as funcionalidades e definir as tarefas que serão realizadas.|
+| Ritmo Sustentável | A equipe tentou melhorar as atribuições de tarefas, mesmo que não perfeitamente as atividades foram melhores compartilhadas e a sobrecarga diminuiu |
+| Pair Programming | Para a realização da atividade a equipe se dividiu em pares para desenvolver o MVP1 |
+
+### Pair Programming
+
+| US | Resumo | Dupla |
+| ----- | ---- | ---- |
+| 01 | login | Algusto e Julia |
+| 02 | logout | Gabriel e Luana |
+| 03 | criar eletiva | Yasmim e Yan |
+| 04 | excluir eletiva | Yan e Gabriel |
+| 05 | criar trilha | Luana e Julia |
+| 06 | excluir trilha | Yasmim e Algusto |
+
+## Sprint 5
+
+Data:  28/11/2023 a 11/12/2023
+
+### Scrum
+
+| Cerimônia | Atividades da Sprint |
+| ------------------------------------- | ----------------------------------------------------- |
+| Sprint Planning | - Goal: Correções do débito técnico do MVP1 e implementação do MVP2. |
+| Backlog da Sprint | - (Organização e atualização) Corrigir US05 e adicionar us de envio de token. Responsáveis: Todos </br>- (Verificação e Validação) Definir a Estratégia de Testes MVP2. Responsáveis: Luana.</br>- Desenvolvimento do MVP2(US07 até US14). Responsáveis: Todos.|
+| Sprint Review | -Feedback: ... </br> - Prioridades para a próxima sprint: ... |
+| Débitos Técnicos | ... |
+| Sprint Retrospective |-Pontos Fortes: ... </br> -Pontos de Melhoria: ... |
+
+### XP
+
+|Estratégia|Descrição|
+|-|-|
+|Metáfora|Utilizamos o método da metáfora, para conseguirmos nos comunicar com o cliente de maneira mais simples.|
+|Propriedade coletiva|Utilizamos a propriedade coletiva, para que todos pudessem desenvolver o GitPages.|
+|Jogo de Planejamento|Utilizamos no início da Sprint, para priorizar as funcionalidades e definir as tarefas que serão realizadas.|
+| Ritmo Sustentável | A equipe tentou melhorar as atribuições de tarefas, mesmo que não perfeitamente as atividades foram melhores compartilhadas e a sobrecarga diminuiu |
+| Pair Programming | Para a realização da atividade a equipe se dividiu em pares para desenvolver o MVP2 |
+
+### Pair Programming
+
+| US | Resumo | Dupla |
+| ----- | ---- | ---- |
+| 07 | solicitar matrícula trilha | Gabriel e Júlia |
+| 08 | solicitar matrícula eletiva | Yan e Algusto |
+| 09 | ver oferta de trilhas e eletivas | Luana e Algusto |
+| 10 | ver resultado matrícula | Algusto e Júlia |
+| 11 | gestão período de matrícula | Yasmim e Luana |
+| 12 | lista de estudante matriculados | Gabriel e Yan |
+| 13 | importar dados | Yasmim |
+| 14 | enviar token | Júlia |

@@ -1,9 +1,9 @@
 | Data | Versão | Descrição | Autores |
 | ---------- | ----------- | -------------- | -------------- |
 | 22/11/2023 | 1.0 | Definição da Estratégia | Luana Ribeiro |
+| 06/12/2023 | 1.1 | Adição do DoR e DoD | Luana Ribeiro |
 
 # Estratégia de Testes MVP 2
-
 
 <table>
 	<tbody>
@@ -61,3 +61,21 @@
 		</tr>
 	</tbody>
 </table>
+
+## DoR e DoD
+
+| DoR | US07 | US08 | US09 | US10 | US11 | US12 | US13 | US14 |  Obs.|
+| ---------------------------- | ---- | ---- | ---- | ---- | ----- | ----- | ----- | ------- | ------- |
+| O Requisito foi aceito por todos da equipe? | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| O levantamento de requisitos, análise e documentação, validação e verificação estão claros e disponíveis? | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | 
+| A priorização do Requisito com relação ao backlog foi realizada? | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| O Requisito é compreendido por todos da equipe ? | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| O Requisito está suficientemente detalhado, de acordo com o modelo de história de usuário, com critérios de aceitação claros e compreensíveis? | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| O Requisito foi aceito e validado pelo Product Owner? | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| A equipe está tecnicamente preparada para realizar o desenvolvimento? | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+
+| DoD |  US07 | US08 | US09 | US10 | US11 | US12 | US13 | US14 |  Obs.|
+| ---------------------------- | ---- | ---- | ---- | ---- | ----- | ----- | ----- | ------- | ------- |
+| O Requisito foi implementado de acordo com o backlog e seus critérios |  | |  |  |  |  | | |
+| O Requisito passou pela Estratégia de Testes? |  |  |  |  |  |  |  | | |
+| Sua integração com o resto do sistema gerou algum impacto negativo? |  |  |  |  |  |  | | | |
