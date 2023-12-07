@@ -2,9 +2,30 @@ module.exports = (sequelize, DataTypes) => {
     const Users = sequelize.define("Users", {
         id: {
             type: DataTypes.INTEGER,
-            field: "co_users",
+            field: "co_user",
             primaryKey: true,
             autoIncrement: true
+        },
+        superuser: {
+            field: "ds_superuser",
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false 
+        },
+        name: {
+            field: "ds_name",
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
+        registry: {
+            field: "ds_registry",
+            type: DataTypes.INTEGER,
+            allowNull: true
+        },
+        school_year: {
+            field: "ds_school_year",
+            type: DataTypes.INTEGER,
+            allowNull: true
         },
         email: {
             type: DataTypes.STRING,
@@ -28,12 +49,8 @@ module.exports = (sequelize, DataTypes) => {
         token: {
             field: "ds_token",
             type: DataTypes.STRING,
-        },
-        user_type: {
-            field: "user_type",
-            type: DataTypes.BOOLEAN,
-            defaultValue: true, 
-        },
+        }
+
     });
 
     return Users;
