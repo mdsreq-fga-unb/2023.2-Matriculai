@@ -1,5 +1,4 @@
-module.exports = (sequelize, DataTypes) =>{
-
+module.exports = (sequelize, DataTypes) => {
     const Users = sequelize.define("Users", {
         id: {
             type: DataTypes.INTEGER,
@@ -18,7 +17,6 @@ module.exports = (sequelize, DataTypes) =>{
                 },
             },
         },
-
         password: {
             field: "ds_password",
             type: DataTypes.STRING,
@@ -27,13 +25,16 @@ module.exports = (sequelize, DataTypes) =>{
                 len: [8, Infinity],
             },
         },
-
         token: {
             field: "ds_token",
             type: DataTypes.STRING,
         },
-    })
+        user_type: {
+            field: "user_type",
+            type: DataTypes.BOOLEAN,
+            defaultValue: true, 
+        },
+    });
 
-    return Users; 
-    
-}
+    return Users;
+};

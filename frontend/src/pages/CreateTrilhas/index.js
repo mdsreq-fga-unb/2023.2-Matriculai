@@ -39,7 +39,7 @@ const CreateTrilhas = () => {
       nomeTrilha: "",
       descricao: "",
       serie: "",
-      eletivas: [], // Inicialize como uma matriz
+      eletivas: [], 
     },
     validationSchema: yup.object({
       nomeTrilha: yup
@@ -80,13 +80,12 @@ const CreateTrilhas = () => {
             position: "top",
           });
 
-          // Sucesso, redirecionar ou realizar outras ações necessárias
+
           setShowAlert(true);
           setTimeout(() => {
             navigate("/home");
           }, 1000);
         } else {
-          // Exibir mensagem de erro
           toast({
             title: "Erro ao cadastrar trilha.",
             description: response.data.message || "Erro desconhecido.",
