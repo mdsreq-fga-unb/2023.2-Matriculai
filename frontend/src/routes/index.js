@@ -8,6 +8,7 @@ import ExclusionTrilhas from "../pages/ExclusionTrilhas";
 import ExclusionEletivas from "../pages/ExclusionEletivas"
 import CreateEletivas from "../pages/CreateEletivas";
 import CreateTrilhas from "../pages/CreateTrilhas";
+import SendStudent from "../pages/SendStudents"
 
 const Private = ({ Item }) => {
   const { signed } = useAuth();
@@ -27,6 +28,7 @@ const RoutesApp = () => {
           <Route path="/excluir-eletivas" element={<ExclusionEletivas />} />
           <Route path="/criar-trilha" element={<CreateTrilhas />} />
           <Route path="/excluir-trilhas" element={<ExclusionTrilhas />} />
+          <Route path="/cadastrar-estudantes" element={<SendStudent />} />
         </Routes>
       </Fragment>
     </BrowserRouter>
