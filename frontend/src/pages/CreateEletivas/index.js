@@ -124,7 +124,9 @@ const CreateEletivas = () => {
             duration: 2800,
             isClosable: true,
             position: "top",
-          });
+          })
+
+          console.log(error)
         }
       }
     },
@@ -148,6 +150,7 @@ const CreateEletivas = () => {
               </Center>
               <FormLabel  color= '#243A69'>Nome da eletiva </FormLabel>
               <Input
+                maxLength={40}
                 type='text' 
                 size='lg'
                 isRequired
@@ -162,6 +165,7 @@ const CreateEletivas = () => {
 
               <FormLabel color= '#243A69'>Descrição da eletiva</FormLabel> 
               <Input 
+                maxLength={150}
                 type='text'
                 isRequired
                 placeholder='Descrição da eletiva'
@@ -193,6 +197,7 @@ const CreateEletivas = () => {
 
               <FormLabel color= '#243A69'>Professor Responsável</FormLabel> 
               <Input
+              maxLength={30}
                 type='text' 
                 isRequired
                 placeholder='Professor Responsável'

@@ -162,6 +162,7 @@ const CreateTrilhas = () => {
                 <Stack spacing={2}>
                   <FormLabel color="#243A69">Nome da trilha </FormLabel>
                   <Input
+                    maxLength={40}
                     type="text"
                     size="lg"
                     isRequired
@@ -177,6 +178,7 @@ const CreateTrilhas = () => {
 
                   <FormLabel color="#243A69">Descrição da trilha</FormLabel>
                   <Input
+                    maxLength={150}
                     type="text"
                     isRequired
                     placeholder="Descrição da trilha"
