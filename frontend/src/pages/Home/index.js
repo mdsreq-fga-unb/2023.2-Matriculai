@@ -19,12 +19,14 @@ const Home = () => {
         <Button colorScheme='blue' variant='ghost'>
         <Link to='/criar-eletiva'>Criar Eletiva </Link>
         </Button>
-
         <Button colorScheme='blue' variant='ghost'>
         <Link to='/excluir-trilhas'>Excluir trilha</Link>
         </Button>
         <Button colorScheme='blue' variant='ghost'>
         <Link to='/excluir-eletivas'>Excluir eletiva</Link>
+        </Button>
+        <Button colorScheme='blue' variant='ghost'>
+        <Link to='/excluir-trilhas'>Recomendações</Link>
         </Button>
         </Center>
         <Center>
