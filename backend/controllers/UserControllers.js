@@ -4,7 +4,7 @@ const { createToken, validateToken } = require('./middlewares/Auth');
 
 exports.userRegister = async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { superuser, name, registry, school_year, email, password } = req.body;
         const existingUser = await Users.findOne({ where: { email: email } });
 
         if (existingUser) {
@@ -13,6 +13,10 @@ exports.userRegister = async (req, res) => {
 
         const hash = await bcrypt.hash(password, 15);
         await Users.create({
+            superuser: superuser,
+            name: name,
+            registry: registry,
+            school_year: school_year,
             email: email,
             password: hash,
         });

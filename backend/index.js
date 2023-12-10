@@ -3,10 +3,10 @@ const cors = require('cors');
 const database = require('./models/schemas');
 const userRoute = require('./views/routes/Users');
 const electiveRoute = require('./views/routes/Electives')
-const learningPathRoute = require('./views/routes/LearningPaths')
+const learningPathRoute = require('./views/routes/LearningPaths');
+const learningPathsEnrolmentRoute = require('./views/routes/LearningPathEnrolment');
 const logoutRoutes = require('./views/routes/Users');
 const sequelize = require('sequelize');
-const deleteLearningPathsRoute = require('./views/routes/LearningPaths');
 const extractStudentsRoutes = require('./views/routes/Extract');
 
 require("dotenv").config();
@@ -20,8 +20,9 @@ app.use('/elective', electiveRoute);
 app.use('/learningpath', learningPathRoute);
 app.use('/api', logoutRoutes);
 app.use('/send-file', extractStudentsRoutes);
+app.use('/learningpathenrolment', learningPathsEnrolmentRoute);
 
-let test = process.env.DB_USERNAME
+let test = process.env.DB_USERNAME;
 
 
 database.sequelize.sync().then(() => {
