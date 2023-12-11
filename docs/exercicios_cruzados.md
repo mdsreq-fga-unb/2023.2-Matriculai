@@ -2,6 +2,7 @@
 | ---------- | ----------- | -------------- | -------------- |
 | 21/11/2023 | 0.1 | Adição das atividades | Luana Ribeiro |
 | 06/12/2023 | 0.2 | Adição do BDD do TabeçaTeam | Júlia Yoshida |
+| 11/12/2023 | 1.1 | Adição atividades unidade 4 | Luana Ribeiro |
 
 # Exercícios Cruzados
 
@@ -377,3 +378,49 @@ O PBB é um método e um Canvas para a elaboração e a criação de um Product 
 ## HealthNet BDD 
 
 Essa atividade não foi realizada pela equipe, portanto não foi validada.
+
+## Verificação e Validação Especificação Casos de Uso VoyageX
+
+Esta atividade consistiu na leitura do documento de especificação de casos de uso da equipe, para analisar se condiziam com as necessidades da aplicação.
+
+### Verificação 
+
+| Critérios | Passou? | Obs. |
+| --------------- | ----- | ----------------- |
+| Os atores foram identificados corretamente? | ✅ | |
+| O fluxo básico de eventos foi organizado de maneira lógica? | ✅ | Não esquecer que o próprio UC é no infinitivo(verbos) |
+| O fluxo de eventos alternativos foi organizado de maneira lógica? | ✅ | |
+| As pré-condições foram organizadas de maneira lógica? | ✅ | |
+| As pós-condições foram organizadas de maneira lógica? | ✅ | |
+| Os requisitos especiais foram organizados de maneira lógica? | ❌ | Deveria especificar melhor. Ex.: um requisito especial poderia se chamar “Gestos de navegação", outro “Interação com a curtida”. |
+
+### Validação
+
+| Critérios | Passou? | Obs. |
+| --------------- | ----- | ----------------- |
+| Os fluxos atendem aos requisitos específicos do sistema? | ❌ | Estão na linha correta, precisam apenas especificar melhor esses casos alternativos, caso o usuário esteja acessando pela primeira vez. E exemplificando com o feedback passado pelo professor, se não houver um histórico de busca, como ele recomendará? |
+| As condições fazem sentido para a realidade do sistema? | ❌ | Seguindo a recomendação do professor em aula, precisa especificar melhor |
+| Todos os atores foram identificados? | ✅ | |
+| Os requisitos especiais estão descritos corretamente? | ❌ | A descrição foi feita de maneira muito resumida, deveriam especificar o que seria um story, etc. |
+
+# Equipe: Gamatech
+
+## Verificação e Validação Especificação Casos de Uso VoyageX
+
+Esta atividade consistiu na avaliação do diagrama de casos de uso da equipe, para analisar se condiziam com as necessidades da aplicação.
+
+### Verificação
+
+| Critérios | Passou? |
+| --------------- | ----- |
+| Os atores foram identificados corretamente? | ✅ |
+| Foram criados casos de uso? | ✅ |
+| Os casos de uso foram organizados de maneira lógica? | ✅ |
+
+### Validação
+
+| Critérios | Passou? |
+| --------------- | ----- |
+| Os casos de uso atendem os requisitos especificos do sistema? | ✅ |
+| Todos os atores envolvidos estão corretamente associados ao caso de uso? | ✅ |
+| A interação com outros casos de uso foi considerada e está corretamente refletida? | ❌ |

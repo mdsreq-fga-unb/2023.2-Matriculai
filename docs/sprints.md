@@ -121,7 +121,8 @@ Data:  14/11/2023 a 27/11/2023
 
 ## Sprint 5
 
-Data:  28/11/2023 a 11/12/2023
+Data:  28/11/2023 a 11/12/2023 </br>
+Adendo: Esta Sprint durará até o dia 13/12, para que tenha período semelhante ao da entrega da atividade final da disciplina.
 
 ### Scrum
 
@@ -153,5 +154,5 @@ Data:  28/11/2023 a 11/12/2023
 | 10 | ver resultado matrícula | Algusto e Júlia |
 | 11 | gestão período de matrícula | Yasmim e Luana |
 | 12 | lista de estudante matriculados | Gabriel e Yan |
-| 13 | importar dados | Yasmim |
-| 14 | enviar token | Júlia |
+| 13 | importar dados | Yasmim e Gabriel|
+| 14 | enviar token | Júlia e Luana |

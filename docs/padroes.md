@@ -108,6 +108,7 @@ Para projetar uma interface pensada na experiência do usuário, utilizaremos as
 ![Imagem 13](./images/vermat2.png)
 ![Imagem 14](./images/vermat3.png)
 ![Imagem 15](./images/vermat4.png)
+![Imagem 16](./images/recom.jpeg)
 
 # Referências bibliográficas
 
