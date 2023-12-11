@@ -27,6 +27,18 @@ exports.userRegister = async (req, res) => {
     }
 };
 
+exports.studentRegister = async(student) => {
+    const hash = await bcrypt.hash(password, 15);
+        await Users.create({
+            superuser: false,
+            name: student['nome completo'],
+            registry: student['matrícula'],
+            school_year: student['ano'],
+            email: student['email'],
+            password: hash,
+        });
+}
+
 exports.userLogin = async (req, res) => {
     try {
         const { email, password } = req.body;

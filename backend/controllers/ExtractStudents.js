@@ -1,29 +1,36 @@
 const exceljs = require('exceljs');
+const user = require('./UserControllers') 
 
 exports.extractStudents = async (req, res) => {
-  const arquivo = req.file;
+  const file_input = req.file;
 
   const workbook = new exceljs.Workbook();
   try {
-    await workbook.xlsx.load(arquivo.buffer);
-    const primeiraPlanilha = workbook.worksheets[0];
+    await workbook.xlsx.load(file_input.buffer);
+    const spreadsheet = workbook.worksheets[0];
 
-    const nomesColunas = primeiraPlanilha.getRow(1).values;
+    const columns = spreadsheet.getRow(1).values;
 
-    const dados = [];
+    const data = [];
 
-    for (let rowIndex = 2; rowIndex <= primeiraPlanilha.rowCount; rowIndex++) {
-      const linha = primeiraPlanilha.getRow(rowIndex);
-      const dadosLinha = {};
-      nomesColunas.forEach((nomeColuna, columnIndex) => {
-        dadosLinha[nomeColuna] = linha.getCell(columnIndex + 1).value;
+    for (let rowIndex = 2; rowIndex <= spreadsheet.rowCount; rowIndex++) {
+      const row = spreadsheet.getRow(rowIndex);
+      const dataRow = {}; 
+      columns.forEach((columnName, columnIndex) => {
+        dataRow[columnName] = row.getCell(columnIndex).value;
       });
-      dados.push(dadosLinha);
+      data.push(dataRow);
     }
 
-
-    console.log('Dados extraídos:', dados);
-
+    data.forEach( async (student) => {
+      try{
+        await user.studentRegister(student)
+      }
+      catch(err){
+        console.log(err)
+      }
+    });
+    
     res.json({ mensagem: 'Arquivo Excel recebido e processado com sucesso!' });
   } catch (erro) {
     console.error('Erro ao processar arquivo Excel:', erro);
