@@ -1,4 +1,5 @@
 const { Users } = require('../models/schemas');
+const randomatic = require('randomatic');
 const bcrypt = require('bcrypt');
 const { createToken, validateToken } = require('./middlewares/Auth');
 
@@ -28,7 +29,9 @@ exports.userRegister = async (req, res) => {
 };
 
 exports.studentRegister = async(student) => {
+    const password = randomatic('Aa0', 15);
     const hash = await bcrypt.hash(password, 15);
+    
         await Users.create({
             superuser: false,
             name: student['nome completo'],
