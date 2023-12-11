@@ -26,7 +26,7 @@ const Home = () => {
         <Link to='/excluir-eletivas'>Excluir eletiva</Link>
         </Button>
         <Button colorScheme='blue' variant='ghost'>
-        <Link to='/excluir-trilhas'>Recomendações</Link>
+        <Link to='/recommendations'>Recomendações</Link>
         </Button>
         </Center>
         <Center>
