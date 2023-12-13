@@ -1,7 +1,5 @@
-import React from "react";
 import { Navigate, Route, BrowserRouter, Routes } from "react-router-dom";
 import React from "react";
-import { Navigate, Route, BrowserRouter, Routes } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
@@ -13,9 +11,14 @@ import ExclusionTrilhas from "../pages/ExclusionTrilhas";
 import Recommendations from "../pages/Recommendations";
 import SendStudent from "../pages/SendStudents";
 import RegistrationPeriod from "../pages/RegistrationPeriod"
+import ChoiceList from "../pages/ChoiceList"
+import ListElectives from "../pages/ListElectives"
+import ListLearningPath from "../pages/ListLearningPath"
 
 const RoutesApp = () => {
   const { isAuthenticated, isSuperUser } = useAuth();
+
+  isSuperUser()
 
   return (
     <BrowserRouter>
@@ -72,6 +75,24 @@ const RoutesApp = () => {
               path="/periodo-matriculas"
               element={
                 !isAuthenticated() ? <Navigate to="/signin" /> : <RegistrationPeriod />
+              }
+            />
+            <Route
+              path="/lista"
+              element={
+                !isAuthenticated() ? <Navigate to="/signin" /> : <ChoiceList />
+              }
+            />
+            <Route
+              path="/eletivas"
+              element={
+                !isAuthenticated() ? <Navigate to="/signin" /> : <ListElectives />
+              }
+            />
+            <Route
+              path="/trilhas"
+              element={
+                !isAuthenticated() ? <Navigate to="/signin" /> : <ListLearningPath />
               }
             />
           </>

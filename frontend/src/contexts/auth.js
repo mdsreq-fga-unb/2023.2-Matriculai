@@ -1,7 +1,5 @@
 import { stubFalse } from "lodash";
-import { stubFalse } from "lodash";
 import { createContext, useEffect, useState } from "react";
-import Signin from "../pages/Signin";
 import Signin from "../pages/Signin";
 
 export const AuthContext = createContext({});
