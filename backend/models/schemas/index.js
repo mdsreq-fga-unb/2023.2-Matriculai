@@ -8,7 +8,7 @@ const basename = path.basename(__filename);
 const config = require(__dirname + '/../../config/config.js');
 const db = {};
 
-let sequelize = new Sequelize(config.database, config.username, config.password, {config, dialect: 'mysql',
+let sequelize = new Sequelize(config.database, config.username, config.password, {config, dialect: 'mysql2',
 dialectModule: require('mysql2')});
 
 
