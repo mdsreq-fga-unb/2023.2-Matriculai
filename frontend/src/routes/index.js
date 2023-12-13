@@ -1,5 +1,5 @@
-import { Fragment } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
+import { Navigate, Route, BrowserRouter, Routes } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
@@ -9,31 +9,62 @@ import CreateEletivas from "../pages/CreateEletivas";
 import CreateTrilhas from "../pages/CreateTrilhas";
 import ExclusionTrilhas from "../pages/ExclusionTrilhas";
 import Recommendations from "../pages/Recommendations";
-import SendStudent from "../pages/SendStudents"
-
-
-const Private = ({ Item }) => {
-  const { signed } = useAuth();
-
-  return signed > 0 ? <Item /> : <Signin />;
-};
+import SendStudent from "../pages/SendStudents";
 
 const RoutesApp = () => {
+  const { isAuthenticated } = useAuth();
+
   return (
     <BrowserRouter>
-      <Fragment>
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/" element={<Signin />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/criar-eletiva" element={<CreateEletivas />} />
-          <Route path="/excluir-eletivas" element={<ExclusionEletivas />} />
-          <Route path="/criar-trilha" element={<CreateTrilhas />} />
-          <Route path="/excluir-trilha" element={<ExclusionTrilhas />} />
-          <Route path="/recommendations" element={<Recommendations />} />
-          <Route path="/cadastrar-estudantes" element={<SendStudent />} />
-        </Routes>
-      </Fragment>
+      <Routes>
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/" element={<Navigate to="/signin" />} />
+
+        {/* Utilize o componente Outlet para renderizar rotas aninhadas */}
+        <Route
+          path="/home"
+          element={
+            !isAuthenticated() ? <Navigate to="/signin" /> : <Home />
+          }
+        />
+        <Route
+          path="/criar-eletiva"
+          element={
+            !isAuthenticated() ? <Navigate to="/signin" /> : <CreateEletivas />
+          }
+        />
+        <Route
+          path="/excluir-eletivas"
+          element={
+            !isAuthenticated() ? <Navigate to="/signin" /> : <ExclusionEletivas />
+          }
+        />
+        <Route
+          path="/criar-trilha"
+          element={
+            !isAuthenticated() ? <Navigate to="/signin" /> : <CreateTrilhas />
+          }
+        />
+        <Route
+          path="/excluir-trilha"
+          element={
+            !isAuthenticated() ? <Navigate to="/signin" /> : <ExclusionTrilhas />
+          }
+        />
+        <Route
+          path="/recommendations"
+          element={
+            !isAuthenticated() ? <Navigate to="/signin" /> : <Recommendations />
+          }
+        />
+        <Route
+          path="/cadastrar-estudantes"
+          element={
+            !isAuthenticated() ? <Navigate to="/signin" /> : <SendStudent />
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
 };

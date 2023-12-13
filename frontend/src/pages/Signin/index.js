@@ -12,7 +12,7 @@ import { Text } from '@chakra-ui/react';
 import axios from 'axios';
 
 const Signin = () => {
-  const { signin } = useAuth();
+  const { signin, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -27,9 +27,13 @@ const Signin = () => {
       })
   
       if (response.data.accessToken) {
-        signin(response.data.accessToken);
-        navigate("/home");
         sessionStorage.setItem("accessToken", response.data.accessToken);
+        sessionStorage.setItem("user", JSON.stringify({email, senha}));
+        signin();
+        
+        navigate("/home");
+
+        
         } else {
         setError("Credenciais inválidas");
       }
