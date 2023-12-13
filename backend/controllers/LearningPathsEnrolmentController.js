@@ -8,7 +8,7 @@ exports.studentEnrolment = async (req, res) => {
     const existingUser = await Users.findOne({where: {id: student_id}})
 
     if (existingEnrolment) {
-        return res.status(400).json({error: 'O aluno já está matriculado nesta trilha.'}); 
+        return res.status(200).json({error: 'O aluno já está matriculado nesta trilha.'}); 
     } else {
         await LearningPathsEnrolment.create({
             learning_path_id: learning_path_id,

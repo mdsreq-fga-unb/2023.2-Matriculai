@@ -1,4 +1,4 @@
-const { Electives } = require('../models/schemas')
+const { Electives, ElectivesStudents } = require('../models/schemas')
 
 exports.createElective = async(req, res) => {
     const { name, description, school_year, teacher, vacancies, schedules } = req.body;
@@ -48,3 +48,27 @@ exports.listElectives = async (req, res) => {
         res.status(400).json({ error: err.message });
     }
 };
+
+exports.ElectivesByStudent = async(req, res) => {
+    const { names, student_id } = req.body
+    const exists = await ElectivesStudents.findOne({where:{ student_id: student_id}})
+
+    if(!exists){
+        try
+        {
+            await ElectivesStudents.create({
+                names: names,
+                student_id: student_id
+            }).then(() => {
+              res.status(201).json("OK")
+            })
+
+        }catch(err)
+        {
+          res.status(400).json({"error": err})
+        }
+    }else{
+      res.status(200).json("Já existe")
+    }
+    
+}

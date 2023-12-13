@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
-import { Container, Flex, Text, Select, FormControl, FormLabel, Input, Button, Center } from "@chakra-ui/react";
+import { Container, Flex, Text, Select, FormControl, FormLabel, Checkbox, Button, Center, Stack, CheckboxGroup } from "@chakra-ui/react";
 import Header from "../../components/Header/index.js";
 import Footer from "../../components/Footer/index.js";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -20,54 +20,59 @@ const NewEnrolmentLP = () => {
   const user = userId()
   const schoolYear = userSy()
   const [showAlert, setShowAlert] = useState(false);
+  const [numElectives, setNumElectives] = useState(false);
 
   const navigate = useNavigate();
   const toast = useToast();
-  const [trilhas, setTrilhas] = useState([]);
+  const [eletivas, setEletivas] = useState([]);
 
   useEffect(() => {
-    async function fetchTrilhas() {
+    const fetchEletivas = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/learningpath/learningpath'); // Endpoint para buscar trilhas
-        setTrilhas(response.data); // Define as trilhas na state 'trilhas'
+        const response = await axios.get(
+          "http://localhost:3001/elective/electives"
+        );
+        setEletivas(response.data);
       } catch (error) {
-        console.error('Erro ao buscar trilhas:', error);
+        console.error("Erro ao buscar eletivas:", error);
       }
+    };
+
+    const numElectives = async () => {    
+        if (parseInt(schoolYear) === 1) {
+          setNumElectives(6)
+        } else if (parseInt(schoolYear) === 2 || parseInt(schoolYear) === 3) {
+          setNumElectives(4)
+        }
     }
-    fetchTrilhas();
+
+    numElectives();
+    fetchEletivas();
   }, []);
 
   const formik = useFormik({
     initialValues: {
-      learning_path_id: "",
+        eletivas: [],
     },
     validationSchema: yup.object({
-      learning_path_id: yup
-        .string()
-        .required("Uma trilha deve ser selecionada!")
-    }),
+      eletivas: yup.array().test('conditionalExactCount', `É necessário selecionar exatamente ${numElectives} eletiva(s)`, function (value) {
+        let requiredCount;
+    
+        if (parseInt(schoolYear) === 1) {
+          requiredCount = 6;
+        } else if (parseInt(schoolYear) === 2 || parseInt(schoolYear) === 3) {
+          requiredCount = 4;
+        }
+    
+        return value.length === requiredCount;
+      }),
+    }),    
     onSubmit: async(values) => {
       try{
-        if(schoolYear === '1'){
-          toast({
-            title: "  Sua matrícula não pode ser realizada.",
-            description: "Só alunos do segundo e terceiro ano podem se matricular!",
-            status: "error",
-            duration: 2800,
-            isClosable: true,
-            position: "top",
-          });
-
-
-          setShowAlert(true);
-          setTimeout(() => {
-            navigate("/home-student");
-          }, 1000);
-        }else{
-          const response = await axios.post("http://localhost:3001/learningpathenrolment/studentenrolment",
+          const response = await axios.post("http://localhost:3001/elective/matricula-eletivas",
           {
+            names: JSON.stringify(values.eletivas),
             student_id: parseInt(user),
-            learning_path_id: values.learning_path_id
           }
           )
 
@@ -89,7 +94,7 @@ const NewEnrolmentLP = () => {
           } else if(response.status === 200){
             toast({
               title: "Matrícula já realizada.",
-              description: response.data.message || "Sua matrícula já foi realizada!",
+              description: "Sua matrícula já foi realizada!",
               status: "error",
               duration: 2800,
               isClosable: true,
@@ -101,7 +106,6 @@ const NewEnrolmentLP = () => {
               navigate("/home-student");
             }, 2000);
           }
-        }
       }catch(error){
         console.error("Erro ao cadastrar:", error);
         toast({
@@ -129,29 +133,28 @@ const NewEnrolmentLP = () => {
                 color={"#243A69"}
                 as={"b"}
                 >
-                Matricule-se em uma trilha
+                Matricule-se em eletivas
                 </Text>
             </C.titulo>
         </Center>
         <FormControl marginTop="2vh">
-          <FormLabel color="#243A69">
-            Selecione uma trilha
+          <FormLabel color="#243A69" fontWeight='bold'>
+            Selecione as eletivas
           </FormLabel>
-          <Select
-            type="text"
-            placeholder="Selecione a trilha"
-            _placeholder={{ opacity: 1, color: "#243A69" }} isRequired
-            {...formik.getFieldProps("learning_path_id")}
-          >
-            {trilhas.map((op) => (
-              <option value={op.id}>{op.name}</option>
-            ))}
-          </Select>
-          {formik.touched.learning_path_id && formik.errors.learning_path_id && (
-                    <Text color="red.500" fontSize="sm">
-                      {formik.errors.learning_path_id}
-                    </Text>
-                  )}
+        
+          <CheckboxGroup value={formik.values.eletivas} onChange={(values) => formik.setFieldValue("eletivas", values)
+                    }>
+            {eletivas.map((eletiva) => 
+              <Checkbox isChecked={formik.values.eletivas.includes(eletiva.name)} color="#243A69" marginLeft="1vh" value={eletiva.name} >{eletiva.name} </Checkbox>
+            )}
+          </CheckboxGroup>
+          {formik.touched.eletivas &&
+                    formik.errors.eletivas && (
+                      <Text color="red.500" fontSize="sm">
+                        {formik.errors.eletivas}
+                      </Text>
+          )}
+         
           <Center paddingBottom={5} marginTop="3vh">
                     <ButtonCadastrar
                       Text="Cadastrar"
