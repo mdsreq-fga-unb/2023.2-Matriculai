@@ -1,4 +1,4 @@
-const { Electives, ElectivesStudents } = require('../models/schemas')
+const { Electives, ElectivesStudents, Users } = require('../models/schemas')
 
 exports.createElective = async(req, res) => {
     const { name, description, school_year, teacher, vacancies, schedules } = req.body;
@@ -71,4 +71,43 @@ exports.ElectivesByStudent = async(req, res) => {
       res.status(200).json("Já existe")
     }
     
+}
+
+exports.FindElective = async(req, res) => {
+  console.log("oi")
+  const { id } = req.body
+  try {
+      const eletiva = await Electives.findOne({where: {id: id}});
+      res.status(200).json(eletiva);
+  } catch (err) {
+      res.status(400).json({ error: err.message });
+  } 
+
+}
+
+exports.Students = async(req, res) => {
+  const { eletivaNome} = req.body
+  let listStudents = []
+  let infoStudents = []
+    try {
+        const students = await ElectivesStudents.findAll();
+        
+        if(students){
+          for(let student of students){
+            let eletivas = JSON.parse(student.names)
+            if(eletivas.includes(eletivaNome)){
+              listStudents.push(student.student_id)
+            }
+          }
+
+          for(let s of listStudents){
+            let find = await Users.findOne({where: {id: s}})
+            infoStudents.push(find)
+          }
+        }
+        res.status(200).json(infoStudents);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    } 
+
 }

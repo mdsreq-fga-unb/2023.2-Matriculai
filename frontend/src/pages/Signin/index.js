@@ -39,9 +39,11 @@ const Signin = () => {
         if(typeUser === "true"){
           console.log("é adm ")
           navigate('/home');
+          window.location.reload()
         } else {
           console.log("é aluno ")
           navigate('/home-student');
+          window.location.reload()
 
         }
         

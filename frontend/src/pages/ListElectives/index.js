@@ -27,7 +27,7 @@ const ListElectives = () => {
     useEffect(() => {
       async function fetchEletivas() {
         try {
-          const response = await axios.get('http://localhost:3001/elective/electives'); // Endpoint para buscar trilhas
+          const response = await axios.get('http://localhost:3001/elective/electives'); // Endpoint para buscar eletivas
           setEletivas(response.data);
         } catch (error) {
           console.error('Erro ao buscar eletivas:', error);
@@ -68,7 +68,7 @@ const ListElectives = () => {
                   <Tr>
                     <Td textColor='#243A69'>{linha.name}</Td>
                     <Td textColor='#243A69'>{linha.school_year}</Td>
-                    <Td><Icon as={ExternalLinkIcon} /></Td>
+                    <Td><Link to={`/eletivas/${linha.id}`}><Icon as={ExternalLinkIcon}/></Link></Td>
                   </Tr>
                 ))}
               </Tbody>

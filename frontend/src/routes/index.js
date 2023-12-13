@@ -16,6 +16,7 @@ import NewEnrolmentLP from "../pages/NewEnrolmentLP"
 import ListLearningPath from "../pages/ListLearningPath"
 import ListElectives from "../pages/ListElectives"
 import StudentsLP from "../pages/StudentsLP";
+import StudentsEl from "../pages/StudentsEl";
 import NewEnrolmentElectives from "../pages/NewEnrolmentElectives";
 
 const RoutesApp = () => {
@@ -98,6 +99,12 @@ const RoutesApp = () => {
               path="/eletivas"
               element={
                 !isAuthenticated() ? <Navigate to="/signin" /> : <ListElectives />
+              }
+            />
+            <Route
+              path="/eletivas/:eletivaId"
+              element={
+                !isAuthenticated() ? <Navigate to="/signin" /> : <StudentsEl />
               }
             />
           </>
