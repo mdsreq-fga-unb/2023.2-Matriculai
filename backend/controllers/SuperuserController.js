@@ -1,11 +1,9 @@
-const Register = require('../models/schemas/RegistrationPeriod')
+const { Registration } = require('../models/schemas')
 
 exports.openRegistrationPeriod = async (req, res) => {
-    const { name, isOpen, start, end } = req.body;
+    const { start, end } = req.body;
  
-    await Register.create({
-        name: name,
-        isOpen: isOpen,
+    await Registration.create({
         start: start,
         end: end,
     }).then(() => {

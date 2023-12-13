@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const RegistrationPeriod = sequelize.define("Registration", {
+    const Registration = sequelize.define("Registration", {
         id: {
             type: DataTypes.INTEGER,
             field: "co_registration_period",
@@ -24,5 +24,5 @@ module.exports = (sequelize, DataTypes) => {
         }
     });
 
-    return RegistrationPeriod;
+    return Registration;
 };
