@@ -27,6 +27,7 @@ export const AuthProvider = ({ children }) => {
 
   const isSuperUser = () => {
     const userType = sessionStorage.getItem("superuser");
+    console.log(userType)
     return userType
   }
 

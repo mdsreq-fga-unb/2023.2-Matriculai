@@ -1,4 +1,5 @@
 import { chakra, MenuList, MenuItem, Image, Container } from '@chakra-ui/react';
+import styled from "styled-components";
 
 export const StyledMenuList = chakra(MenuList, {
   baseStyle: {
@@ -7,6 +8,15 @@ export const StyledMenuList = chakra(MenuList, {
     margin: 0,
   },
 });
+
+export const titulo = styled.div`
+  font-size: 150%;
+  font-weight: 600;
+  color: #243A69;
+  margin-left: 20px;
+  margin-top: 20px;
+  align: center;
+`;
 
 // export const StyledContainer = chakra( Container, {
 //   baseStyle: {

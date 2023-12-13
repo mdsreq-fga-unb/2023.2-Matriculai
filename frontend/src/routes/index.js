@@ -1,5 +1,5 @@
-import { Navigate, Route, BrowserRouter, Routes } from "react-router-dom";
 import React from "react";
+import { Navigate, Route, BrowserRouter, Routes } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import Home from "../pages/Home";
 import Signin from "../pages/Signin";
@@ -11,14 +11,14 @@ import ExclusionTrilhas from "../pages/ExclusionTrilhas";
 import Recommendations from "../pages/Recommendations";
 import SendStudent from "../pages/SendStudents";
 import RegistrationPeriod from "../pages/RegistrationPeriod"
-import ChoiceList from "../pages/ChoiceList"
-import ListElectives from "../pages/ListElectives"
-import ListLearningPath from "../pages/ListLearningPath"
+import StudentHome from "../pages/StudentHome"
 
 const RoutesApp = () => {
   const { isAuthenticated, isSuperUser } = useAuth();
+  let typeUser = isSuperUser()
+  console.log('type:', typeUser == 'true')
 
-  isSuperUser()
+
 
   return (
     <BrowserRouter>
@@ -27,7 +27,7 @@ const RoutesApp = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Navigate to="/signin" />} />
   
-        {isSuperUser() ? (
+        {typeUser == 'true' ? (
           <>
             <Route
               path="/home"
@@ -60,7 +60,7 @@ const RoutesApp = () => {
               }
             />
             <Route
-              path="/excluir-trilha"
+              path="/excluir-trilhas"
               element={
                 !isAuthenticated() ? <Navigate to="/signin" /> : <ExclusionTrilhas />
               }
@@ -77,30 +77,12 @@ const RoutesApp = () => {
                 !isAuthenticated() ? <Navigate to="/signin" /> : <RegistrationPeriod />
               }
             />
-            <Route
-              path="/lista"
-              element={
-                !isAuthenticated() ? <Navigate to="/signin" /> : <ChoiceList />
-              }
-            />
-            <Route
-              path="/eletivas"
-              element={
-                !isAuthenticated() ? <Navigate to="/signin" /> : <ListElectives />
-              }
-            />
-            <Route
-              path="/trilhas"
-              element={
-                !isAuthenticated() ? <Navigate to="/signin" /> : <ListLearningPath />
-              }
-            />
           </>
         ) : (
           <Route
-            path="/home"
+            path="/home-student"
             element={
-              !isAuthenticated() ? <Navigate to="/signin" /> : <Home />
+              !isAuthenticated() ? <Navigate to="/signin" /> : <StudentHome />
             }
           />
         )}

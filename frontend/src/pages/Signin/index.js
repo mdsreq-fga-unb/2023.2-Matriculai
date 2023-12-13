@@ -31,11 +31,15 @@ const Signin = () => {
         sessionStorage.setItem("superuser", response.data.superuser);
 
         signin();
-        console.log("oi")
-        console.log( sessionStorage.getItem("superuser"))
-        console.log(isSuperUser())
-        navigate("/home");
+        let typeUser = isSuperUser()
 
+        if(typeUser == "true"){
+          console.log("é adm ")
+          navigate("/home");
+        } else {
+          console.log("é aluno ")
+          navigate('/home')
+        }
         
         } else {
         setError("Credenciais inválidas");
