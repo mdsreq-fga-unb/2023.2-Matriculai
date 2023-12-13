@@ -1,6 +1,6 @@
 'use strict';
 
-import mysql2 from 'mysql2';
+const mysql2 = require('mysql2'); // Alteração nesta linha
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
