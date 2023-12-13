@@ -6,7 +6,7 @@ import GlobalStyle from "./styles/global";
 const App = () => (
   <AuthProvider>
     <RoutesApp />
-    <GlobalStyle />
+    {/* <GlobalStyle /> */}
   </AuthProvider>
 );
 

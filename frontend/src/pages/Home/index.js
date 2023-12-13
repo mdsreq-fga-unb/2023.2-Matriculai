@@ -56,6 +56,14 @@ const Home = () => {
                 </Button>
             </HStack>
         </Center>
+
+        <Center>
+            <HStack marginTop='2vh'>
+                <Button colorScheme='facebook'>
+                <Link to='/cadastrar-estudantes'>Importar estudantes</Link>
+                </Button>
+            </HStack>
+        </Center>
       </Container>
       <Footer />
     </Flex>

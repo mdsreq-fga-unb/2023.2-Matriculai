@@ -11,10 +11,14 @@ import logoutIcon from '../../icon/sair-alt 1.png';
 import { StyledMenuList, StyledImage, StyledMenuItem } from "./styles";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
+import useAuth from "../../hooks/useAuth";
 
 const Header = () => {
+  const { isSuperUser } = useAuth()
   const navigate = useNavigate();
   const [showConfirmation, setShowConfirmation] = useState(false);
+
+  const typeUser = isSuperUser()
 
   const handleLogout = async () => {
     const accessToken = sessionStorage.getItem("accessToken");
@@ -42,9 +46,16 @@ const Header = () => {
       color="white"
     >
       <Box maxWidth={'16vh'} maxHeight={'16vh'}  paddingLeft='3vh'>
-        <Link to="/Home">
+        {typeUser === 'true' ? (
+          <Link to="/home">
           <Image src={cmtnLogo} alt='student' style={{ maxWidth: '100%', height: 'auto' }} />
         </Link>
+        ): (
+          <Link to="/home-student">
+          <Image src={cmtnLogo} alt='student' style={{ maxWidth: '100%', height: 'auto' }} />
+        </Link>
+        )}
+        
       </Box>
       <Spacer />
       <Box maxWidth={'5vh'} maxHeight={'2vh'} marginTop={'-0.5px'} marginBottom={'3vh'} >
