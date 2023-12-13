@@ -55,10 +55,11 @@ const CreateTrilhas = () => {
       serie: yup.string().required("A série é obrigatória"),
       eletivas: yup
         .array()
-        .min(1, "É necessário selecionar pelo menos uma eletiva")
+        .min(1, "É necessário selecionar pelo menos uma eletiva além do Projeto de Vida")
         .required("É necessário selecionar eletivas relacionadas"),
     }),
     onSubmit: async (values) => {
+      values.eletivas.push("Projeto de Vida")
       try {
         const response = await axios.post(
           "http://localhost:3001/learningpath/createLearningPaths",
@@ -220,6 +221,7 @@ const CreateTrilhas = () => {
                     }
                   >
                     <Stack spacing={[1, 2]} direction={["column", "column"]}>
+                      <Checkbox isChecked>Projeto de Vida</Checkbox>
                       {isLoading ? (
                         <Text color="red.500" fontSize="sm">
                           {formik.errors.eletivas}

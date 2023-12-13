@@ -15,7 +15,7 @@ import ButtonCadastrar from "../../components/Button";
 
 import { Link } from "react-router-dom";
 
-const NewEnrolmentLP = () => {
+const NewEnrolmentElectives = () => {
   const { userId, userSy } = useAuth();
   const user = userId()
   const schoolYear = userSy()
@@ -50,6 +50,9 @@ const NewEnrolmentLP = () => {
     fetchEletivas();
   }, []);
 
+  const eletivasFiltradas = eletivas.filter((eletiva) => eletiva.school_year === parseInt(schoolYear));
+
+
   const formik = useFormik({
     initialValues: {
         eletivas: [],
@@ -59,15 +62,17 @@ const NewEnrolmentLP = () => {
         let requiredCount;
     
         if (parseInt(schoolYear) === 1) {
-          requiredCount = 6;
+          requiredCount = 5;
         } else if (parseInt(schoolYear) === 2 || parseInt(schoolYear) === 3) {
-          requiredCount = 4;
+          requiredCount = 3;
         }
     
         return value.length === requiredCount;
       }),
     }),    
     onSubmit: async(values) => {
+      values.eletivas.push("Projeto de Vida")
+
       try{
           const response = await axios.post("http://localhost:3001/elective/matricula-eletivas",
           {
@@ -144,7 +149,8 @@ const NewEnrolmentLP = () => {
         
           <CheckboxGroup value={formik.values.eletivas} onChange={(values) => formik.setFieldValue("eletivas", values)
                     }>
-            {eletivas.map((eletiva) => 
+            <Checkbox isChecked color="#243A69">Projeto de Vida</Checkbox>
+            {eletivasFiltradas.map((eletiva) => 
               <Checkbox isChecked={formik.values.eletivas.includes(eletiva.name)} color="#243A69" marginLeft="1vh" value={eletiva.name} >{eletiva.name} </Checkbox>
             )}
           </CheckboxGroup>
@@ -170,4 +176,4 @@ const NewEnrolmentLP = () => {
   );
 };
 
-export default NewEnrolmentLP;
+export default NewEnrolmentElectives;
