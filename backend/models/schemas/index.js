@@ -16,10 +16,10 @@ const sequelize = new Sequelize(
   {
     host: '104.154.26.234',
     dialect: 'mysql',
-    dialectModule: mysql2// Por exemplo, 'mysql', 'postgres', 'sqlite', etc.
     // Outras opções, se necessário
   }
 );
+
 
 
 fs
