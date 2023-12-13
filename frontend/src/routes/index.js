@@ -10,6 +10,7 @@ import CreateTrilhas from "../pages/CreateTrilhas";
 import ExclusionTrilhas from "../pages/ExclusionTrilhas";
 import Recommendations from "../pages/Recommendations";
 import SendStudent from "../pages/SendStudents";
+import RegistrationPeriod from "../pages/RegistrationPeriod"
 
 const RoutesApp = () => {
   const { isAuthenticated, isSuperUser } = useAuth();
@@ -21,7 +22,7 @@ const RoutesApp = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Navigate to="/signin" />} />
   
-        {!isSuperUser() ? (
+        {isSuperUser() ? (
           <>
             <Route
               path="/home"
@@ -63,6 +64,12 @@ const RoutesApp = () => {
               path="/recommendations"
               element={
                 !isAuthenticated() ? <Navigate to="/signin" /> : <Recommendations />
+              }
+            />
+            <Route
+              path="/periodo-matriculas"
+              element={
+                !isAuthenticated() ? <Navigate to="/signin" /> : <RegistrationPeriod />
               }
             />
           </>

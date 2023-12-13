@@ -8,6 +8,7 @@ const learningPathsEnrolmentRoute = require('./views/routes/LearningPathEnrolmen
 const logoutRoutes = require('./views/routes/Users');
 const sequelize = require('sequelize');
 const extractStudentsRoutes = require('./views/routes/Extract');
+const registrationPeriod = require('./views/routes/RegistrationPeriod')
 
 require("dotenv").config();
 const app = express();
@@ -21,6 +22,7 @@ app.use('/learningpath', learningPathRoute);
 app.use('/api', logoutRoutes);
 app.use('/send-file', extractStudentsRoutes);
 app.use('/learningpathenrolment', learningPathsEnrolmentRoute);
+app.use('/registration-period', registrationPeriod)
 
 let test = process.env.DB_USERNAME;
 
