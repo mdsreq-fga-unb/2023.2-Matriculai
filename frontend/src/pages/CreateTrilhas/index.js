@@ -62,7 +62,7 @@ const CreateTrilhas = () => {
       values.eletivas.push("Projeto de Vida")
       try {
         const response = await axios.post(
-          "http://localhost:3001/learningpath/createLearningPaths",
+          "https://backend-matriculai.vercel.app/learningpath/createLearningPaths",
           {
             name: values.nomeTrilha,
             description: values.descricao,
@@ -114,7 +114,7 @@ const CreateTrilhas = () => {
     const fetchEletivas = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3001/elective/electives"
+          "https://backend-matriculai.vercel.app/elective/electives"
         );
         setEletivas(response.data);
       } catch (error) {

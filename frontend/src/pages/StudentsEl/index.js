@@ -36,7 +36,7 @@ const StudentsEl = () => {
   useEffect(() => {
     async function fetchEletiva() {
       try {
-        const response = await axios.post('http://localhost:3001/elective/find-elective', 
+        const response = await axios.post('https://backend-matriculai.vercel.app/elective/find-elective', 
         {
           id: parseInt(eletivaId)
         }) 
@@ -47,7 +47,7 @@ const StudentsEl = () => {
     }
     async function fetchStudents() {
       try {
-        const response = await axios.post('http://localhost:3001/elective/students', {eletivaNome: eletiva.name});
+        const response = await axios.post('https://backend-matriculai.vercel.app/elective/students', {eletivaNome: eletiva.name});
         setStudents(response.data);
         console.log(response)
       } catch (error) {

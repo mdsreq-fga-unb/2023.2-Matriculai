@@ -18,7 +18,7 @@ const SendStudent = () => {
         const formData = new FormData();
         formData.append('arquivo', selectedFile);
 
-        axios.post('http://localhost:3001/send-file/extract-students', formData)
+        axios.post('https://backend-matriculai.vercel.app/send-file/extract-students', formData)
         .then(response => {
             console.log('Resposta do servidor:', response.data);
         })

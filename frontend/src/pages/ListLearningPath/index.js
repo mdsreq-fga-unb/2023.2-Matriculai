@@ -27,7 +27,7 @@ const ListLearningPath = () => {
   useEffect(() => {
     async function fetchTrilhas() {
       try {
-        const response = await axios.get('http://localhost:3001/learningpath/learningpath'); // Endpoint para buscar trilhas
+        const response = await axios.get('https://backend-matriculai.vercel.app/learningpath/learningpath'); // Endpoint para buscar trilhas
         setTrilhas(response.data); // Define as trilhas na state 'trilhas'
       } catch (error) {
         console.error('Erro ao buscar trilhas:', error);

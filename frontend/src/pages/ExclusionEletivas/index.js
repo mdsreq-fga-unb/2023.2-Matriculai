@@ -44,7 +44,7 @@ const ExclusionEletivas = () => {
   useEffect(() => {
     async function fetchEletivas() {
       try {
-        const response = await axios.get('http://localhost:3001/elective/electives'); // Endpoint para buscar trilhas
+        const response = await axios.get('https://backend-matriculai.vercel.app/elective/electives'); // Endpoint para buscar trilhas
         setEletivas(response.data); // Define as trilhas na state 'trilhas'
       } catch (error) {
         console.error('Erro ao buscar trilhas:', error);
@@ -71,13 +71,13 @@ const ExclusionEletivas = () => {
     try {
       // Enviar uma solicitação para excluir as eletivas selecionadas
       eletivasSelecionadas.map(async (eletiva)  => {
-        await axios.delete('http://localhost:3001/elective/deleteElective', {
+        await axios.delete('https://backend-matriculai.vercel.app/elective/deleteElective', {
           data: { id: eletiva },
         });
       })
   
       // Atualizar a lista de eletivas após a exclusão
-      const response = await axios.get('http://localhost:3001/elective/electives');
+      const response = await axios.get('https://backend-matriculai.vercel.app/elective/electives');
       setEletivas(response.data);
   
       // Limpar a lista de eletivas selecionadas

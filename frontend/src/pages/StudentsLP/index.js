@@ -33,7 +33,7 @@ const StudentsLP = () => {
   useEffect(() => {
     async function fetchTrilha() {
       try {
-        const response = await axios.post('http://localhost:3001/learningpath/find_lp', {
+        const response = await axios.post('https://backend-matriculai.vercel.app/learningpath/find_lp', {
           id: parseInt(trilhaId)
           }) 
         setTrilha(response.data)
@@ -43,7 +43,7 @@ const StudentsLP = () => {
     }
     async function fetchStudents() {
       try {
-        const response = await axios.post('http://localhost:3001/learningpathenrolment/students', {id: parseInt(trilhaId)});
+        const response = await axios.post('https://backend-matriculai.vercel.app/learningpathenrolment/students', {id: parseInt(trilhaId)});
         setStudents(response.data);
         console.log(response)
       } catch (error) {

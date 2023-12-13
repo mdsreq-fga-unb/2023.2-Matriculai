@@ -21,7 +21,7 @@ const Signin = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post("http://localhost:3001/auth/login", {
+      const response = await axios.post("https://backend-matriculai.vercel.app/auth/login", {
         email: email,
         password: senha,
       })

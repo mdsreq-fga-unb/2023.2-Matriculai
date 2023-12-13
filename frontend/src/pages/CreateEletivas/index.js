@@ -76,7 +76,7 @@ const CreateEletivas = () => {
           schedules: parseInt(values.horario),
         };
 
-        const response = await axios.post("http://localhost:3001/elective/createElective", data);
+        const response = await axios.post("https://backend-matriculai.vercel.app/elective/createElective", data);
 
         if (response.status === 201) {
           toast({

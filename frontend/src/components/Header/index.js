@@ -23,7 +23,7 @@ const Header = () => {
   const handleLogout = async () => {
     const accessToken = sessionStorage.getItem("accessToken");
     try {
-      await axios.post("http://localhost:3001/auth/logout", { accessToken });
+      await axios.post("https://backend-matriculai.vercel.app/auth/logout", { accessToken });
       sessionStorage.removeItem("accessToken");
       navigate("/");
     } catch (error) {

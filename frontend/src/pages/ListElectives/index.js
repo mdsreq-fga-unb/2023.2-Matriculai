@@ -27,7 +27,7 @@ const ListElectives = () => {
     useEffect(() => {
       async function fetchEletivas() {
         try {
-          const response = await axios.get('http://localhost:3001/elective/electives'); // Endpoint para buscar eletivas
+          const response = await axios.get('https://backend-matriculai.vercel.app/elective/electives'); // Endpoint para buscar eletivas
           setEletivas(response.data);
         } catch (error) {
           console.error('Erro ao buscar eletivas:', error);

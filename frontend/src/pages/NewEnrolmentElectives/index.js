@@ -30,7 +30,7 @@ const NewEnrolmentElectives = () => {
     const fetchEletivas = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3001/elective/electives"
+          "https://backend-matriculai.vercel.app/elective/electives"
         );
         setEletivas(response.data);
       } catch (error) {
@@ -74,7 +74,7 @@ const NewEnrolmentElectives = () => {
       values.eletivas.push("Projeto de Vida")
 
       try{
-          const response = await axios.post("http://localhost:3001/elective/matricula-eletivas",
+          const response = await axios.post("https://backend-matriculai.vercel.app/elective/matricula-eletivas",
           {
             names: JSON.stringify(values.eletivas),
             student_id: parseInt(user),

@@ -57,7 +57,7 @@ const RegistrationPeriod = () => {
           console.log(values);
           try {
             const response = await axios.post(
-              "http://localhost:3001/registration-period/create",
+              "https://backend-matriculai.vercel.app/registration-period/create",
               {
                 start: values.startDate + " " + values.startTime,
                 end: values.endDate + " " + values.endTime,
