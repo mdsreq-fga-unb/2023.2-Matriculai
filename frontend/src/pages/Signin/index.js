@@ -30,6 +30,7 @@ const Signin = () => {
         sessionStorage.setItem("accessToken", response.data.accessToken);
         sessionStorage.setItem("superuser", response.data.superuser);
         sessionStorage.setItem("user_id", response.data.userId);
+        sessionStorage.setItem("sy", response.data.sy);
 
         signin();
         let typeUser = isSuperUser()

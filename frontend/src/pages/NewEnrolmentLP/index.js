@@ -16,8 +16,9 @@ import ButtonCadastrar from "../../components/Button";
 import { Link } from "react-router-dom";
 
 const NewEnrolmentLP = () => {
-  const { userId } = useAuth();
+  const { userId, userSy } = useAuth();
   const user = userId()
+  const schoolYear = userSy()
   const [showAlert, setShowAlert] = useState(false);
 
   const navigate = useNavigate();
@@ -47,17 +48,11 @@ const NewEnrolmentLP = () => {
     }),
     onSubmit: async(values) => {
       try{
-        const response = await axios.post("http://localhost:3001/learningpathenrolment/studentenrolment",
-        {
-          student_id: parseInt(user),
-          learning_path_id: values.learning_path_id
-        }
-        )
-        if (response.status === 201) {
+        if(schoolYear === '1'){
           toast({
-            title: "Matrícula realizada.",
-            description: "Matrícula realizada com sucesso!",
-            status: "success",
+            title: "  Sua matrícula não pode ser realizada.",
+            description: "Só alunos do segundo e terceiro ano podem se matricular!",
+            status: "error",
             duration: 2800,
             isClosable: true,
             position: "top",
@@ -68,15 +63,39 @@ const NewEnrolmentLP = () => {
           setTimeout(() => {
             navigate("/home-student");
           }, 1000);
-        } else {
-          toast({
-            title: "Erro na matrícula.",
-            description: response.data.message || "Erro desconhecido.",
-            status: "error",
-            duration: 2800,
-            isClosable: true,
-            position: "top",
-          });
+        }else{
+          const response = await axios.post("http://localhost:3001/learningpathenrolment/studentenrolment",
+          {
+            student_id: parseInt(user),
+            learning_path_id: values.learning_path_id
+          }
+          )
+
+          if (response.status === 201) {
+            toast({
+              title: "Matrícula realizada.",
+              description: "Matrícula realizada com sucesso!",
+              status: "success",
+              duration: 2800,
+              isClosable: true,
+              position: "top",
+            });
+
+
+            setShowAlert(true);
+            setTimeout(() => {
+              navigate("/home-student");
+            }, 1000);
+          } else {
+            toast({
+              title: "Erro na matrícula.",
+              description: response.data.message || "Erro desconhecido.",
+              status: "error",
+              duration: 2800,
+              isClosable: true,
+              position: "top",
+            });
+          }
         }
       }catch(error){
         console.error("Erro ao cadastrar:", error);
@@ -120,7 +139,7 @@ const NewEnrolmentLP = () => {
             {...formik.getFieldProps("learning_path_id")}
           >
             {trilhas.map((op) => (
-              <option value={op.id}>{op.name}</option>
+              <option value={op.name}>{op.name}</option>
             ))}
           </Select>
           {formik.touched.learning_path_id && formik.errors.learning_path_id && (
