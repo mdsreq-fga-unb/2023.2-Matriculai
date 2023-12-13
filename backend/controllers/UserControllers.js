@@ -70,7 +70,7 @@ exports.userLogin = async (req, res) => {
             secure: true,
         });
 
-        res.json({ accessToken: accessToken });
+        res.json({ accessToken: accessToken, superuser: user.superuser });
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Erro durante o login.' });
