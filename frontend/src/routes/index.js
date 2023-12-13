@@ -13,6 +13,8 @@ import SendStudent from "../pages/SendStudents";
 import RegistrationPeriod from "../pages/RegistrationPeriod"
 import StudentHome from "../pages/StudentHome"
 import NewEnrolmentLP from "../pages/NewEnrolmentLP"
+import ListLearningPath from "../pages/ListLearningPath"
+import ListElectives from "../pages/ListElectives"
 
 const RoutesApp = () => {
   const { isAuthenticated, isSuperUser } = useAuth();
@@ -76,6 +78,18 @@ const RoutesApp = () => {
               path="/periodo-matriculas"
               element={
                 !isAuthenticated() ? <Navigate to="/signin" /> : <RegistrationPeriod />
+              }
+            />
+            <Route
+              path="/trilhas"
+              element={
+                !isAuthenticated() ? <Navigate to="/signin" /> : <ListLearningPath />
+              }
+            />
+            <Route
+              path="/eletivas"
+              element={
+                !isAuthenticated() ? <Navigate to="/signin" /> : <ListElectives />
               }
             />
           </>

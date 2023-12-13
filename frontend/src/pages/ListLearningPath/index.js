@@ -68,7 +68,7 @@ const ListLearningPath = () => {
                   <Tr>
                     <Td textColor='#243A69'>{linha.name}</Td>
                     <Td textColor='#243A69'>{linha.school_year}</Td>
-                    <Td><Icon as={ExternalLinkIcon} /></Td>
+                    <Td><Icon as={ExternalLinkIcon}/><Link to={`/trilhas/${linha.id}`}></Link></Td>
                   </Tr>
                 ))}
               </Tbody>

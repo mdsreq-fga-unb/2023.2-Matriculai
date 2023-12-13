@@ -49,7 +49,10 @@ const Home = () => {
         <Center>
             <HStack marginTop='2vh'>
                 <Button colorScheme='facebook'>
-                <Link to='/recommendations'>Recomendações</Link>
+                <Link to='/trilhas'>Trilhas</Link>
+                </Button>
+                <Button colorScheme='facebook'>
+                <Link to='/eletivas'>Eletivas</Link>
                 </Button>
             </HStack>
         </Center>
