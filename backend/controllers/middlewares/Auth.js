@@ -2,7 +2,7 @@ const { sign, verify } = require('jsonwebtoken');
 
 const createToken = (user) => {
     const accessToken = sign({username: user.email}, 
-        process.env.SECRET 
+        "qualquer coisa"
     );
     return accessToken;
 };
@@ -15,7 +15,7 @@ const validateToken = (req, res, next) => {
     }
 
     try {
-        const validToken = verify(accessToken, process.env.SECRET);
+        const validToken = verify(accessToken, "qualquer coisa");
         if (validToken) {
             req.authenticated = true;
             return next();
