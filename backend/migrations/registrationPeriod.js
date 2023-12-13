@@ -10,15 +10,8 @@ module.exports = {
             await queryInterface.createTable(register, {
                 co_registration_period: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
                 ds_is_open: { type: Sequelize.BOOLEAN, defaultValue: false, allowNull: false},
-                ds_name: { type: Sequelize.TEXT, allowNull: false},
-                ds_start: { type: Sequelize.DATE, allowNull: false,
-                    set(value) {
-                        this.setDataValue('ds_start', value ? new Date(value) : null);
-                }},
-                ds_end: { type: Sequelize.DATE, allowNull: false,
-                    set(value) {
-                        this.setDataValue('ds_end', value ? new Date(value) : null);
-                }},
+                ds_start: { type: Sequelize.STRING, allowNull: false},
+                ds_end: { type: Sequelize.STRING, allowNull: false},
             })
             await transaction.commit()
         }catch (e) {

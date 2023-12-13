@@ -6,11 +6,6 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
-            field: "ds_name",
-            type: DataTypes.TEXT,
-            allowNull: false
-        },
         isOpen: {
             field: "ds_is_open",
             type: DataTypes.BOOLEAN,
