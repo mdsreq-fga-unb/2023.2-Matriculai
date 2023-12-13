@@ -38,7 +38,7 @@ const Signin = () => {
           navigate("/home");
         } else {
           console.log("é aluno ")
-          navigate('/home')
+          navigate('/home-student')
         }
         
         } else {
