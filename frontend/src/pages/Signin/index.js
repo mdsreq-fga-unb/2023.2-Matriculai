@@ -12,7 +12,7 @@ import { Text } from '@chakra-ui/react';
 import axios from 'axios';
 
 const Signin = () => {
-  const { signin, isSuperUser } = useAuth();
+  const { signin, isSuperUser, userId} = useAuth();
   const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
@@ -29,10 +29,12 @@ const Signin = () => {
       if (response.data.accessToken) {
         sessionStorage.setItem("accessToken", response.data.accessToken);
         sessionStorage.setItem("superuser", response.data.superuser);
+        sessionStorage.setItem("user_id", response.data.userId);
 
         signin();
         let typeUser = isSuperUser()
-
+        let user = userId()
+        
         if(typeUser == "true"){
           console.log("é adm ")
           navigate("/home");

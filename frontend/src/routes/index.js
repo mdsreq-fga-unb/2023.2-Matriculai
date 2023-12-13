@@ -12,6 +12,7 @@ import Recommendations from "../pages/Recommendations";
 import SendStudent from "../pages/SendStudents";
 import RegistrationPeriod from "../pages/RegistrationPeriod"
 import StudentHome from "../pages/StudentHome"
+import NewEnrolmentLP from "../pages/NewEnrolmentLP"
 
 const RoutesApp = () => {
   const { isAuthenticated, isSuperUser } = useAuth();
@@ -27,7 +28,7 @@ const RoutesApp = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Navigate to="/signin" />} />
   
-        {typeUser == 'true' ? (
+        {typeUser === 'true' ? (
           <>
             <Route
               path="/home"
@@ -79,12 +80,21 @@ const RoutesApp = () => {
             />
           </>
         ) : (
-          <Route
+          <>
+            <Route
             path="/home-student"
             element={
               !isAuthenticated() ? <Navigate to="/signin" /> : <StudentHome />
             }
           />
+          <Route
+            path="/matricula-trilha"
+            element={
+              !isAuthenticated() ? <Navigate to="/signin" /> : <NewEnrolmentLP />
+            }
+          />
+          </>
+          
         )}
       </Routes>
     </BrowserRouter>

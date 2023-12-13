@@ -29,10 +29,10 @@ const StudentHome = () => {
         <Center>
             <HStack marginTop='2vh'>
                 <Button colorScheme='facebook'>
-                <Link to='/eletivas'>Nova matrícula</Link>
+                <Link to='/matricula-eletiva'>Nova matrícula em eletiva</Link>
                 </Button>
                 <Button colorScheme='facebook'>
-                <Link to='/trilhas'>Visualizar grade</Link>
+                <Link to='/matricula-trilha'>Nova matrícula em trilha</Link>
                 </Button>
             </HStack>
         </Center>

@@ -27,14 +27,17 @@ export const AuthProvider = ({ children }) => {
 
   const isSuperUser = () => {
     const userType = sessionStorage.getItem("superuser");
-    console.log(userType)
     return userType
   }
 
+  const userId = () => {
+    const user = sessionStorage.getItem("user_sy");
+    return user
+  }
 
   return (
     <AuthContext.Provider
-      value={{signin, isAuthenticated, isSuperUser}}
+      value={{signin, isAuthenticated, isSuperUser, userId}}
     >
       {children}
     </AuthContext.Provider>

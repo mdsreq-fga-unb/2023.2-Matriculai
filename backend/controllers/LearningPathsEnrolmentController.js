@@ -1,4 +1,6 @@
 const { LearningPathsEnrolment } = require('../models/schemas');
+const { Registration } = require('../models/schemas')
+
 
 exports.studentEnrolment = async (req, res) => {
     const { learning_path_id, student_id } = req.body;
@@ -18,4 +20,27 @@ exports.studentEnrolment = async (req, res) => {
             };
         });
     }; 
+}
+
+exports.isOpenEnrolment = async() => {
+    let registrationsPeriod = Registration.findAll()
+
+    for(let res of registrationsPeriod){
+        let startDate = new Date(res.start)
+        let endDate = new Date(res.end)
+        const now = new Date()
+
+        if(startDate < now){
+            await Registration.update(
+                { isOpen: false },
+                { where: { id: registrationsPeriod.id } }
+            );
+        }else if(startDate >= now && endDate < now){
+            await Registration.update(
+                { isOpen: true },
+                { where: { id: registrationsPeriod.id } }
+            );
+        }
+    }
+
 }
