@@ -28,12 +28,9 @@ const Signin = () => {
   
       if (response.data.accessToken) {
         sessionStorage.setItem("accessToken", response.data.accessToken);
-        sessionStorage.setItem("superuser", response.data.superuser);
-
+        sessionStorage.setItem("user", JSON.stringify({email, senha}));
         signin();
-        console.log("oi")
-        console.log( sessionStorage.getItem("superuser"))
-        console.log(isSuperUser())
+        
         navigate("/home");
 
         

@@ -1,5 +1,7 @@
 import { stubFalse } from "lodash";
+import { stubFalse } from "lodash";
 import { createContext, useEffect, useState } from "react";
+import Signin from "../pages/Signin";
 import Signin from "../pages/Signin";
 
 export const AuthContext = createContext({});
@@ -16,6 +18,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const signout = () => {
+    sessionStorage.removeItem("accessToken");
     sessionStorage.removeItem("accessToken");
     sessionStorage.removeItem("superuser");
   };
@@ -37,4 +40,4 @@ export const AuthProvider = ({ children }) => {
       {children}
     </AuthContext.Provider>
   );
-};
+}
