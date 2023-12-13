@@ -17,16 +17,22 @@ export const AuthProvider = ({ children }) => {
 
   const signout = () => {
     sessionStorage.removeItem("accessToken");
+    sessionStorage.removeItem("superuser");
   };
 
   const isAuthenticated = () => {
     return signin()
   }
 
+  const isSuperUser = () => {
+    const userType = sessionStorage.getItem("superuser");
+    return userType
+  }
+
 
   return (
     <AuthContext.Provider
-      value={{signin, isAuthenticated}}
+      value={{signin, isAuthenticated, isSuperUser}}
     >
       {children}
     </AuthContext.Provider>
