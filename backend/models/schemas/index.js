@@ -1,5 +1,6 @@
 'use strict';
 
+import mysql2 from 'mysql2';
 const fs = require('fs');
 const path = require('path');
 const Sequelize = require('sequelize');
@@ -15,7 +16,7 @@ const sequelize = new Sequelize(
   {
     host: '104.154.26.234',
     dialect: 'mysql',
-    dialectModule: require('mysql2')// Por exemplo, 'mysql', 'postgres', 'sqlite', etc.
+    dialectModule: mysql2// Por exemplo, 'mysql', 'postgres', 'sqlite', etc.
     // Outras opções, se necessário
   }
 );
