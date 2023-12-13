@@ -36,17 +36,12 @@ const Signin = () => {
         let typeUser = isSuperUser()
         let user = userId()
         
-        if(typeUser == "true"){
+        if(typeUser === "true"){
           console.log("é adm ")
-          setTimeout(() => {
-            navigate('/home');
-          }, 2000);
+          navigate('/home');
         } else {
           console.log("é aluno ")
-
-          setTimeout(() => {
-            navigate('/home-student');
-          }, 2000);
+          navigate('/home-student');
 
         }
         
