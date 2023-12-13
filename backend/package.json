@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "migrate": "npx sequelize-cli db:migrate --env development",
+    "build": "tsc",
+    "migrate": "npx sequelize-cli db:migrate",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,10 +16,13 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
+    "exceljs": "^4.4.0",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
     "mysql2": "^3.6.3",
     "nodemon": "^3.0.1",
+    "randomatic": "^3.1.1",
     "sequelize": "^6.35.0",
     "sequelize-cli": "^6.6.2"
   }

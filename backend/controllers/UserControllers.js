@@ -1,10 +1,11 @@
 const { Users } = require('../models/schemas');
+const randomatic = require('randomatic');
 const bcrypt = require('bcrypt');
 const { createToken, validateToken } = require('./middlewares/Auth');
 
 exports.userRegister = async (req, res) => {
     try {
-        const { email, password } = req.body;
+        const { superuser, name, registry, school_year, email, password } = req.body;
         const existingUser = await Users.findOne({ where: { email: email } });
 
         if (existingUser) {
@@ -13,6 +14,10 @@ exports.userRegister = async (req, res) => {
 
         const hash = await bcrypt.hash(password, 15);
         await Users.create({
+            superuser: superuser,
+            name: name,
+            registry: registry,
+            school_year: school_year,
             email: email,
             password: hash,
         });
@@ -22,6 +27,25 @@ exports.userRegister = async (req, res) => {
         res.status(400).json({ error: err.message || 'Erro desconhecido durante o registro.' });
     }
 };
+
+exports.studentRegister = async(student) => {
+    // const password = randomatic('Aa0', 15);
+    const password = '12345678'
+    const hash = await bcrypt.hash(password, 15);
+
+    const userExisting = await Users.findOne({where: {email: student['email']}})
+    
+    if(!userExisting){
+        await Users.create({
+            superuser: false,
+            name: student['nome completo'],
+            registry: student['matrícula'],
+            school_year: student['ano'],
+            email: student['email'],
+            password: hash,
+        });
+    } 
+}
 
 exports.userLogin = async (req, res) => {
     try {
@@ -51,7 +75,7 @@ exports.userLogin = async (req, res) => {
             secure: true,
         });
 
-        res.json({ accessToken: accessToken });
+        res.json({ accessToken: accessToken, superuser: user.superuser, userId: user.id, sy: user.school_year});
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: 'Erro durante o login.' });

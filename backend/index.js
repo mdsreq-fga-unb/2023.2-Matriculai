@@ -3,10 +3,12 @@ const cors = require('cors');
 const database = require('./models/schemas');
 const userRoute = require('./views/routes/Users');
 const electiveRoute = require('./views/routes/Electives')
-const learningPathRoute = require('./views/routes/LearningPaths')
+const learningPathRoute = require('./views/routes/LearningPaths');
+const learningPathsEnrolmentRoute = require('./views/routes/LearningPathEnrolment');
 const logoutRoutes = require('./views/routes/Users');
 const sequelize = require('sequelize');
-const deleteLearningPathsRoute = require('./views/routes/LearningPaths');
+const extractStudentsRoutes = require('./views/routes/Extract');
+const registrationPeriod = require('./views/routes/RegistrationPeriod')
 
 require("dotenv").config();
 const app = express();
@@ -18,15 +20,11 @@ app.use('/auth', userRoute);
 app.use('/elective', electiveRoute);
 app.use('/learningpath', learningPathRoute);
 app.use('/api', logoutRoutes);
+app.use('/send-file', extractStudentsRoutes);
+app.use('/learningpathenrolment', learningPathsEnrolmentRoute);
+app.use('/registration-period', registrationPeriod)
 
-// sequelize
-//   .sync()
-//   .then(() => {
-//     console.log('Conexão bem-sucedida com o banco de dados');
-//   })
-//   .catch((error) => {
-//     console.error('Erro ao conectar-se ao banco de dados:', error);
-//   });
+let test = process.env.DB_USERNAME;
 
 
 database.sequelize.sync().then(() => {

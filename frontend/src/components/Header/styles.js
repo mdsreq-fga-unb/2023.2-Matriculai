@@ -5,6 +5,8 @@ export const StyledMenuList = chakra(MenuList, {
     listStyle: 'circle',
     padding: 0,
     margin: 0,
+    backgroundColor: '#243A69',
+    borderColor:  '#243A69'
   },
 });
 
