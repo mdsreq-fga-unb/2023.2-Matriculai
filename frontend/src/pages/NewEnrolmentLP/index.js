@@ -139,7 +139,7 @@ const NewEnrolmentLP = () => {
             {...formik.getFieldProps("learning_path_id")}
           >
             {trilhas.map((op) => (
-              <option value={op.name}>{op.name}</option>
+              <option value={op.id}>{op.name}</option>
             ))}
           </Select>
           {formik.touched.learning_path_id && formik.errors.learning_path_id && (

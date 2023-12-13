@@ -38,10 +38,16 @@ const Signin = () => {
         
         if(typeUser == "true"){
           console.log("é adm ")
-          navigate("/home");
+          setTimeout(() => {
+            navigate('/home');
+          }, 2000);
         } else {
           console.log("é aluno ")
-          navigate('/home-student')
+
+          setTimeout(() => {
+            navigate('/home-student');
+          }, 2000);
+
         }
         
         } else {

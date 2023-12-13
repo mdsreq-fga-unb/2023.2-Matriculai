@@ -29,9 +29,13 @@ exports.userRegister = async (req, res) => {
 };
 
 exports.studentRegister = async(student) => {
-    const password = randomatic('Aa0', 15);
+    // const password = randomatic('Aa0', 15);
+    const password = '12345678'
     const hash = await bcrypt.hash(password, 15);
+
+    const userExisting = await Users.findOne({where: {email: student['email']}})
     
+    if(!userExisting){
         await Users.create({
             superuser: false,
             name: student['nome completo'],
@@ -40,6 +44,7 @@ exports.studentRegister = async(student) => {
             email: student['email'],
             password: hash,
         });
+    } 
 }
 
 exports.userLogin = async (req, res) => {

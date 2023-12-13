@@ -11,9 +11,11 @@ exports.createLearningPaths = async(req, res) => {
         electives: electives_object
     }).then(() => {
         res.status(201).json("OK")
+        console.log('oi')
     }).catch((err) => {
         if(err){
             res.status(400).json({error: err})
+            console.log(err)
         };
     });
 };
@@ -33,6 +35,16 @@ exports.LearningPath = async (req, res) => {
     try {
         const trilhas = await LearningPath.findAll();
         res.status(200).json(trilhas);
+    } catch (err) {
+        res.status(400).json({ error: err.message });
+    } 
+}
+
+exports.FindLP = async (req, res) => {
+    const { id } = req.body
+    try {
+        const trilha = await LearningPath.findOne({where: {id: id}});
+        res.status(200).json(trilha);
     } catch (err) {
         res.status(400).json({ error: err.message });
     } 

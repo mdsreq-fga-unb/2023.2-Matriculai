@@ -15,6 +15,7 @@ import StudentHome from "../pages/StudentHome"
 import NewEnrolmentLP from "../pages/NewEnrolmentLP"
 import ListLearningPath from "../pages/ListLearningPath"
 import ListElectives from "../pages/ListElectives"
+import StudentsLP from "../pages/StudentsLP";
 
 const RoutesApp = () => {
   const { isAuthenticated, isSuperUser } = useAuth();
@@ -84,6 +85,12 @@ const RoutesApp = () => {
               path="/trilhas"
               element={
                 !isAuthenticated() ? <Navigate to="/signin" /> : <ListLearningPath />
+              }
+            />
+            <Route
+              path="/trilhas/:trilhaId"
+              element={
+                !isAuthenticated() ? ( <Navigate to="/signin" /> ) : (<StudentsLP />)
               }
             />
             <Route

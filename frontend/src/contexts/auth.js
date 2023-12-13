@@ -31,7 +31,7 @@ export const AuthProvider = ({ children }) => {
   }
 
   const userId = () => {
-    const user = sessionStorage.getItem("user_sy");
+    const user = sessionStorage.getItem("user_id");
     return user
   }
 

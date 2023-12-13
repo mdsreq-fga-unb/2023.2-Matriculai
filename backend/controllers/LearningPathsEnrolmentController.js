@@ -1,16 +1,19 @@
 const { LearningPathsEnrolment } = require('../models/schemas');
 const { Registration } = require('../models/schemas')
-
+const { Users } = require('../models/schemas');
 
 exports.studentEnrolment = async (req, res) => {
     const { learning_path_id, student_id } = req.body;
     const existingEnrolment = await LearningPathsEnrolment.findOne({where: {learning_path_id: learning_path_id, student_id: student_id} });
+    const existingUser = await Users.findOne({where: {id: student_id}})
 
     if (existingEnrolment) {
         return res.status(400).json({error: 'O aluno já está matriculado nesta trilha.'}); 
     } else {
         await LearningPathsEnrolment.create({
             learning_path_id: learning_path_id,
+            student_name: existingUser.name,
+            student_registry: existingUser.registry,
             student_id: student_id,
         }).then(() => {
             res.status(201).json("Solicitação bem sucedida")
@@ -42,5 +45,16 @@ exports.isOpenEnrolment = async() => {
             );
         }
     }
+}
 
+exports.Students = async(req, res) => {
+    const { id } = req.body
+
+    try{
+        let students_by_lp = await LearningPathsEnrolment.findAll({where: {learning_path_id: id}})
+        res.status(200).json(students_by_lp);
+    }catch(err){
+        res.status(400).json({ error: err.message });
+    }
+    
 }

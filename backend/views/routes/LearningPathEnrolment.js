@@ -4,5 +4,6 @@ const learningPathsEnrolmentController =  require('../../controllers/LearningPat
 
 
 router.post('/studentenrolment', learningPathsEnrolmentController.studentEnrolment);
+router.post('/students', learningPathsEnrolmentController.Students)
 
 module.exports = router;

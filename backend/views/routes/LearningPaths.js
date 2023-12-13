@@ -5,5 +5,7 @@ const learningPathsController =  require('../../controllers/LearningPathsControl
 router.post("/createLearningPaths", learningPathsController.createLearningPaths);
 router.delete("/deleteLearningPaths", learningPathsController.deleteLearningPaths)
 router.get('/learningpath', learningPathsController.LearningPath);
+router.post('/find_lp', learningPathsController.FindLP);
+
 
 module.exports = router; 
