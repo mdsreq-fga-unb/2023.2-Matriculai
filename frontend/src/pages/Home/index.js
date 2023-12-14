@@ -63,7 +63,7 @@ const Home = () => {
                 <Link to='/cadastrar-estudantes'>Importar estudantes</Link>
                 </Button>
                 <Button colorScheme='facebook'>
-                <Link to='/cadastrar-estudantes'>Periodo de matriculas</Link>
+                <Link to='/periodo-matriculas'>Periodo de matriculas</Link>
                 </Button>
             </HStack>
         </Center>
