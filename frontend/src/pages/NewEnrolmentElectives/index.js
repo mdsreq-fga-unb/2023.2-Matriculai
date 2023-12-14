@@ -50,7 +50,7 @@ const NewEnrolmentElectives = () => {
     const checkRegistrationPeriod = async () => {
       try {
         const response = await axios.get(
-          "https://backend-matriculai.vercel.app/registration/period"
+          "https://backend-matriculai.vercel.app/registration-period/current"
         );
         const registrationPeriod = response.data;
 
