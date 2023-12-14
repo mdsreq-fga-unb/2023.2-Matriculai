@@ -58,3 +58,45 @@ exports.Students = async(req, res) => {
     }
     
 }
+
+exports.isOpenEnrolment = async () => {
+    let registrationsPeriod = await Registration.findAll();
+  
+    for (let res of registrationsPeriod) {
+      let startDate = new Date(res.start);
+      let endDate = new Date(res.end);
+      const now = new Date();
+  
+      if (startDate < now && endDate >= now) {
+        // O período de matrícula está aberto
+        await Registration.update(
+          { isOpen: true },
+          { where: { id: res.id } }
+        );
+      } else {
+        // O período de matrícula está fechado
+        await Registration.update(
+          { isOpen: false },
+          { where: { id: res.id } }
+        );
+  
+        if (endDate < now) {
+          // O período de matrícula está encerrado, gerar lista aleatória de alunos matriculados
+          const studentsByLP = await LearningPathsEnrolment.findAll({ where: { learning_path_id: res.learning_path_id } });
+          const shuffledStudents = shuffleArray(studentsByLP);
+  
+          // Faça o que você precisa com a lista aleatória de alunos, por exemplo, salvar no banco de dados ou retornar na resposta da API
+          console.log('Lista aleatória de alunos matriculados:', shuffledStudents);
+        }
+      }
+    }
+  }
+  
+  function shuffleArray(array) {
+    // Função para embaralhar um array aleatoriamente
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
