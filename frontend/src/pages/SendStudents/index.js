@@ -48,13 +48,14 @@ const SendStudent = () => {
         <Header />
         <Flex direction="column" align="center" justify="center" flex="1">
           <Box
-            backgroundColor='#F4F4F2'
+            backgroundColor='#FFFFFF'
             borderRadius="30px"
             p="4"
             w="100%"
             h="25vh"
             maxW="400px"
             textAlign="center"
+            boxShadow="lg"
           >
             <Text color="#243A69" fontWeight="bold" fontSize="xx-large" mb="8">
               Importar dados
