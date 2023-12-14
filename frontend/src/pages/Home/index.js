@@ -42,7 +42,7 @@ const Home = () => {
                 <Link to="/criar-trilha">Criar trilha</Link>
               </Button>
               <Button colorScheme="facebook" size="lg" width="35vh">
-                <Link to="/criar-eletiva">Criar Eletiva</Link>
+                <Link to="/criar-eletiva">Criar eletiva</Link>
               </Button>
             </HStack>
           </Center>
@@ -61,10 +61,10 @@ const Home = () => {
           <Center>
             <HStack spacing="4" marginTop="2vh">
               <Button colorScheme="facebook" size="lg" width="35vh">
-                <Link to="/trilhas">Trilhas</Link>
+                <Link to="/trilhas">Listagem trilhas</Link>
               </Button>
               <Button colorScheme="facebook" size="lg" width="35vh">
-                <Link to="/eletivas">Eletivas</Link>
+                <Link to="/eletivas">Listagem Eletivas</Link>
               </Button>
             </HStack>
           </Center>
@@ -75,7 +75,18 @@ const Home = () => {
                 <Link to="/cadastrar-estudantes">Importar estudantes</Link>
               </Button>
               <Button colorScheme="facebook" size="lg" width="35vh">
-                <Link to="/periodo-matriculas">Periodo de matriculas</Link>
+                <Link to="/periodo-matriculas">Período de matrículas</Link>
+              </Button>
+            </HStack>
+          </Center>
+
+          <Center>
+            <HStack spacing="4" marginTop="2vh">
+              <Button colorScheme="facebook" size="lg" width="35vh">
+                <Link to="/recommendations">Disciplinas disponíveis</Link>
+              </Button>
+              <Button colorScheme="facebook" size="lg" width="35vh">
+                <Link to="/solicitacao-matricula">Solicitações de matrículas</Link>
               </Button>
             </HStack>
           </Center>
