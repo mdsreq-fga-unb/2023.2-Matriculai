@@ -51,7 +51,6 @@
 | -------------- | ------------- |
 | Frontend | React |
 | Backend | Nodejs |
-| Testes | Jasmine e Jest |
 | Integração contínua | GitActions |
 | Banco de dados | MySQL |
 

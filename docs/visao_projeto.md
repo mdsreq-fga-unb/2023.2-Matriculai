@@ -40,9 +40,9 @@
 |0|Material do seminário de processos e ciclos de vida, visão do produto e projeto, GitPages e vídeo de apresentação das entregas|12/09/23|02/10/23|
 |1|Backlog do produto|03/10/23|16/10/23|
 |2|Backlog do produto atualizado, backlog dos MVP's, visão do produto e projeto atualizado, GitPages atualizado e vídeo de apresentação das entregas|17/10/23|30/10/23|
-|3|Visão do produto e projeto atualizado e GitPages atualizado|31/10/23|13/11/23|
-|4|Entrega da Unidade 3|14/11/23|27/11/23|
-|5|Entrega da Unidade 4|28/11/23|11/12/23|
+|3|Visão do produto e projeto atualizado, GitPages atualizado e entrega do MVP1|31/10/23|13/11/23|
+|4|Entrega da Unidade 3, correções do MVP1 e implementação inicial do MVP2|14/11/23|27/11/23|
+|5|Entrega da Unidade 4, Pages atualizado e entrega do MVP2|28/11/23|11/12/23|
 
 ## Matriz de comunicação
 
