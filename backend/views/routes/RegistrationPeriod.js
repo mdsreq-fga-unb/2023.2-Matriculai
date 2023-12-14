@@ -3,7 +3,7 @@ const router = express.Router();
 const RegistrationPeriodController =  require('../../controllers/SuperuserController');
 
 router.post("/create", RegistrationPeriodController.openRegistrationPeriod);
-router.get("/current", RegistrationPeriodController.getRegistrationperiod);
+router.get("/current", RegistrationPeriodController.getRecentRegistrationPeriod);
 
 
 module.exports = router; 
