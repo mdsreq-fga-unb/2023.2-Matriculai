@@ -15,7 +15,6 @@ exports.openRegistrationPeriod = async (req, res) => {
     });
 }
 
-
 exports.getRegistrationPeriod = async (req, res) => {
     try {
         const currentPeriod = await Registration.findOne({
