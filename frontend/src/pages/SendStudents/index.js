@@ -46,26 +46,26 @@ const SendStudent = () => {
     <ChakraProvider>
       <Flex direction="column" minH="100vh">
         <Header />
-        <Container flex="1">
-          <Center>
-            <Box
-              backgroundColor='#F4F4F2'
-              borderRadius="30px"
-              p="4"
-              mt="8"
-              w="100%"
-              maxW="400px"
-              textAlign="center"
-            >
-              <Text color="#243A69" fontWeight="bold" fontSize="xl" mb="4">
-                Importar dados
-              </Text>
-              <Input
-                type="file"
-                onChange={handleFileChange}
-                display="none"
-                id="fileInput"
-              />
+        <Flex direction="column" align="center" justify="center" flex="1">
+          <Box
+            backgroundColor='#F4F4F2'
+            borderRadius="30px"
+            p="4"
+            w="100%"
+            h="25vh"
+            maxW="400px"
+            textAlign="center"
+          >
+            <Text color="#243A69" fontWeight="bold" fontSize="xx-large" mb="8">
+              Importar dados
+            </Text>
+            <Input
+              type="file"
+              onChange={handleFileChange}
+              display="none"
+              id="fileInput"
+            />
+            <Flex direction="row" justify="center" mt="2">
               <label htmlFor="fileInput">
                 <Button
                   as="span"
@@ -75,6 +75,9 @@ const SendStudent = () => {
                   p="2"
                   cursor="pointer"
                   _hover={{ bg: "#C4C4C4" }}
+                  mr="2" // Adicionando espaço à direita do botão
+                  width='23vh'
+                  size="lg"
                 >
                   Selecionar arquivo
                 </Button>
@@ -85,14 +88,15 @@ const SendStudent = () => {
                 color="#FFFFFF"
                 borderRadius="10px"
                 p="2"
-                mt="4"
                 _hover={{ bg: "#1B2D4A" }}
+                width='23vh'
+                size="lg"
               >
                 Enviar arquivo
               </Button>
-            </Box>
-          </Center>
-        </Container>
+            </Flex>
+          </Box>
+        </Flex>
         <Footer />
       </Flex>
     </ChakraProvider>
