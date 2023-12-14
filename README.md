@@ -2,8 +2,8 @@
 
 Para alunos do Novo Ensino Médio e suas matrículas quase impossíveis.
 
-A aplicação está disponível [aqui](https://matriculai-matriculai.vercel.app/signin)
-Credenciais para Administrador - email: adm@superuser.com, senha:12345678
+A aplicação está disponível [aqui](https://matriculai-matriculai.vercel.app/signin)<br>
+Credenciais para Administrador - email: adm@superuser.com, senha:12345678 <br>
 Credenciais para Aluno - email: george@user.com, senha:12345678
 ## 📚 Índice
 
