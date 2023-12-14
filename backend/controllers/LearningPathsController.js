@@ -49,3 +49,23 @@ exports.FindLP = async (req, res) => {
         res.status(400).json({ error: err.message });
     } 
 }
+
+exports.findElectives = async (req, res) =>{
+    const learningPathId = req.params.learningPathId;
+
+    try {
+        const learningPath = await LearningPath.findById(learningPathId);
+
+        if (!learningPath) {
+            return res.status(404).json({ error: 'Trilha não encontrada' });
+        }
+
+        const electives = JSON.parse(learningPath.electives);
+
+        res.status(200).json({ electives });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Erro interno do servidor' });
+    }
+}
+

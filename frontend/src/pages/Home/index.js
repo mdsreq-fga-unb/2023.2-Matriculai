@@ -91,23 +91,25 @@ const Home = () => {
             </HStack>
           </Center>
 
-          {currentRegistrationPeriod && (
-          <Center>
-            <Text fontSize="lg" color="#243A69" marginTop="2vh">
-              Período de Matrícula Atual:{" "}
-              {`${new Date(currentRegistrationPeriod.start).toLocaleDateString()} às ${new Date(
-                currentRegistrationPeriod.start
-              ).toLocaleTimeString()} - ${new Date(currentRegistrationPeriod.end).toLocaleDateString()} às ${new Date(
-                currentRegistrationPeriod.end
-              ).toLocaleTimeString()}`}
-            </Text>
-          </Center>
-        )}
-        </Container>
-        <Footer />
-      </Flex>
-    </ChakraProvider>
-  );
+{currentRegistrationPeriod && (
+  <Center>
+    <Text fontSize="lg" color="#243A69" marginTop="2vh">
+      Período de matrícula atual:{" "}
+      {`${new Date(currentRegistrationPeriod.start).toLocaleDateString()} às ${new Date(
+        new Date(currentRegistrationPeriod.start).getTime() + (new Date(currentRegistrationPeriod.start).getHours() < 3 ? 25 : 3) * 60 * 60 * 1000
+      ).toLocaleTimeString()} - ${new Date(currentRegistrationPeriod.end).toLocaleDateString()} às ${new Date(
+        new Date(currentRegistrationPeriod.end).getTime() + 3 * 60 * 60 * 1000
+      ).toLocaleTimeString()}`}
+    </Text>
+  </Center>
+)}
+
+
+      </Container>
+      <Footer />
+    </Flex>
+  </ChakraProvider>
+);
 };
 
 export default Home;
