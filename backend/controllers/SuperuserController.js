@@ -18,14 +18,15 @@ exports.openRegistrationPeriod = async (req, res) => {
 exports.getRegistrationPeriod = async (req, res) => {
     try {
         const currentPeriod = await Registration.findOne({
-            attributes: [
-              [sequelize.fn('max', sequelize.col('createdAt')), 'maxCreatedAt']
-            ]
-          });
-  
-      res.json(currentPeriod);
+            where: { id: 1 }
+        });
+        if (!currentPeriod) {
+            res.status(404).json({ error: 'Período de matrícula não encontrado.' });
+            return;
+        }
+        res.json(currentPeriod);
     } catch (error) {
-      console.error('Error fetching current registration period:', error);
-      res.status(500).json({ error: 'Erro ao buscar o período de matrícula atual.' });
+        console.error('Erro ao buscar o período de matrícula atual:', error);
+        res.status(500).json({ error: 'Erro ao buscar o período de matrícula atual.' });
     }
-  };
+};
