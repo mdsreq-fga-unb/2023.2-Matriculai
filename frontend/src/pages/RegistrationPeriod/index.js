@@ -31,21 +31,38 @@ const RegistrationPeriod = () => {
     },
     validationSchema: yup.object({
       startDate: yup
-        .date()
-        .required("A data de ínicio é obrigatória")
-        .min(new Date(new Date().setDate(new Date().getDate()-1)), "A data de início deve ser a partir de hoje")
-        .max(tenYearsFromNow, "A data de início não pode ser mais do que 10 anos a partir de hoje"),
-      startTime: yup
-        .string()
-        .required("A hora de ínicio é obrigatória")
-        .test('isAfterOrEqualCurrentTime', 'A hora de ínicio deve ser posterior à hora atual', function (startTime) {
-          const currentDateTime = new Date();
-          const selectedTime = new Date(currentDateTime);
-          const [hours, minutes] = startTime.split(':');
-          selectedTime.setHours(hours, minutes, 0);  
-  
-          return selectedTime >= currentDateTime;
-        }),
+    .date()
+    .required("A data de início é obrigatória")
+    .min(new Date(new Date().setDate(new Date().getDate() - 1)), "A data de início deve ser a partir de hoje")
+    .max(tenYearsFromNow, "A data de início não pode ser mais do que 10 anos a partir de hoje"),
+  startTime: yup
+    .string()
+    .test('isStartTimeValid', 'A hora de ínicio deve ser posterior à hora atual', function (startTime, { parent }) {
+      const selectedDate = new Date(parent.startDate);
+      const currentDate = new Date();
+
+      if (
+        selectedDate.getDate() === currentDate.getDate() &&
+        selectedDate.getMonth() === currentDate.getMonth() &&
+        selectedDate.getFullYear() === currentDate.getFullYear()
+      ) {
+        if (!startTime) {
+          return this.createError({
+            message: "A hora de ínicio é obrigatória",
+            path: 'startTime',
+          });
+        }
+
+        const currentDateTime = new Date();
+        const selectedTime = new Date(currentDateTime);
+        const [hours, minutes] = startTime.split(':');
+        selectedTime.setHours(hours, minutes, 0);
+
+        return selectedTime >= currentDateTime;
+      }
+
+      return true;
+    }),
       endDate: yup
         .date()
         .required("A data de término é obrigatória")

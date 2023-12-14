@@ -15,15 +15,17 @@ exports.openRegistrationPeriod = async (req, res) => {
     });
 }
 
-
-exports.getRecentRegistrationPeriod = async (req, res) => {
+exports.getRegistrationPeriod = async (req, res) => {
     try {
-      const recentPeriod = await Registration.findOne({
-        order: [['start', 'DESC']], // Ordena por data de início em ordem decrescente
-      });
+        const currentPeriod = await Registration.findOne({
+            attributes: [
+              [sequelize.fn('max', sequelize.col('createdAt')), 'maxCreatedAt']
+            ]
+          });
   
-      res.json(recentPeriod);
+      res.json(currentPeriod);
     } catch (error) {
-      res.status(500).json({ error: 'Erro ao buscar o período de matrícula mais recente.' });
+      console.error('Error fetching current registration period:', error);
+      res.status(500).json({ error: 'Erro ao buscar o período de matrícula atual.' });
     }
   };

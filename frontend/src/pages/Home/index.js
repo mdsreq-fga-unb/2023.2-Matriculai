@@ -92,17 +92,17 @@ const Home = () => {
           </Center>
 
           {currentRegistrationPeriod && (
-            <Center>
-              <Text fontSize="lg" color="#243A69" marginTop="2vh">
-                Período de Matrícula Atual:{" "}
-                {`${new Date(currentRegistrationPeriod.start).toLocaleDateString()} às ${new Date(
-                  currentRegistrationPeriod.start
-                ).toLocaleTimeString()} - ${new Date(currentRegistrationPeriod.end).toLocaleDateString()} às ${new Date(
-                  currentRegistrationPeriod.end
-                ).toLocaleTimeString()}`}
-              </Text>
-            </Center>
-          )}
+          <Center>
+            <Text fontSize="lg" color="#243A69" marginTop="2vh">
+              Período de Matrícula Atual:{" "}
+              {`${new Date(currentRegistrationPeriod.start).toLocaleDateString()} às ${new Date(
+                currentRegistrationPeriod.start
+              ).toLocaleTimeString()} - ${new Date(currentRegistrationPeriod.end).toLocaleDateString()} às ${new Date(
+                currentRegistrationPeriod.end
+              ).toLocaleTimeString()}`}
+            </Text>
+          </Center>
+        )}
         </Container>
         <Footer />
       </Flex>
