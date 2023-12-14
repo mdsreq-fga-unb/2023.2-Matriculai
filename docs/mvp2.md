@@ -77,9 +77,9 @@
 
 | DoD |  US07 | US08 | US09 | US10 | US11 | US12 | US13 | US14 |  Obs.|
 | ---------------------------- | ---- | ---- | ---- | ---- | ----- | ----- | ----- | ------- | ------- |
-| O Requisito foi implementado de acordo com o backlog e seus critérios | ✅ | ✅ |  |  | ✅ | ✅ | ✅ | ❌ |
-| O Requisito passou pela Estratégia de Testes? | ✅ | ✅ |  |  | ✅ | ✅ | ✅ |  |
-| Sua integração com o resto do sistema gerou algum impacto negativo? | ✅ | ✅ |  |  | ✅ | ✅ | ✅|  |
+| O Requisito foi implementado de acordo com o backlog e seus critérios | ✅ | ✅ | ❌  | ❌  | ✅ | ✅ | ✅ | ❌ |
+| O Requisito passou pela Estratégia de Testes? | ✅ | ✅ | ❌  | ❌  | ✅ | ✅ | ✅ | ❌ |
+| Sua integração com o resto do sistema gerou algum impacto negativo? | ✅ | ✅ | ❌  | ❌  | ✅ | ✅ | ✅| ❌ |
 
 ## Testes Funcionais
 
@@ -105,7 +105,7 @@ Eu, como estudante, desejo poder solicitar a matrícula em disciplinas eletivas 
 |  Caso 1 (aluno do 1° ano):  o aluno poderá escolher 6 matérias eletivas sendo 1 o Projeto de Vida obrigatoriamente; | O aluno escolher as 6 disciplinas sendo 1 delas o Projeto de Vida |- O aluno consegue se inscrever em mais de 6 eletivas </br> - O aluno consegue se incscrever em mais de 1 projeto de vida ou nenhum | ✅ |
 | Caso 2 (aluno do 2° ano):  o aluno deverá escolher 4 eletivas sendo 1 o Projeto de Vida obrigatoriamente;| O aluno escolher as 4 disciplinas sendo 1 delas o Projeto de Vida | - O aluno consegue se inscrever em mais de 4 eletivas </br> - O aluno consegue se incscrever em mais de 1 projeto de vida ou nenhum | ✅ |
 | Caso 3 (aluno do 3° ano):  o aluno deverá escolher 4 eletivas sendo 1 o Projeto de Vida obrigatoriamente; | O aluno escolher as 4 disciplinas sendo 1 delas o Projeto de Vida | - O aluno consegue se inscrever em mais de 4 eletivas </br> - O aluno consegue se incscrever em mais de 1 projeto de vida ou nenhum | ✅ |
-| Se o aluno não estiver dentro do caso do período letivo da trilha, ele não poderá solicitar matrícula na eletiva; | O aluno escolher as trilhas dentro do seu caso | O aluno poder escolher eletivas que não são do seu período letivo |
+| Se o aluno não estiver dentro do caso do período letivo da trilha, ele não poderá solicitar matrícula na eletiva; | O aluno escolher as trilhas dentro do seu caso | O aluno poder escolher eletivas que não são do seu período letivo | ✅ |
 | Deve ser apresentada uma mensagem de confirmação ou não da solicitação de matrícula;| A mensagem de confirmação aparece | A mensagem não aparecer depois da matrícula | ✅ |
 
 #### US09
@@ -114,17 +114,17 @@ Eu, como estudante, desejo poder visualizar lista de trilhas e disciplinas eleti
 
 | Critérios de aceitação </br> - Deve ser apresentada uma lista de trilhas contendo as seguintes informações:   | Caso válido | Caso inválido | Passou? | Obs. |
 | ------------- | ---------- | ---------- | ------- | -------- |
-| Nome da trilha (de 3 até 40 caracteres); | O nome  está disponível | O nome não está disponível |
-| Eletivas relacionadas | As eletivas relacionadas estão corretas | As eletivas relacionadas estão incorretas |
+| Nome da trilha (de 3 até 40 caracteres); | O nome  está disponível | O nome não está disponível | ❌ |
+| Eletivas relacionadas | As eletivas relacionadas estão corretas | As eletivas relacionadas estão incorretas | ❌ |
 
 | Critérios de aceitação </br> - Deve ser apresentada uma lista de eletivas contendo as seguintes informações:    | Caso válido | Caso inválido | Passou? | Obs. |
 | ------------- | ---------- | ---------- | ------- | -------- |
-| Nome da eletiva(de 3 até 40 caracteres); | O nome está disponível | O nome não está disponível |
-| Breve descrição(de 10 até 150 caracteres); | A descrição está disponível | A descrição não está disponível |
-| Ano letivo(1, 2 ou 3); | O ano está disponível | O ano não está disponível |
-| Professor responsável(10 a 30 caracteres); | O nome do professor está disponível | O nome do professor não está disponível |
-| Número de vagas(mínimo 15 e máximo 30); | O número de vagas está disponível | O número de vagasnão está disponível |
-| Horário da disciplina no formato (1º a 5º); | O horário está disponível | O horário não está disponível |
+| Nome da eletiva(de 3 até 40 caracteres); | O nome está disponível | O nome não está disponível | ❌ |
+| Breve descrição(de 10 até 150 caracteres); | A descrição está disponível | A descrição não está disponível | ❌  |
+| Ano letivo(1, 2 ou 3); | O ano está disponível | O ano não está disponível | ❌ |
+| Professor responsável(10 a 30 caracteres); | O nome do professor está disponível | O nome do professor não está disponível | ❌  |
+| Número de vagas(mínimo 15 e máximo 30); | O número de vagas está disponível | O número de vagasnão está disponível | ❌  |
+| Horário da disciplina no formato (1º a 5º); | O horário está disponível | O horário não está disponível | ❌  |
 
 #### US10
 
@@ -132,7 +132,7 @@ Eu, como estudante, desejo poder visualizar o resultado da solicitação de matr
 
 | Critérios de aceitação | Caso válido | Caso inválido | Passou? | Obs. |
 | ------------- | ---------- | ---------- | ------- | -------- |
-| - Deve ser apresentado uma lista com as disciplinas homologadas e não-homologadas, organizadas em uma tabela com os nomes das disciplinas e o status(deferida ou indeferida), organizadas primeiramente por status e depois por ordem alfabética; | - A lista está organizada na ordem de priorização (deferido, e alfabética) | - A lista não está organizada na ordem de priorização (deferido, e alfabética) |
+| - Deve ser apresentado uma lista com as disciplinas homologadas e não-homologadas, organizadas em uma tabela com os nomes das disciplinas e o status(deferida ou indeferida), organizadas primeiramente por status e depois por ordem alfabética; | - A lista está organizada na ordem de priorização (deferido, e alfabética) | - A lista não está organizada na ordem de priorização (deferido, e alfabética) | ❌  | Us não implementada | 
 
 #### US11
 

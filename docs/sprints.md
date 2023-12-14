@@ -132,7 +132,7 @@ Adendo: Esta Sprint durará até o dia 13/12, para que tenha período semelhante
 | Sprint Planning | - Goal: Correções do débito técnico do MVP1 e implementação do MVP2. |
 | Backlog da Sprint | - (Organização e atualização) Corrigir US05 e adicionar us de envio de token. Responsáveis: Todos </br>- (Verificação e Validação) Definir a Estratégia de Testes MVP2. Responsáveis: Luana.</br>- Desenvolvimento do MVP2(US07 até US14). Responsáveis: Todos.|
 | Sprint Review | -Feedback: Ótima experiência, boa interação e equipe dedicada |
-| Débitos Técnicos | -US10: Visualizar resultado de matrícula  </br> -US14: Envio de token |
+| Débitos Técnicos | -US09: Listagem de disciplinas (não passou no DoD) </br> -US10: Visualizar resultado de matrícula (não implementada) </br> -US14: Envio de token (não implementada) |
 | Sprint Retrospective |-Pontos Fortes: Maior entrosamento e comunicação entre a equipe </br> -Pontos Fracos: Sobrecarga |
 
 ### XP
