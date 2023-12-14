@@ -27,38 +27,38 @@ import {
   Select
 } from "@chakra-ui/react";
 
-const Recommendations = () => {
-  const [trilhas, setTrilhas] = useState([]);
+const EnrollmentRequest = () => {
+  const [eletivas, setEletivas] = useState([]);
   const [eletivasPorTrilha, setEletivasPorTrilha] = useState({});
-  const [descricaoTrilha, setDescricaoTrilha] = useState('');
-
+  const [descricaoEletiva, setDescricaoEletiva] = useState('');
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = React.useRef();
-
   const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
-    async function fetchTrilhas() {
+    async function fetchEletivas() {
       try {
-        const response = await axios.get('http://localhost:3001/learningpath/learningpath');
-        setTrilhas(response.data);
+        const response = await axios.get('http://localhost:3001/eletivas');
+        setEletivas(response.data);
 
-        // Mapear as eletivas por trilha para posterior uso
         const eletivasMap = {};
-        response.data.forEach((trilha) => {
-          eletivasMap[trilha.id] = trilha.related_eletivas || [];
+        response.data.forEach((eletiva) => {
+          eletivasMap[eletiva.id] = eletiva.related_trilhas || [];
         });
         setEletivasPorTrilha(eletivasMap);
       } catch (error) {
-        console.error('Erro ao buscar trilhas:', error);
+        console.error('Erro ao buscar eletivas:', error);
       }
     }
-    fetchTrilhas();
+    fetchEletivas();
   }, []);
 
-  // Função para abrir o modal e exibir a descrição da trilha
+  const getStatus = (eletivaId) => {
+    return eletivaId % 2 === 0 ? 'Homologado' : 'Não homologado';
+  };
+
   const handleVerDescricaoClick = (descricao) => {
-    setDescricaoTrilha(descricao);
+    setDescricaoEletiva(descricao);
     onOpen();
   };
 
@@ -79,34 +79,25 @@ const Recommendations = () => {
             boxShadow="lg"
           >
             <Box textAlign="center">
-              <Heading color="#243A69">Disciplinas disponíveis</Heading>
+              <Heading color="#243A69">Eletivas Disponíveis</Heading>
             </Box>
             <Table variant="simple">
               <Thead>
                 <Tr>
-                  <Th>Nome da trilha</Th>
-                  <Th>Descrição</Th>
+                  <Th>Disciplina</Th>
+                  <Th>Status</Th>
                   <Th>Eletivas relacionadas</Th>
                 </Tr>
               </Thead>
               <Tbody>
-                {trilhas.map((linha) => (
-                  <Tr key={linha.id}>
-                    <Td>{linha.name}</Td>
-                    <Td>
-                      <Button
-                        colorScheme="facebook"
-                        backgroundColor="#243A69"
-                        size="sm"
-                        onClick={() => handleVerDescricaoClick(linha.description)}
-                      >
-                        Ver Descrição
-                      </Button>
-                    </Td>
+                {eletivas.map((eletiva) => (
+                  <Tr key={eletiva.id}>
+                    <Td>{eletiva.name}</Td>
+                    <Td>{getStatus(eletiva.id)}</Td>
                     <Td>
                       <Select>
-                        {eletivasPorTrilha[linha.id]?.map((eletiva) => (
-                          <option key={eletiva.id}>{eletiva.name}</option>
+                        {eletivasPorTrilha[eletiva.id]?.map((trilha) => (
+                          <option key={trilha.id}>{trilha.name}</option>
                         ))}
                       </Select>
                     </Td>
@@ -114,7 +105,6 @@ const Recommendations = () => {
                 ))}
               </Tbody>
             </Table>
-            {/* Modal de Ver Descrição */}
             <AlertDialog isOpen={isOpen} leastDestructiveRef={cancelRef} onClose={onClose} isCentered>
               <AlertDialogOverlay
                 style={{
@@ -127,10 +117,10 @@ const Recommendations = () => {
               >
                 <AlertDialogContent>
                   <AlertDialogHeader fontSize="lg" fontWeight="bold">
-                    Descrição da Trilha
+                    Descrição da Eletiva
                   </AlertDialogHeader>
                   <AlertDialogBody>
-                    {descricaoTrilha}
+                    {descricaoEletiva}
                   </AlertDialogBody>
                   <AlertDialogFooter>
                     <Button ref={cancelRef} onClick={onClose}>
@@ -145,7 +135,7 @@ const Recommendations = () => {
             <Box>
               <Alert status="success" variant="subtle">
                 <AlertIcon />
-                Trilhas excluídas com sucesso!
+                Eletivas carregadas com sucesso!
               </Alert>
             </Box>
           )}
@@ -156,4 +146,4 @@ const Recommendations = () => {
   );
 };
 
-export default Recommendations;
+export default EnrollmentRequest;

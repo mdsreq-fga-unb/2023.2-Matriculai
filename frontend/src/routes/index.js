@@ -18,6 +18,7 @@ import ListElectives from "../pages/ListElectives"
 import StudentsLP from "../pages/StudentsLP";
 import StudentsEl from "../pages/StudentsEl";
 import NewEnrolmentElectives from "../pages/NewEnrolmentElectives";
+import EnrollmentRequest from "../pages/EnrollmentRequest";
 
 const RoutesApp = () => {
   const { isAuthenticated, isSuperUser } = useAuth();
@@ -126,6 +127,12 @@ const RoutesApp = () => {
             path="/matricula-eletiva"
             element={
               !isAuthenticated() ? <Navigate to="/signin" /> : <NewEnrolmentElectives /> 
+            }
+          />
+          <Route
+            path="/solicitacao-matricula"
+            element={
+              !isAuthenticated() ? <Navigate to="/signin" /> : <EnrollmentRequest /> 
             }
           />
           </>
