@@ -12,29 +12,49 @@ import * as yup from "yup";
 import axios from "axios";
 import ButtonCadastrar from "../../components/Button";
 
-
-import { Link } from "react-router-dom";
-
 const NewEnrolmentLP = () => {
+  const navigate = useNavigate();  
+  const toast = useToast();
   const { userId, userSy } = useAuth();
   const user = userId()
   const schoolYear = userSy()
   const [showAlert, setShowAlert] = useState(false);
-
-  const navigate = useNavigate();
-  const toast = useToast();
   const [trilhas, setTrilhas] = useState([]);
+  const [isRegistrationOpen, setIsRegistrationOpen] = useState(true);
 
   useEffect(() => {
-    async function fetchTrilhas() {
+    const fetchData = async () => {
       try {
-        const response = await axios.get('https://backend-matriculai.vercel.app/learningpath/learningpath'); // Endpoint para buscar trilhas
-        setTrilhas(response.data); // Define as trilhas na state 'trilhas'
+        const response = await axios.get(
+          "https://backend-matriculai.vercel.app/learningpath/learningpath"
+        );
+        setTrilhas(response.data);
       } catch (error) {
-        console.error('Erro ao buscar trilhas:', error);
+        console.error("Erro ao buscar trilhas:", error);
       }
-    }
-    fetchTrilhas();
+    };
+
+    const checkRegistrationPeriod = async () => {
+      try {
+        const response = await axios.get(
+          "https://backend-matriculai.vercel.app/registration/period"
+        );
+        const registrationPeriod = response.data;
+
+        const currentDate = new Date();
+        const isWithinRegistrationPeriod =
+          currentDate >= new Date(registrationPeriod.start) &&
+          currentDate <= new Date(registrationPeriod.end);
+
+        setIsRegistrationOpen(isWithinRegistrationPeriod);
+      } catch (error) {
+        console.error("Erro ao verificar o período de matrícula:", error);
+        setIsRegistrationOpen(false); // Defina como false em caso de erro
+      }
+    };
+
+    checkRegistrationPeriod();
+    fetchData();
   }, []);
 
   const formik = useFormik({
@@ -42,15 +62,27 @@ const NewEnrolmentLP = () => {
       learning_path_id: "",
     },
     validationSchema: yup.object({
-      learning_path_id: yup
-        .string()
-        .required("Uma trilha deve ser selecionada!")
+      learning_path_id: yup.string().required("Uma trilha deve ser selecionada!"),
     }),
-    onSubmit: async(values) => {
-      try{
-        if(schoolYear === '1'){
+    onSubmit: async (values) => {
+      try {
+        if (!isRegistrationOpen) {
           toast({
-            title: "  Sua matrícula não pode ser realizada.",
+            title: "Sua matrícula não pode ser realizada.",
+            description: "Fora do período de matrículas!",
+            status: "error",
+            duration: 2800,
+            isClosable: true,
+            position: "top",
+          });
+
+          setShowAlert(true);
+          setTimeout(() => {
+            navigate("/home-student");
+          }, 1000);
+        } else if (schoolYear === "1") {
+          toast({
+            title: "Sua matrícula não pode ser realizada.",
             description: "Só alunos do segundo e terceiro ano podem se matricular!",
             status: "error",
             duration: 2800,
@@ -58,18 +90,18 @@ const NewEnrolmentLP = () => {
             position: "top",
           });
 
-
           setShowAlert(true);
           setTimeout(() => {
             navigate("/home-student");
           }, 1000);
-        }else{
-          const response = await axios.post("https://backend-matriculai.vercel.app/learningpathenrolment/studentenrolment",
-          {
-            student_id: parseInt(user),
-            learning_path_id: values.learning_path_id
-          }
-          )
+        } else {
+          const response = await axios.post(
+            "https://backend-matriculai.vercel.app/learningpathenrolment/studentenrolment",
+            {
+              student_id: parseInt(user),
+              learning_path_id: values.learning_path_id,
+            }
+          );
 
           if (response.status === 201) {
             toast({
@@ -81,12 +113,11 @@ const NewEnrolmentLP = () => {
               position: "top",
             });
 
-
             setShowAlert(true);
             setTimeout(() => {
               navigate("/home-student");
             }, 1000);
-          } else if(response.status === 200){
+          } else if (response.status === 200) {
             toast({
               title: "Matrícula já realizada.",
               description: response.data.message || "Sua matrícula já foi realizada!",
@@ -102,7 +133,7 @@ const NewEnrolmentLP = () => {
             }, 2000);
           }
         }
-      }catch(error){
+      } catch (error) {
         console.error("Erro ao cadastrar:", error);
         toast({
           title: "Erro na matrícula.",
@@ -113,57 +144,56 @@ const NewEnrolmentLP = () => {
           position: "top",
         });
       }
-    }
-  })
+    },
+  });
 
   return (
     <ChakraProvider>
       <Flex direction="column" minH="100vh">
-      <Header />
-      <Container flex="1" marginTop='5vh'>
-        <Center>
-            <C.titulo>
-                <Text
-                textAlign={"center"}
-                fontSize={"3xl"}
-                color={"#243A69"}
-                as={"b"}
-                >
-                Matricule-se em uma trilha
-                </Text>
-            </C.titulo>
-        </Center>
-        <FormControl marginTop="2vh">
-          <FormLabel color="#243A69">
-            Selecione uma trilha
-          </FormLabel>
-          <Select
-            type="text"
-            placeholder="Selecione a trilha"
-            _placeholder={{ opacity: 1, color: "#243A69" }} isRequired
-            {...formik.getFieldProps("learning_path_id")}
-          >
-            {trilhas.map((op) => (
-              <option value={op.id}>{op.name}</option>
-            ))}
-          </Select>
-          {formik.touched.learning_path_id && formik.errors.learning_path_id && (
-                    <Text color="red.500" fontSize="sm">
-                      {formik.errors.learning_path_id}
-                    </Text>
-                  )}
-          <Center paddingBottom={5} marginTop="3vh">
-                    <ButtonCadastrar
-                      Text="Cadastrar"
-                      onClick={formik.handleSubmit}
-                    ></ButtonCadastrar>
+        <Header />
+        <Container flex="1" marginTop="5vh">
+          {isRegistrationOpen ? (
+            <FormControl marginTop="2vh">
+              <FormLabel color="#243A69">
+                Selecione uma trilha
+              </FormLabel>
+              <Select
+                type="text"
+                placeholder="Selecione a trilha"
+                _placeholder={{ opacity: 1, color: "#243A69" }}
+                isRequired
+                {...formik.getFieldProps("learning_path_id")}
+              >
+                {trilhas.map((op) => (
+                  <option key={op.id} value={op.id}>
+                    {op.name}
+                  </option>
+                ))}
+              </Select>
+              {formik.touched.learning_path_id &&
+                formik.errors.learning_path_id && (
+                  <Text color="red.500" fontSize="sm">
+                    {formik.errors.learning_path_id}
+                  </Text>
+                )}
+              <Center paddingBottom={5} marginTop="3vh">
+                <ButtonCadastrar
+                  Text="Cadastrar"
+                  onClick={formik.handleSubmit}
+                ></ButtonCadastrar>
+              </Center>
+            </FormControl>
+          ) : (
+            <Center>
+              <Text fontSize="xl" color="red.500" fontWeight="bold">
+                Fora do período de matrículas.
+              </Text>
             </Center>
-        </FormControl>
-      </Container>
-      <Footer />
-    </Flex>
+          )}
+        </Container>
+        <Footer />
+      </Flex>
     </ChakraProvider>
-    
   );
 };
 
