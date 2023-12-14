@@ -85,6 +85,8 @@ const Home = () => {
               <Text fontSize="lg" color="#243A69" marginTop="2vh">
                 Período de Matrícula Atual:{" "}
                 {`${new Date(currentRegistrationPeriod.start).toLocaleDateString()} às ${new Date(
+                  currentRegistrationPeriod.start
+                ).toLocaleTimeString()} - ${new Date(currentRegistrationPeriod.end).toLocaleDateString()} às ${new Date(
                   currentRegistrationPeriod.end
                 ).toLocaleTimeString()}`}
               </Text>

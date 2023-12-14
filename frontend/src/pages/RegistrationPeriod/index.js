@@ -60,7 +60,19 @@ const RegistrationPeriod = () => {
         }),
       endTime: yup
         .string()
-        .required("A hora de término é obrigatória"),
+        .required("A hora de término é obrigatória")
+        .test('isAfterStart', 'A hora de término deve ser posterior à hora de início', function (endTime) {
+          const { startDate, startTime, endDate } = this.parent;
+      
+          if (endDate === startDate) {
+            const startDateTime = new Date(`${startDate}T${startTime}`);
+            const endDateTime = new Date(`${endDate}T${endTime}`);
+      
+            return endDateTime > startDateTime;
+          }
+      
+          return true;
+        }),
     }),
     onSubmit: async (values) => {
       console.log(values);
