@@ -17,16 +17,18 @@ exports.openRegistrationPeriod = async (req, res) => {
 
 exports.getRegistrationPeriod = async (req, res) => {
     try {
-        const currentPeriod = await Registration.findOne({
-            where: { id: 1 }
+        const mostRecentPeriod = await Registration.findOne({
+            order: [['createdAt', 'DESC']]
         });
-        if (!currentPeriod) {
+
+        if (!mostRecentPeriod) {
             res.status(404).json({ error: 'Período de matrícula não encontrado.' });
             return;
         }
-        res.json(currentPeriod);
+
+        res.json(mostRecentPeriod);
     } catch (error) {
-        console.error('Erro ao buscar o período de matrícula atual:', error);
-        res.status(500).json({ error: 'Erro ao buscar o período de matrícula atual.' });
+        console.error('Erro ao buscar o período de matrícula mais recente:', error);
+        res.status(500).json({ error: 'Erro ao buscar o período de matrícula mais recente.' });
     }
 };
