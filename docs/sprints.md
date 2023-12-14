@@ -10,6 +10,7 @@
 | 24/10/2023 | 0.4 | Documentação da Sprint 2 | Júlia Yoshida e Luana Ribeiro |
 | 14/11/2023 | 0.5 | Documentação Sprint 2,3 e 4 | Luana Ribeiro |
 | 06/12/2023 | 0.6 | Adição da Sprint 5 | Luana Ribeiro |
+| 13/12/2023 | 1.1 | Adição fechamento da sprint 5 | Luana Ribeiro |
 
 ## Sprint 0
 
@@ -130,9 +131,9 @@ Adendo: Esta Sprint durará até o dia 13/12, para que tenha período semelhante
 | ------------------------------------- | ----------------------------------------------------- |
 | Sprint Planning | - Goal: Correções do débito técnico do MVP1 e implementação do MVP2. |
 | Backlog da Sprint | - (Organização e atualização) Corrigir US05 e adicionar us de envio de token. Responsáveis: Todos </br>- (Verificação e Validação) Definir a Estratégia de Testes MVP2. Responsáveis: Luana.</br>- Desenvolvimento do MVP2(US07 até US14). Responsáveis: Todos.|
-| Sprint Review | -Feedback: ... </br> - Prioridades para a próxima sprint: ... |
-| Débitos Técnicos | ... |
-| Sprint Retrospective |-Pontos Fortes: ... </br> -Pontos de Melhoria: ... |
+| Sprint Review | -Feedback: Ótima experiência, boa interação e equipe dedicada |
+| Débitos Técnicos | -US10: Visualizar resultado de matrícula  </br> -US14: Envio de token |
+| Sprint Retrospective |-Pontos Fortes: Maior entrosamento e comunicação entre a equipe </br> -Pontos Fracos: Sobrecarga |
 
 ### XP
 

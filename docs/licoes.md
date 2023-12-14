@@ -6,6 +6,7 @@
 | 23/10/2023 | 0.2 | Detalhando melhor as lições aprendidas na unidade 1 | Luana Ribeiro |
 | 25/10/2023 | 0.3 | Adicionando as lições aprendidas na unidade 2 | Luana Ribeiro |
 | 20/11/2023 | 0.4 | Adicionando as lições aprendidas na unidade 3 | Luana Ribeiro |
+| 13/12/2023 | 1.1 | Adicionando as lições aprendidas na unidade 4 | Luana Ribeiro e Yan Luca |
 
 ## Unidade 1
 
@@ -27,3 +28,7 @@
 <p style="text-indent: 50px;text-align: justify;"> Nesta unidade, a equipe se desenvolveu e superou barreiras pessoais no sentido de desenvolvimento de software. Colocou à prova o companheirismo em prol de de finalizar as entregas, com um ajudando o outro. Dessa forma, apesar de haver pequenos atritos por falhas na comunicação entre a equipe, todos se ajudaram e criaram vínculos maiores.   </p>
 
 ## Unidade 4
+
+<p style="text-indent: 50px;text-align: justify;"> Nesta unidade, pudemos aprender sobre os Casos de Uso e sua importância na disciplina de Requisitos tanto dentro de sala como no mercado de trabalho. Foi um conteúdo novo e desafiador para a equipe, haja vista que o conhecimento prévio era voltado para histórias de usuário, então foi preciso desvincular um tema com o outro para compreendê-lo melhor. </p>
+
+<p style="text-indent: 50px;text-align: justify;"> Nesta unidade, a equipe melhorou muito seu entrosamento e puderam fazer amizades que esperam seguir ao longo da formação acadêmica. Pode-se ressaltar, também, uma maior participação de todos os membros no desenvolvimento das atividades da unidade. A comunicação nesta unidade teve uma melhora significativa , no entanto houve a sobrecarga de alguns membros em detrimento de outros </p>

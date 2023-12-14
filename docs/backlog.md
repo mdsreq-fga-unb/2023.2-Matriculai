@@ -65,7 +65,7 @@
 		</tr>
 		<tr>
 			<td>[FE04] Solicitação de matrícula	</td>
-			<td>[US09] Eu, como estudante, desejo poder visualizar trilhas e as disciplinas eletivas recomendadas, para me orientar na escolha das disciplinas.
+			<td>[US09] Eu, como estudante, desejo poder visualizar uma lista de trilhas e disciplinas eletivas, para me orientar na escolha das disciplinas.
 </td>
 		</tr>
 		<tr>
@@ -322,9 +322,9 @@ Organização das US por Épicos por ordem de média do VN (valor de negócio) e
 		</tr>
 		<tr>
 			<td>[FE05] Visualização de oferta de disciplinas	</td>
-			<td>[US09] Eu, como estudante, desejo poder visualizar trilhas e as disciplinas eletivas recomendadas, para me orientar na escolha das disciplinas.
+			<td>[US09] Eu, como estudante, desejo poder visualizar uma lista de trilhas e disciplinas eletivas, para me orientar na escolha das disciplinas.
 </td>
-			<td>Deve ser apresentada uma lista de trilhas contendo as seguintes informações:</br>- Nome da trilha(até 40 caracteres);</br>- Descrição(até 150 caracteres);</br>-  unidade curricular;</br>- Eletivas relacionadas;</br>Deve ser apresentada uma lista de eletivas, em ordem crescente do ano letivo, contendo as seguintes informações:</br>- Mome da eletiva(até 40 caracteres);</br>- Descrição(até 150 caractres);</br>- Ano letivo(1, 2 ou 3);</br>- Professor responsável(nome e sobrenome);</br>- Número de vagas;</br>- Horário da disciplina(formato horas:minutos);</br>- Código da sala de aula.</td>
+			<td>Deve ser apresentada uma lista de trilhas contendo as seguintes informações:</br>- Nome da trilha(até 40 caracteres);</br>- Descrição(até 150 caracteres);</br>- Eletivas relacionadas;</br>Deve ser apresentada uma lista de eletivas, em ordem crescente do ano letivo, contendo as seguintes informações:</br>- Mome da eletiva(até 40 caracteres);</br>- Descrição(até 150 caractres);</br>- Ano letivo(1, 2 ou 3);</br>- Professor responsável(nome e sobrenome);</br>- Número de vagas;</br>- Horário da disciplina(formato horas:minutos);</br>- Código da sala de aula.</td>
 		</tr>
 		<tr>
 			<td>[FE06] Visualização do resultado da solicitação de matrícula	</td>
